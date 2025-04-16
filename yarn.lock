@@ -289,6 +289,16 @@
   resolved "https://registry.yarnpkg.com/@fastify/busboy/-/busboy-2.1.1.tgz#b9da6a878a371829a0502c9b6c1c143ef6663f4d"
   integrity sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==
 
+"@fontsource-variable/figtree@^5.2.6":
+  version "5.2.6"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/figtree/-/figtree-5.2.6.tgz#4df66a3641c84d8c86fea07159d99cf5ddaf9008"
+  integrity sha512-3uPFk3gDc9ps5YR6D+mE+o0TAV8PguSyJsqaP+i6AXxjL9GD2FNPWNO6YPVCARQhW2LwH6Ck9YzpwhBln+mDpg==
+
+"@fontsource-variable/onest@^5.2.7":
+  version "5.2.7"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/onest/-/onest-5.2.7.tgz#1a08bfd7934e80f835d716ee0bab02d2f45d0f02"
+  integrity sha512-iGsSGXwdqvaG5zJ6pmt7TKakYd5ADCzEZ4SPpaeueHrNiK3i6IbKrap4aK5vlak9E275BAHXv8Ac134r/PBREA==
+
 "@humanfs/core@^0.19.1":
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/@humanfs/core/-/core-0.19.1.tgz#17c55ca7d426733fe3c561906b8173c336b40a77"
