@@ -480,6 +480,11 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@lucide/svelte@^0.488.0":
+  version "0.488.0"
+  resolved "https://registry.yarnpkg.com/@lucide/svelte/-/svelte-0.488.0.tgz#8f600b12c2e5ff3933ffb22db33df3e50987e740"
+  integrity sha512-i8TFY+vOVci2J/UhaeF1Yj25NOL8UJ27hf+/CexvfIyLSdgid3zHwh0iVf+DlWpAsXXJl2rQ5Cl5g/qfMbfOHw==
+
 "@napi-rs/wasm-runtime@^0.2.8":
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/@napi-rs/wasm-runtime/-/wasm-runtime-0.2.9.tgz#7278122cf94f3b36d8170a8eee7d85356dfa6a96"
@@ -2064,6 +2069,11 @@ svelte@^5.0.0:
     locate-character "^3.0.0"
     magic-string "^0.30.11"
     zimmerframe "^1.1.2"
+
+tailwind-merge@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-3.2.0.tgz#bedcf6a67a8c982da5913afcba9c854f35abb857"
+  integrity sha512-FQT/OVqCD+7edmmJpsgCsY820RTD5AkBryuG5IUqR5YQZSdj5xlH5nLgH7YPths7WsLPSpSBNneJdM8aS8aeFA==
 
 tailwindcss@4.1.4, tailwindcss@^4.0.0:
   version "4.1.4"
