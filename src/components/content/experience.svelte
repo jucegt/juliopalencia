@@ -1,6 +1,6 @@
 <script>
-  import Container from './container.svelte';
-  import Header from './section/header.svelte';
+  import Container from '../container.svelte';
+  import Header from '../section/header.svelte';
 </script>
 
 <Container as="section" class="my-24 flex flex-col md:my-48">
