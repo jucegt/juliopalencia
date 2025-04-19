@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Container from './container.svelte';
   import Browser from './hero/browser.svelte';
   import Glow from './hero/glow.svelte';
@@ -7,7 +7,7 @@
 </script>
 
 <Glow />
-<Container class="relative" role="main">
+<Container as="main" class="relative" role="main">
   <Text class="mt-16 mb-16 lg:mt-32">Got a business? You’re in the right place.</Text>
   <Title class="my-16"
     >Your <span class="text-dark dark:text-light font-black">business</span> deserves a
