@@ -1,5 +1,5 @@
 <script>
-  import { ChevronDown, MessageCircleMore } from '@lucide/svelte';
+  import { ChevronDown, Lock, MessageCircleMore, RotateCw } from '@lucide/svelte';
   import Button from '../button.svelte';
 </script>
 
@@ -13,13 +13,15 @@
       <div class="aspect-square w-[14px] rounded-full bg-green-400"></div>
     </div>
     <div
-      class="font-figtree text-dark dark:text-light bg-light dark:bg-dark border-light-border-200 dark:border-dark-border-200 ring-primary flex h-[36px] shrink-1 grow-1 basis-0 items-center justify-center rounded-sm border tracking-wider outline-0 transition focus-within:ring-2"
+      class="font-figtree text-dark dark:text-light bg-light dark:bg-dark border-light-border-200 dark:border-dark-border-200 ring-primary flex h-[36px] shrink-1 grow-1 basis-0 items-center justify-between rounded-sm border px-2 tracking-wider outline-0 transition focus-within:ring-2 md:justify-center"
       role="textbox"
       aria-readonly="true"
     >
+      <Lock size="18" strokeWidth="2" class="text-gray md:hidden" />
       <span class="animate-typewriter overflow-hidden text-nowrap whitespace-nowrap">
         www.youbusiness.com
       </span>
+      <RotateCw size="18" strokeWidth="2" class="text-gray md:hidden" />
     </div>
     <div
       class="bg-light/50 dark:bg-dark/50 hidden h-[20px] w-[54px] rounded-full md:block"
@@ -28,7 +30,17 @@
   </div>
   <Button class="my-16 md:text-xl" href="#contact" variant="primary">
     <span class="z-10">Talk to me now</span>
-    <MessageCircleMore aria-hidden="true" width="24" class="z-10 shrink-0 grow-0 basis-[24px]" />
+    <MessageCircleMore
+      aria-hidden="true"
+      size="24"
+      strokeWidth="2"
+      class="z-10 shrink-0 grow-0 basis-[24px]"
+    />
   </Button>
-  <ChevronDown width="24" class="text-gray mx-auto animate-bounce" aria-hidden="true" />
+  <ChevronDown
+    size="24"
+    strokeWidth="2"
+    class="text-gray mx-auto animate-bounce"
+    aria-hidden="true"
+  />
 </div>
