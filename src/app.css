@@ -13,15 +13,42 @@
   --color-primary: oklch(0.56 0.1361 249.13);
   --color-dark: oklch(0.25 0.0104 229.36);
   --color-dark-200: oklch(0.36 0.0145 252.28);
+  --color-dark-border-200: oklch(0.36 0.0088 219.72);
   --color-light: oklch(0.97 0.0029 264.54);
   --color-light-50: oklch(0.98 0.0045 258.32);
   --color-light-100: oklch(0.97 0.0017 247.84);
   --color-light-200: oklch(0.89 0.0101 267.35);
   --color-light-border: oklch(0.89 0.0101 267.35);
+  --color-light-border-200: oklch(0.85 0.0035 247.86);
   --color-gray: oklch(0.61 0.0066 239.89);
   --color-gray-200: oklch(0.71 0.0125 264.49);
-  --color-light-border-200: oklch(0.85 0.0035 247.86);
   --color-whatsapp: oklch(0.76 0.2015 149.74);
   --color-gradient-start: var(--color-primary);
   --color-gradient-end: oklch(0.6 0.2655 304.98);
+  --color-purple: oklch(0.79 0.1041 274.71);
+  --color-skyblue: oklch(0.83 0.1013 230.32);
+  --animate-spin-slow: spin-slow 120s linear infinite;
+  --animate-typewriter: typewriter 1.5s steps(20) 1s 1 normal both;
+  --shadow-on-top: 0px -20px 40px -20px transparent;
+
+  @keyframes spin-slow {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 179.53px;
+    }
+  }
+}
+
+:root {
+  @apply font-figtree;
+  @apply text-gray;
+  @apply text-base;
+  @apply antialiased;
 }
