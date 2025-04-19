@@ -30,6 +30,7 @@
   --animate-spin-slow: spin-slow 120s linear infinite;
   --animate-typewriter: typewriter 1.5s steps(20) 1s 1 normal both;
   --shadow-on-top: 0px -20px 40px -20px transparent;
+  --font-xxs: 10px;
 
   @keyframes spin-slow {
     to {
