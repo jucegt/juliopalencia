@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { cn } from '../utilities/cn';
+
   export let variant: 'primary' | 'secondary' = 'primary';
   export let href: string | null = null;
 
@@ -11,11 +13,11 @@
 </script>
 
 {#if href}
-  <a {href} class={classes[variant]} {...$$restProps}>
+  <a {href} {...$$restProps} class={cn(classes[variant], $$restProps.class)} role="button">
     <slot />
   </a>
 {:else}
-  <button class={classes[variant]} {...$$restProps}>
+  <button {...$$restProps} class={cn(classes[variant], $$restProps.class)}>
     <slot />
   </button>
 {/if}
