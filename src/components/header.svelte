@@ -18,6 +18,7 @@
       isAfterPosition = window.scrollY > LIMIT;
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   });
@@ -25,8 +26,8 @@
 
 <header
   class={cn(
-    "before:content-'' before:bg-light/80 dark:before:bg-dark/80 sticky top-0 z-50 before:absolute before:inset-0 before:opacity-0 before:backdrop-blur-sm before:transition",
-    isAfterPosition && 'before:opacity-100'
+    "before:content-'' before:bg-light/80 dark:before:bg-dark/80 sticky top-0 z-50 before:absolute before:inset-0 before:-translate-y-full before:backdrop-blur-sm before:transition",
+    isAfterPosition && 'before:translate-0'
   )}
 >
   <Container class="flex w-full items-center justify-between py-4 md:py-8">
