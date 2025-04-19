@@ -8,8 +8,8 @@
   import Right from './header/right.svelte';
   import { cn } from '../utilities/cn';
 
-  const SCROLL_LIMIT = 140;
-  const SCROLL_LIMIT_MOBILE = 70;
+  const SCROLL_LIMIT = 100;
+  const SCROLL_LIMIT_MOBILE = 50;
   let isAfterPosition = $state(false);
 
   $effect(() => {
