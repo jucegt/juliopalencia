@@ -12,6 +12,7 @@
   --font-onest: 'Onest Variable', ui-sans-serif, system-ui;
   --color-primary: oklch(0.56 0.1361 249.13);
   --color-dark: oklch(0.25 0.0104 229.36);
+  --color-dark-100: oklch(0.24 0.009 208.75);
   --color-dark-200: oklch(0.36 0.0145 252.28);
   --color-dark-border-200: oklch(0.36 0.0088 219.72);
   --color-light: oklch(0.97 0.0029 264.54);
