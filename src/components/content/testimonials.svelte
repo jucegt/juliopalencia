@@ -31,17 +31,17 @@
 </script>
 
 <div class="overflow-hidden">
-  <Container as="section" class="flex flex-col">
-    <Header badge="Testimonials" title="Client stories">
+  <Container as="section" class="flex flex-col" aria-labelledby="testimonials-heading">
+    <Header badge="Testimonials" title="Client stories" id="testimonials-heading">
       Real people, real businesses. These are just a few of the things they’ve said
       <br class="hidden md:block" />
       after working with me › <ShinyText
         >clear process, real results, and ongoing support.</ShinyText
       >
     </Header>
-    <Carousel>
+    <Carousel role="list">
       {#each testimonials as { testimonial, id, ...rest } (id)}
-        <Testimonial {...rest}>{testimonial}</Testimonial>
+        <Testimonial role="listitem" {...rest}>{testimonial}</Testimonial>
       {/each}
     </Carousel>
   </Container>
