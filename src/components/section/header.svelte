@@ -4,10 +4,11 @@
 
   export let badge: string | undefined = undefined;
   export let title: string | undefined = undefined;
+  export let id: string | undefined = undefined;
 </script>
 
 {#if badge}
-  <Badge class="mb-4 md:mx-auto">{badge}</Badge>
+  <Badge class="mb-4 md:mx-auto" {id}>{badge}</Badge>
 {/if}
 {#if title}
   <Title>{title}</Title>
