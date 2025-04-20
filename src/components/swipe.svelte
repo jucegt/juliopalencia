@@ -12,7 +12,7 @@
 >
   Swipe to see more
   <span
-    class="before:content-'' before:animate-swipe-dot before:bg-light-200 relative ml-2 origin-bottom before:invisible before:absolute before:top-0 before:left-[15px] before:h-[6px] before:w-[6px] before:rounded-full"
+    class="before:content-'' before:animate-swipe-dot before:bg-primary/50 relative ml-2 origin-bottom before:invisible before:absolute before:top-0 before:left-[15px] before:h-[6px] before:w-[6px] before:rounded-full"
   >
     <Hand class="animate-swipe-hand relative" size={24} strokeWidth={2} />
   </span>
