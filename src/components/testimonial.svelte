@@ -3,10 +3,12 @@
 
   export let name: string | undefined;
   export let business: string | undefined;
+  export let role: string | undefined = undefined;
 </script>
 
 <article
   class="bg-light-100 border-light-200 flex shrink-0 grow-0 basis-full flex-col gap-4 rounded-2xl border p-6 select-none sm:basis-sm md:p-8 xl:shrink-1 xl:grow-1 xl:basis-0"
+  {role}
 >
   <blockquote class="text-base font-bold"><slot /></blockquote>
   {#if name || business}
@@ -24,6 +26,7 @@
           class="text-primary shrink-0 grow-0 basis-[24px] text-base"
           size="24"
           strokeWidth="2"
+          aria-hidden="true"
         />
       </div>
     </footer>
