@@ -29,6 +29,8 @@
   --color-skyblue: oklch(0.83 0.1013 230.32);
   --animate-spin-slow: spin-slow 120s linear infinite;
   --animate-typewriter: typewriter 1.5s steps(20) 1s 1 normal both;
+  --animate-swipe-dot: swipe-dot 2s 0.5s infinite cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-swipe-hand: swipe-hand 2s infinite cubic-bezier(0.16, 1, 0.3, 1);
   --shadow-on-top: 0px -20px 40px -20px transparent;
   --font-xxs: 10px;
 
@@ -43,6 +45,33 @@
     }
     to {
       width: 179.53px;
+    }
+  }
+
+  @keyframes swipe-hand {
+    25% {
+      transform: translate(6px) rotate(30deg);
+    }
+    50% {
+      transform: translate(-6px) rotate(-15deg);
+    }
+    100% {
+      transform: translate(0px) rotate(0);
+    }
+  }
+
+  @keyframes swipe-dot {
+    12% {
+      visibility: visible;
+      width: 16px;
+    }
+    25% {
+      visibility: visible;
+      transform: translateX(-17px);
+      width: 6px;
+    }
+    26% {
+      visibility: hidden;
     }
   }
 }
