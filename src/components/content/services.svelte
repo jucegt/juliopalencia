@@ -4,8 +4,8 @@
   import ShinyText from '../shiny-text.svelte';
 </script>
 
-<Container as="section" class="my-24 flex flex-col md:my-48">
-  <Header badge="Services" title="What I offer">
+<Container as="section" class="my-24 flex flex-col md:my-48" aria-labelledby="services-heading">
+  <Header badge="Services" title="What I offer" id="services-heading">
     Here are the services I offer to help your business get online, automate tasks, or simply run
     more efficiently. Each one is designed to give you peace of mind ›
     <ShinyText>no technical knowledge required.</ShinyText>
