@@ -13,7 +13,7 @@
       <div class="aspect-square w-[14px] rounded-full bg-green-400"></div>
     </div>
     <div
-      class="font-figtree text-dark dark:text-light bg-light dark:bg-dark border-light-border-200 dark:border-dark-border-200 ring-primary flex h-[36px] shrink-1 grow-1 basis-0 items-center justify-between rounded-sm border px-2 tracking-wider outline-0 transition focus-within:ring-2 md:justify-center"
+      class="font-figtree text-dark dark:text-light bg-light dark:bg-dark border-light-border-200 dark:border-dark-border-200 ring-primary flex h-[36px] shrink-1 grow-1 basis-0 items-center justify-between rounded-sm border px-2 tracking-wider transition md:justify-center"
       role="textbox"
       aria-readonly="true"
     >
