@@ -8,7 +8,7 @@
   {...$$restProps}
   role="img"
   class={cn(
-    'mx-4 aspect-square w-37 bg-cover opacity-25',
+    'aspect-square w-37 bg-cover opacity-25 md:mx-4',
     `dark:logo-${id}`,
     `logo-${id}`,
     $$restProps.class
