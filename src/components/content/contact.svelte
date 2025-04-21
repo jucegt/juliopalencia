@@ -3,8 +3,8 @@
   import Container from '../container.svelte';
   import Header from '../section/header.svelte';
   import ShinyText from '../shiny-text.svelte';
-  import Testimonial from '../testimonial.svelte';
-  import TrustedBullet from '../trusted-bullet.svelte';
+  import Testimonial from '../section/testimonial.svelte';
+  import TrustedBullet from '../section/trusted-bullet.svelte';
 </script>
 
 <Container as="section" class="my-24 flex flex-col md:my-48" aria-labelledby="contact-heading">

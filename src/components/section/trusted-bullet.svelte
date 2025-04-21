@@ -1,5 +1,5 @@
 <script>
-  import { cn } from '../utilities/cn';
+  import { cn } from '../../utilities/cn';
 </script>
 
 <p
