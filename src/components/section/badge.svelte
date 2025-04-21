@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { cn } from '../utilities/cn';
+  import { cn } from '../../utilities/cn';
 
   export let as: keyof HTMLElementTagNameMap = 'h1';
 </script>
