@@ -32,6 +32,7 @@
   --animate-typewriter: typewriter 1.5s steps(20) 1s 1 normal both;
   --animate-swipe-dot: swipe-dot 2s 0.5s infinite cubic-bezier(0.16, 1, 0.3, 1);
   --animate-swipe-hand: swipe-hand 2s infinite cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slide: slide 30s linear infinite;
   --shadow-on-top: 0px -20px 40px -20px transparent;
   --font-xxs: 10px;
 
@@ -74,6 +75,76 @@
     26% {
       visibility: hidden;
     }
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@layer utilities {
+  .logo-cocacola {
+    background-image: url('/logos/dark-coca-cola.png');
+  }
+  .dark:logo-cocacola {
+    background-image: url('/logos/light-coca-cola.png');
+  }
+  .logo-jeep {
+    background-image: url('/logos/dark-jeep.png');
+  }
+  .dark:logo-jeep {
+    background-image: url('/logos/light-jeep.png');
+  }
+  .logo-mercedesbenz {
+    background-image: url('/logos/dark-mercedes-benz.png');
+  }
+  .dark:logo-mercedesbenz {
+    background-image: url('/logos/light-mercedes-benz.png');
+  }
+  .logo-gallo {
+    background-image: url('/logos/dark-gallo.png');
+  }
+  .dark:logo-gallo {
+    background-image: url('/logos/light-gallo.png');
+  }
+  .logo-intecap {
+    background-image: url('/logos/dark-intecap.png');
+  }
+  .dark:logo-intecap {
+    background-image: url('/logos/light-intecap.png');
+  }
+  .logo-hyundai {
+    background-image: url('/logos/dark-hyundai.png');
+  }
+  .dark:logo-hyundai {
+    background-image: url('/logos/light-hyundai.png');
+  }
+  .logo-mcdonalds {
+    background-image: url('/logos/dark-mcdonalds.png');
+  }
+  .dark:logo-mcdonalds {
+    background-image: url('/logos/light-mcdonalds.png');
+  }
+  .logo-revlon {
+    background-image: url('/logos/dark-revlon.png');
+  }
+  .dark:logo-revlon {
+    background-image: url('/logos/light-revlon.png');
+  }
+  .logo-siman {
+    background-image: url('/logos/dark-siman.png');
+  }
+  .dark:logo-siman {
+    background-image: url('/logos/light-siman.png');
+  }
+
+  .paused-on-hover:hover {
+    animation-play-state: paused;
   }
 }
 
