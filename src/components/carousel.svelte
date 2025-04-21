@@ -1,7 +1,7 @@
 <script lang="ts">
   import { type EmblaOptionsType } from 'embla-carousel';
   import emblaCarouselSvelte from 'embla-carousel-svelte';
-  import Swipe from './swipe.svelte';
+  import Swipe from './section/swipe.svelte';
 
   export let role: string | undefined = undefined;
 

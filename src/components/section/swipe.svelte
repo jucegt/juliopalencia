@@ -1,6 +1,6 @@
 <script>
-  import Hand from '../svgs/hand.svelte';
-  import { cn } from '../utilities/cn';
+  import Hand from '../../svgs/hand.svelte';
+  import { cn } from '../../utilities/cn';
 </script>
 
 <p
