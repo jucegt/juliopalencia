@@ -3,7 +3,7 @@
   import Container from '../container.svelte';
   import Header from '../section/header.svelte';
   import ShinyText from '../shiny-text.svelte';
-  import Testimonial from '../testimonial.svelte';
+  import Testimonial from '../section/testimonial.svelte';
 
   const testimonials = [
     {
