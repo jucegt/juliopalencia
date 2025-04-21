@@ -3,7 +3,7 @@
   aria-hidden="true"
 >
   <div
-    class="animate-spin-slow relative h-[40dvw] w-[40dvw] sm:h-[50dvw] sm:w-[50dvw] xl:h-[60dvw] xl:w-[60dvw]"
+    class="animate-spin-slow relative h-[30dvw] w-[40dvw] sm:w-[50dvw] xl:h-[40dvw] xl:w-[60dvw]"
   >
     <div
       class="bg-purple absolute top-[40px] left-[70%] aspect-square w-[100px] rounded-full blur-[80px] sm:w-[180px] sm:blur-[110px] lg:w-xs lg:blur-[200px] dark:blur-[120px] sm:dark:blur-[165px] lg:dark:blur-[300px]"
