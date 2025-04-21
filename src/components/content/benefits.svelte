@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Container from '../container.svelte';
   import Header from '../section/header.svelte';
   import ShinyText from '../shiny-text.svelte';

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { cn } from '../../utilities/cn';
 </script>
 

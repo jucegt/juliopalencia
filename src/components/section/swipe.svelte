@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Hand from '../../svgs/hand.svelte';
   import { cn } from '../../utilities/cn';
 </script>

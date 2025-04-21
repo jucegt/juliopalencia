@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Benefits from '../components/content/benefits.svelte';
   import Contact from '../components/content/contact.svelte';
   import Experience from '../components/content/experience.svelte';

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Clock, MessageCircleMore, ShieldCheck } from '@lucide/svelte';
   import Container from '../container.svelte';
   import Header from '../section/header.svelte';

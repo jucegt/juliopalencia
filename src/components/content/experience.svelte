@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Container from '../container.svelte';
   import Logo from '../logo.svelte';
   import Header from '../section/header.svelte';

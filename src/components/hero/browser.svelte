@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { ChevronDown, Lock, MessageCircleMore, RotateCw } from '@lucide/svelte';
   import Button from '../button.svelte';
 </script>
