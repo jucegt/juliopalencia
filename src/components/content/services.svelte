@@ -16,7 +16,7 @@
   <div class="gap- flex flex-wrap items-center gap-8 lg:gap-16">
     <div class="shrink-0 grow-0 basis-full lg:basis-[46%] xl:basis-[28%]">
       <SmallTitle>
-        <Workflow class="text-primary" size="32" strokeWidth="2" /> How it works
+        <Workflow class="text-primary h-6 w-6 md:h-8 md:w-8" strokeWidth="2" /> How it works
       </SmallTitle>
       <Step before={1} class="mt-8">Tell me about your business</Step>
       <Step before={2} class="mt-4 md:mt-6">I plan and build a solution for you</Step>
