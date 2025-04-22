@@ -91,55 +91,55 @@
   .logo-cocacola {
     background-image: url('/logos/dark-coca-cola.png');
   }
-  .dark:logo-cocacola {
+  .dark\:logo-cocacola {
     background-image: url('/logos/light-coca-cola.png');
   }
   .logo-jeep {
     background-image: url('/logos/dark-jeep.png');
   }
-  .dark:logo-jeep {
+  .dark\:logo-jeep {
     background-image: url('/logos/light-jeep.png');
   }
   .logo-mercedesbenz {
     background-image: url('/logos/dark-mercedes-benz.png');
   }
-  .dark:logo-mercedesbenz {
+  .dark\:logo-mercedesbenz {
     background-image: url('/logos/light-mercedes-benz.png');
   }
   .logo-gallo {
     background-image: url('/logos/dark-gallo.png');
   }
-  .dark:logo-gallo {
+  .dark\:logo-gallo {
     background-image: url('/logos/light-gallo.png');
   }
   .logo-intecap {
     background-image: url('/logos/dark-intecap.png');
   }
-  .dark:logo-intecap {
+  .dark\:logo-intecap {
     background-image: url('/logos/light-intecap.png');
   }
   .logo-hyundai {
     background-image: url('/logos/dark-hyundai.png');
   }
-  .dark:logo-hyundai {
+  .dark\:logo-hyundai {
     background-image: url('/logos/light-hyundai.png');
   }
   .logo-mcdonalds {
     background-image: url('/logos/dark-mcdonalds.png');
   }
-  .dark:logo-mcdonalds {
+  .dark\:logo-mcdonalds {
     background-image: url('/logos/light-mcdonalds.png');
   }
   .logo-revlon {
     background-image: url('/logos/dark-revlon.png');
   }
-  .dark:logo-revlon {
+  .dark\:logo-revlon {
     background-image: url('/logos/light-revlon.png');
   }
   .logo-siman {
     background-image: url('/logos/dark-siman.png');
   }
-  .dark:logo-siman {
+  .dark\:logo-siman {
     background-image: url('/logos/light-siman.png');
   }
 
