@@ -16,7 +16,7 @@
       <div class="flex items-center justify-between gap-4">
         <div class="shrink-1 grow-1 basis-0">
           {#if name}
-            <p class="font-onest text-dark text-base font-bold">{name}</p>
+            <p class="font-onest text-dark dark:text-light text-base font-bold">{name}</p>
           {/if}
           {#if business}
             <p>{business}</p>
