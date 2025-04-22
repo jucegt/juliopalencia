@@ -30,8 +30,8 @@
   {/if}
   <article
     class={cn(
-      'border-light-200 bg-light-100 rounded-2xl border p-6 lg:rounded-4xl xl:p-16 2xl:px-20',
-      variant === 'recommended' && 'lg:shadow-sm'
+      'border-light-200 bg-light-100 dark:bg-dark-100 dark:border-dark-200 rounded-2xl border p-6 lg:rounded-4xl xl:p-16 2xl:px-20',
+      variant === 'recommended' && 'lg:shadow-sm dark:lg:shadow-none'
     )}
   >
     <div class="grid gap-x-8 gap-y-4 lg:auto-rows-auto lg:grid-cols-2 xl:gap-x-16">
@@ -39,8 +39,10 @@
         <SmallTitle class="mb-4">{name}</SmallTitle>
         <p class="my-4 sm:text-balance xl:text-wrap 2xl:text-balance">{description}</p>
         <p>
-          Starting at <strong class="text-dark font-onest text-xl font-bold">{formatedPrice}</strong
-          >
+          Starting at{' '}
+          <strong class="text-dark font-onest dark:text-light text-xl font-bold">
+            {formatedPrice}
+          </strong>
         </p>
       </div>
       <div class="order-3 mt-4 flex flex-col gap-4 lg:order-2 lg:col-start-1 lg:row-start-2">
@@ -48,12 +50,12 @@
       </div>
       <div class="order-2 lg:order-3 lg:col-start-2 lg:row-span-2 lg:row-start-1">
         <p class="mb-4 lg:mb-8">{text}</p>
-        <h4 class="text-dark font-onest mb-4 font-bold lg:mb-8">Includes:</h4>
+        <h4 class="text-dark font-onest dark:text-light mb-4 font-bold lg:mb-8">Includes:</h4>
         <ul class="flex flex-col gap-4 text-base/5">
           {#each list as item (item)}
             <li class="flex gap-4">
               <CircleCheck
-                class="text-dark shrink-0 grow-0 basis-[24px]"
+                class="text-dark dark:text-light shrink-0 grow-0 basis-[24px]"
                 size="20"
                 strokeWidth="2"
               />
