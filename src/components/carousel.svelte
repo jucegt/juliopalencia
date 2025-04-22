@@ -4,16 +4,17 @@
   import Swipe from './section/swipe.svelte';
 
   export let role: string | undefined = undefined;
+  export let breakpoints: Record<string, EmblaOptionsType> | null = {
+    '(min-width: 1280px)': {
+      active: false
+    }
+  };
 
   let params = {
     options: {
       align: 'center',
       slidesToScroll: 'auto',
-      breakpoints: {
-        '(min-width: 1280px)': {
-          active: false
-        }
-      }
+      breakpoints
     } as EmblaOptionsType,
     plugins: []
   };
