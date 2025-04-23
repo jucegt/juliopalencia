@@ -65,9 +65,9 @@
     more efficiently. Each one is designed to give you peace of mind ›
     <ShinyText>no technical knowledge required.</ShinyText>
   </Header>
-  <div class="gap- flex flex-wrap items-center gap-8 lg:gap-16">
+  <div class="flex flex-col flex-wrap gap-8 md:flex-row md:items-center lg:gap-16">
     <section
-      class="shrink-0 grow-0 basis-full md:basis-[40%] lg:basis-[32%] xl:basis-[28%]"
+      class="w-full md:shrink-0 md:grow-0 md:basis-[40%] lg:basis-[32%] xl:basis-[28%]"
       aria-labelledby="how-it-works-heading"
     >
       <SmallTitle id="how-it-works-heading">
@@ -85,7 +85,7 @@
         I’ll guide you
       </button>
     </section>
-    <div class="shrink-1 grow-1 basis-full md:basis-0">
+    <div class="w-full md:shrink-1 md:grow-1 md:basis-0">
       <div
         class="before:content-'' after:content-'' before:from-light before:to-light/0 after:from-light after:to-light/0 dark:before:from-dark dark:before:to-dark/0 dark:after:from-dark dark:after:to-dark/0 relative -mx-4 overflow-hidden px-4 before:absolute before:top-0 before:left-0 before:z-10 before:h-full before:w-4 before:bg-gradient-to-r after:absolute after:top-0 after:right-0 after:h-full after:w-4 after:bg-gradient-to-l lg:-mx-8 lg:px-8 lg:before:w-8 lg:after:w-8"
       >
