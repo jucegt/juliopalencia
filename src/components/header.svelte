@@ -26,11 +26,11 @@
 
 <header
   class={cn(
-    "before:content-'' before:bg-light/80 dark:before:bg-dark/80 sticky top-0 z-50 before:absolute before:inset-0 before:-translate-y-full before:backdrop-blur-sm before:transition",
+    "before:content-'' before:bg-light/80 dark:before:bg-dark/80 before:border-light-200 dark:before:border-dark-200 sticky top-0 z-50 before:absolute before:inset-0 before:-translate-y-full before:border before:backdrop-blur-sm before:transition",
     isAfterPosition && 'before:translate-0'
   )}
 >
-  <Container class="flex w-full items-center justify-between py-4 md:py-8">
+  <Container class="flex w-full items-center justify-between py-4 md:py-6">
     <Logo />
     <Nav />
     <Right>
