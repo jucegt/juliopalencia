@@ -15,8 +15,8 @@
 
   const classes = {
     recommended:
-      'bg-gradient-to-r from-gradient-start to-gradient-end rounded-2xl lg:px-2 lg:pb-2 lg:rounded-[38px] grow-0 basis-full shrink-0 select-none',
-    default: 'pt-8 lg:px-2 lg:pb-2 grow-0 basis-full shrink-0 select-none'
+      'bg-gradient-to-r from-gradient-start to-gradient-end rounded-2xl lg:px-2 lg:pb-2 lg:rounded-[38px] grow-0 basis-full shrink-0 select-none h-fit',
+    default: 'pt-8 lg:px-2 lg:pb-2 grow-0 basis-full shrink-0 select-none h-fit'
   };
 </script>
 
