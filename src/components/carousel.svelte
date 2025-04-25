@@ -1,6 +1,8 @@
 <script lang="ts">
   import { type EmblaOptionsType } from 'embla-carousel';
   import emblaCarouselSvelte from 'embla-carousel-svelte';
+  import AutoHeight from 'embla-carousel-auto-height';
+
   import Swipe from './section/swipe.svelte';
 
   export let role: string | undefined = undefined;
@@ -16,7 +18,7 @@
       slidesToScroll: 'auto',
       breakpoints
     } as EmblaOptionsType,
-    plugins: []
+    plugins: [AutoHeight()]
   };
 </script>
 
