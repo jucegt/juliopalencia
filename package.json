@@ -29,6 +29,7 @@
     "@tailwindcss/typography": "^0.5.15",
     "@tailwindcss/vite": "^4.0.0",
     "clsx": "^2.1.1",
+    "embla-carousel-auto-height": "^8.6.0",
     "embla-carousel-svelte": "^8.6.0",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
