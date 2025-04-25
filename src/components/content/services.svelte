@@ -1,5 +1,16 @@
 <script lang="ts">
-  import { Compass, FileText, Workflow, Wrench, Hammer, HelpCircle } from '@lucide/svelte';
+  import {
+    Compass,
+    FileText,
+    Workflow,
+    Wrench,
+    Hammer,
+    HelpCircle,
+    CircleEllipsis,
+    CalendarCheck,
+    Speech,
+    ClipboardList
+  } from '@lucide/svelte';
   import Container from '../container.svelte';
   import Header from '../section/header.svelte';
   import SmallTitle from '../section/small-title.svelte';
@@ -55,6 +66,51 @@
           href: '#contact'
         }
       }
+    },
+    {
+      name: 'Website Maintenance Plan',
+      description:
+        'I keep your site updated, backed up and running smoothly, while you focus on your business.',
+      price: 40,
+      text: 'I take care of it, so you don’t have to',
+      list: ['Small edits or updates', 'Monthly checkups', 'Backups', 'Quick response'],
+      buttons: {
+        primary: {
+          text: 'Start plan',
+          icon: ClipboardList,
+          href: '#contact'
+        },
+        secondary: {
+          text: 'Get info',
+          icon: CircleEllipsis,
+          href: '#contact'
+        }
+      }
+    },
+    {
+      name: 'Digital Guidance',
+      description:
+        'Let’s talk and I’ll tell you what makes the most sense for your business › no tech talk.',
+      price: 55,
+      text: 'Not sure where to start? I’ll help you',
+      list: [
+        '1:1 video call',
+        'Simple, honest advice',
+        'Action plan made for you',
+        'Recap in writing'
+      ],
+      buttons: {
+        primary: {
+          text: 'Book a session',
+          icon: CalendarCheck,
+          href: '#contact'
+        },
+        secondary: {
+          text: 'Let’s chat first',
+          icon: Speech,
+          href: '#contact'
+        }
+      }
     }
   ];
 </script>
@@ -65,9 +121,9 @@
     more efficiently. Each one is designed to give you peace of mind ›
     <ShinyText>no technical knowledge required.</ShinyText>
   </Header>
-  <div class="flex flex-col flex-wrap gap-8 md:flex-row md:items-center lg:gap-16">
+  <div class="flex flex-col gap-8 md:flex-row md:items-center lg:gap-16">
     <section
-      class="w-full md:shrink-0 md:grow-0 md:basis-[40%] lg:basis-[32%] xl:basis-[28%]"
+      class="md:shrink-0 md:grow-0 md:basis-[40%] lg:basis-[32%] xl:basis-[28%]"
       aria-labelledby="how-it-works-heading"
     >
       <SmallTitle id="how-it-works-heading">
@@ -85,7 +141,7 @@
         I’ll guide you
       </button>
     </section>
-    <div class="w-full md:shrink-1 md:grow-1 md:basis-0">
+    <div class="min-w-0 md:grow md:basis-0">
       <div
         class="before:content-'' after:content-'' before:from-light before:to-light/0 after:from-light after:to-light/0 dark:before:from-dark dark:before:to-dark/0 dark:after:from-dark dark:after:to-dark/0 relative -mx-4 overflow-hidden px-4 before:absolute before:top-0 before:left-0 before:z-10 before:h-full before:w-4 before:bg-gradient-to-r after:absolute after:top-0 after:right-0 after:h-full after:w-4 after:bg-gradient-to-l lg:-mx-8 lg:px-8 lg:before:w-8 lg:after:w-8"
       >
