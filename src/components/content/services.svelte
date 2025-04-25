@@ -9,7 +9,9 @@
     CircleEllipsis,
     CalendarCheck,
     Speech,
-    ClipboardList
+    ClipboardList,
+    BotMessageSquare,
+    Eye
   } from '@lucide/svelte';
   import Container from '../container.svelte';
   import Header from '../section/header.svelte';
@@ -108,6 +110,31 @@
         secondary: {
           text: 'Let’s chat first',
           icon: Speech,
+          href: '#contact'
+        }
+      }
+    },
+    {
+      name: 'WhatsApp Automation',
+      description:
+        'Want your website to automatically send WhatsApp messages? Whether it’s after an order, question, or signup › your client gets a helpful reply, without you needing to do anything in real time.',
+      price: 150,
+      text: 'Your business replies › even when you’re offline',
+      list: [
+        'Integrated with your site or form',
+        'Personalized messages with interactive buttons',
+        'Setup and testing',
+        'Simple walkthrough so you’re in control'
+      ],
+      buttons: {
+        primary: {
+          text: 'Automate now',
+          icon: BotMessageSquare,
+          href: '#contact'
+        },
+        secondary: {
+          text: 'See it live',
+          icon: Eye,
           href: '#contact'
         }
       }
