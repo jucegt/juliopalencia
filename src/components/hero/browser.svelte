@@ -1,39 +1,7 @@
 <script lang="ts">
   import { ChevronDown, Lock, MessageCircleMore, RotateCw } from '@lucide/svelte';
   import Button from '../button.svelte';
-  import { writable } from 'svelte/store';
-
-  const texts: string[] = ['www.yourbusiness.com', 'www.yourbrand.com', 'www.youridea.com'];
-
-  const typingSpeed = 100;
-  const deletingSpeed = 50;
-  const delayBetweenWords = 5000;
-
-  const text = writable('');
-
-  const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
-  (async () => {
-    let index = 0;
-
-    while (true) {
-      const currentText = texts[index % texts.length];
-
-      for (let i = 1; i <= currentText.length; i++) {
-        text.set(currentText.slice(0, i));
-        await wait(typingSpeed);
-      }
-      await wait(delayBetweenWords);
-
-      for (let i = currentText.length; i >= 0; i--) {
-        text.set(currentText.slice(0, i));
-        await wait(deletingSpeed);
-      }
-      await wait(500);
-
-      index++;
-    }
-  })();
+  import TypingText from '../typing-text.svelte';
 </script>
 
 <div
@@ -50,11 +18,7 @@
       aria-readonly="true"
     >
       <Lock size="18" strokeWidth="2" class="text-gray md:hidden" />
-      <span
-        class="animate-blink overflow-hidden border-r border-[currentColor] text-base/4 text-nowrap whitespace-nowrap"
-      >
-        {$text}
-      </span>
+      <TypingText texts={['www.yourbusiness.com', 'www.yourbrand.com', 'www.youridea.com']} />
       <RotateCw size="18" strokeWidth="2" class="text-gray md:hidden" />
     </div>
     <div
