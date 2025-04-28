@@ -29,27 +29,27 @@
   --color-purple: oklch(0.79 0.1041 274.71);
   --color-skyblue: oklch(0.83 0.1013 230.32);
   --animate-spin-slow: spin-slow 120s linear infinite;
-  --animate-typewriter: typewriter 1.5s steps(20) 1s 1 normal both;
+  --animate-blink: blink 1s step-end infinite;
   --animate-swipe-dot: swipe-dot 2s 0.5s infinite cubic-bezier(0.16, 1, 0.3, 1);
   --animate-swipe-hand: swipe-hand 2s infinite cubic-bezier(0.16, 1, 0.3, 1);
   --animate-slide: slide 30s linear infinite;
   --shadow-on-top: 0px -20px 40px -20px transparent;
   --font-xxs: 10px;
 
+  @keyframes blink {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: currentColor;
+    }
+  }
   @keyframes spin-slow {
     to {
       transform: rotate(360deg);
     }
   }
-  @keyframes typewriter {
-    from {
-      width: 0;
-    }
-    to {
-      width: 179.53px;
-    }
-  }
-
   @keyframes swipe-hand {
     25% {
       transform: translate(6px) rotate(30deg);
