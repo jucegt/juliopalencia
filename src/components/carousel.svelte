@@ -23,7 +23,7 @@
 </script>
 
 <div use:emblaCarouselSvelte={params}>
-  <div class="flex items-center gap-x-8" {role}>
+  <div class="flex items-center gap-x-8 transition-[height] ease-in-out" {role}>
     <slot />
   </div>
 </div>
