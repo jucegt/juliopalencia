@@ -1,6 +1,39 @@
 <script lang="ts">
   import { ChevronDown, Lock, MessageCircleMore, RotateCw } from '@lucide/svelte';
   import Button from '../button.svelte';
+  import { writable } from 'svelte/store';
+
+  const texts: string[] = ['www.yourbusiness.com', 'www.yourbrand.com', 'www.youridea.com'];
+
+  const typingSpeed = 100;
+  const deletingSpeed = 50;
+  const delayBetweenWords = 5000;
+
+  const text = writable('');
+
+  const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+  (async () => {
+    let index = 0;
+
+    while (true) {
+      const currentText = texts[index % texts.length];
+
+      for (let i = 1; i <= currentText.length; i++) {
+        text.set(currentText.slice(0, i));
+        await wait(typingSpeed);
+      }
+      await wait(delayBetweenWords);
+
+      for (let i = currentText.length; i >= 0; i--) {
+        text.set(currentText.slice(0, i));
+        await wait(deletingSpeed);
+      }
+      await wait(500);
+
+      index++;
+    }
+  })();
 </script>
 
 <div
@@ -14,12 +47,13 @@
     </div>
     <div
       class="font-figtree text-dark dark:text-light bg-light dark:bg-dark border-light-border-200 dark:border-dark-border-200 ring-primary flex h-[36px] shrink-1 grow-1 basis-0 items-center justify-between rounded-sm border px-2 tracking-wider transition md:justify-center"
-      role="textbox"
       aria-readonly="true"
     >
       <Lock size="18" strokeWidth="2" class="text-gray md:hidden" />
-      <span class="animate-typewriter overflow-hidden text-nowrap whitespace-nowrap">
-        www.youbusiness.com
+      <span
+        class="animate-blink overflow-hidden border-r border-[currentColor] text-base/4 text-nowrap whitespace-nowrap"
+      >
+        {$text}
       </span>
       <RotateCw size="18" strokeWidth="2" class="text-gray md:hidden" />
     </div>
