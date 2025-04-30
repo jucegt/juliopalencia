@@ -24,7 +24,11 @@ export const config: Config = {
       key: 'hero',
       loader: async () => (await import('./en/hero.json')).default
     },
-
+    {
+      locale: 'en',
+      key: 'benefits',
+      loader: async () => (await import('./en/benefits.json')).default
+    },
     {
       locale: 'es',
       key: 'nav',
@@ -39,6 +43,11 @@ export const config: Config = {
       locale: 'es',
       key: 'hero',
       loader: async () => (await import('./es/hero.json')).default
+    },
+    {
+      locale: 'es',
+      key: 'benefits',
+      loader: async () => (await import('./es/benefits.json')).default
     }
   ]
 };
