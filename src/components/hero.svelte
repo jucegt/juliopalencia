@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { t } from '../i18n/config';
   import Container from './container.svelte';
   import Browser from './hero/browser.svelte';
   import Glow from './hero/glow.svelte';
@@ -9,13 +10,15 @@
 
 <Glow />
 <Container as="main" class="relative" role="main">
-  <Text class="mt-16 mb-16 lg:mt-32">Got a business? You’re in the right place.</Text>
+  <Text class="mt-16 mb-16 lg:mt-32">{$t('hero.text')}</Text>
   <Title class="my-16">
-    Your <strong class="text-dark dark:text-light font-black">business</strong> deserves a
-    <ShinyText as="strong" class="font-black">professional website</ShinyText>
+    {$t('hero.title.start')}
+    <strong class="text-dark dark:text-light font-black">{$t('hero.title.highlighted')}</strong>
+    {$t('hero.title.middle')}
+    <ShinyText as="strong" class="font-black">{$t('hero.title.shiny')}</ShinyText>
   </Title>
   <Text class="my-16 text-balance">
-    I build websites that help small businesses look professional and get more customers online.
+    {$t('hero.subtitle')}
   </Text>
   <Browser />
 </Container>

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { ChevronDown, Lock, MessageCircleMore, RotateCw } from '@lucide/svelte';
+  import { t } from '../../i18n/config';
   import Button from '../button.svelte';
   import TypingText from '../typing-text.svelte';
 </script>
@@ -18,7 +19,9 @@
       aria-readonly="true"
     >
       <Lock size="18" strokeWidth="2" class="text-gray md:hidden" />
-      <TypingText texts={['www.yourbusiness.com', 'www.yourbrand.com', 'www.youridea.com']} />
+      <TypingText
+        texts={[$t('hero.domains.one'), $t('hero.domains.two'), $t('hero.domains.three')]}
+      />
       <RotateCw size="18" strokeWidth="2" class="text-gray md:hidden" />
     </div>
     <div
@@ -27,7 +30,7 @@
     ></div>
   </div>
   <Button class="my-16 md:text-xl" href="#contact" variant="primary">
-    <span class="z-10">Talk to me now</span>
+    <span class="z-10">{$t('hero.cta')}</span>
     <MessageCircleMore
       aria-hidden="true"
       size="24"
