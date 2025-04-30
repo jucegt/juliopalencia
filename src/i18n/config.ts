@@ -15,9 +15,19 @@ export const config: Config = {
       loader: async () => (await import('./en/nav.json')).default
     },
     {
+      locale: 'en',
+      key: 'header',
+      loader: async () => (await import('./en/header.json')).default
+    },
+    {
       locale: 'es',
       key: 'nav',
       loader: async () => (await import('./es/nav.json')).default
+    },
+    {
+      locale: 'es',
+      key: 'header',
+      loader: async () => (await import('./es/header.json')).default
     }
   ]
 };
