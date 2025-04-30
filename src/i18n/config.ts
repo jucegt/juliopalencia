@@ -30,6 +30,11 @@ export const config: Config = {
       loader: async () => (await import('./en/benefits.json')).default
     },
     {
+      locale: 'en',
+      key: 'experience',
+      loader: async () => (await import('./en/experience.json')).default
+    },
+    {
       locale: 'es',
       key: 'nav',
       loader: async () => (await import('./es/nav.json')).default
@@ -48,6 +53,11 @@ export const config: Config = {
       locale: 'es',
       key: 'benefits',
       loader: async () => (await import('./es/benefits.json')).default
+    },
+    {
+      locale: 'es',
+      key: 'experience',
+      loader: async () => (await import('./es/experience.json')).default
     }
   ]
 };
