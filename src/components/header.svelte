@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Mail } from '@lucide/svelte';
 
+  import { t } from '../i18n/config';
   import Button from './button.svelte';
   import Container from './container.svelte';
   import Logo from './header/logo.svelte';
@@ -42,7 +43,8 @@
           aria-hidden="true"
         />
         <span class="z-10">
-          Let’s talk <span class="hidden md:inline">about your website</span>
+          {$t('header.button.small')}
+          <span class="hidden md:inline">{$t('header.button.extended')}</span>
         </span>
       </Button>
     </Right>
