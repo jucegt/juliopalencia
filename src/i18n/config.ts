@@ -20,6 +20,12 @@ export const config: Config = {
       loader: async () => (await import('./en/header.json')).default
     },
     {
+      locale: 'en',
+      key: 'hero',
+      loader: async () => (await import('./en/hero.json')).default
+    },
+
+    {
       locale: 'es',
       key: 'nav',
       loader: async () => (await import('./es/nav.json')).default
@@ -28,6 +34,11 @@ export const config: Config = {
       locale: 'es',
       key: 'header',
       loader: async () => (await import('./es/header.json')).default
+    },
+    {
+      locale: 'es',
+      key: 'hero',
+      loader: async () => (await import('./es/hero.json')).default
     }
   ]
 };
