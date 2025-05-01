@@ -217,7 +217,7 @@ const services = {
           href: '#contact'
         },
         secondary: {
-          text: '¿Dudas? Escribime',
+          text: '¿Dudas? Hablemos',
           icon: Speech,
           href: '#contact'
         }
