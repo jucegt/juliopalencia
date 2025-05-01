@@ -16,7 +16,7 @@ export function formatCurrency(amount: number, currency: Currency = 'USD'): stri
   }
 
   if (currency === 'GTQ') {
-    return formatted.replace('Q', 'GTQ ');
+    return formatted.replace('Q', 'GTQ');
   }
 
   return formatted;
