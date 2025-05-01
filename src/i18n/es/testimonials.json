@@ -1,0 +1,25 @@
+{
+  "title": "Testimonios",
+  "subtitle": "Lo que cuentan mis clientes",
+  "description": {
+    "text": "Personas reales, negocios reales. Ellos confiaron en mí para crear su sitio web y esto fue lo que experimentaron ›",
+    "shiny": "claridad, resultados y acompañamiento."
+  },
+  "testimonials": [
+    {
+      "name": "Carolina",
+      "business": "Emprendedora",
+      "text": "“No sabía nada de páginas web y él me explicó todo clarito. Me sentí acompañada desde el primer día.”"
+    },
+    {
+      "name": "Luis",
+      "business": "Dueño de negocio local",
+      "text": "“Solo le conté qué necesitaba y él se encargó de todo. Ahora la gente me escribe desde el sitio.”"
+    },
+    {
+      "name": "Andrea",
+      "business": "Tienda de productos naturales",
+      "text": "“Me gustó que no me llenó de cosas técnicas. Fue directo, claro y cumplió con lo que prometió.”"
+    }
+  ]
+}
