@@ -39,7 +39,7 @@
         >clear process, real results, and ongoing support.</ShinyText
       >
     </Header>
-    <Carousel role="list">
+    <Carousel role="list" id="testimonials-carousel">
       {#each testimonials as { testimonial, id, ...rest } (id)}
         <Testimonial role="listitem" {...rest}>{testimonial}</Testimonial>
       {/each}
