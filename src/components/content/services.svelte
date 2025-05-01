@@ -21,6 +21,12 @@
   import Service from '../section/service.svelte';
   import Button from '../button.svelte';
   import Carousel from '../carousel.svelte';
+  import { carousels } from '../../stores/services';
+
+  function scrollTo(index: number) {
+    const embla = carousels.getInstance('services-carousel');
+    embla?.scrollTo(index);
+  }
 
   const services = [
     {
@@ -162,6 +168,7 @@
       <Step before={4} class="mt-4 md:mt-6">We launch or implement it!</Step>
       <button
         class="focus-visible:ring-primary ring-primary mt-8 flex cursor-pointer flex-wrap items-center gap-x-4 gap-y-2 rounded-md p-1 focus:outline-none focus-visible:ring-2"
+        on:click={() => scrollTo(3)}
       >
         <Compass size="24" strokeWidth="2" class="text-primary" />
         <ShinyText>Not sure where to start?</ShinyText>
@@ -172,7 +179,7 @@
       <div
         class="before:content-'' after:content-'' before:from-light before:to-light/0 after:from-light after:to-light/0 dark:before:from-dark dark:before:to-dark/0 dark:after:from-dark dark:after:to-dark/0 relative -mx-4 overflow-hidden px-4 before:absolute before:top-0 before:left-0 before:z-10 before:h-full before:w-4 before:bg-gradient-to-r after:absolute after:top-0 after:right-0 after:h-full after:w-4 after:bg-gradient-to-l lg:-mx-8 lg:px-8 lg:before:w-8 lg:after:w-8"
       >
-        <Carousel breakpoints={null} role="list">
+        <Carousel breakpoints={null} role="list" id="services-carousel">
           {#each services as { buttons, ...rest } (rest.name)}
             <Service {...rest}>
               <Button class="w-fit" variant="primary" href={buttons.primary.href}>
