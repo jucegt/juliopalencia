@@ -1,6 +1,5 @@
 <script lang="ts">
-  export let size: number = 24;
-  export let strokeWidth: number = 1.5;
+  let { size = 24, strokeWidth = 1.5, ...restProps } = $props();
 </script>
 
 <svg
@@ -9,7 +8,7 @@
   viewBox="0 0 24 24"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
-  {...$$restProps}
+  {...restProps}
 >
   <path
     d="M8.00001 14.5715L6.17717 12.8355C5.53523 12.2241 4.5133 12.2706 3.92954 12.9378C3.40197 13.5407 3.4175 14.4454 3.96545 15.0299L9.9074 21.368C10.2855 21.7713 10.8127 22.0001 11.3655 22.0001C12.4505 22.0001 14.2343 22.0001 16 22.0001C18.4 22.0001 20 20.0001 20 18.0001C20 18.0001 20 11.143 20 9.42871"
