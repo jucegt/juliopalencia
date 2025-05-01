@@ -166,7 +166,7 @@ const services = {
       list: ['Diseño llamativo', 'Enlace a WhatsApp o compra', 'Rápida y adaptada a celular'],
       buttons: {
         primary: {
-          text: 'Quiero una página así',
+          text: 'Quiero una',
           icon: Hammer,
           href: '#contact'
         },
