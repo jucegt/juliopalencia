@@ -5,6 +5,7 @@
   import { cn } from '../../utilities/cn';
   import SmallTitle from './small-title.svelte';
   import { formatCurrency } from '../../utilities/format-currency';
+  import { smoothScroll } from '../../actions/smooth-scroll';
 
   export let variant: 'recommended' | 'default' = 'default';
   export let name: string = '';
@@ -24,7 +25,7 @@
   };
 </script>
 
-<div class={cn(classes[variant])} role="listitem">
+<div class={cn(classes[variant])} role="listitem" use:smoothScroll>
   {#if variant === 'recommended'}
     <p
       class="text-light font-onest flex items-center justify-center gap-2 py-2 text-xs font-bold uppercase"
