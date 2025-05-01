@@ -224,7 +224,7 @@ const services = {
     {
       name: 'Automatización con WhatsApp',
       description:
-        '¿Querés que tu sitio web envíe mensajes por WhatsApp automáticamente? Ya sea después de un pedido, consulta o registro, tus clientes reciben una respuesta clara y útil — sin que tengas que estar pendiente.',
+        '¿Querés que tu sitio web envíe mensajes por WhatsApp automáticamente? Ya sea después de un pedido, consulta o registro, tus clientes reciben una respuesta clara y útil › sin que tengas que estar pendiente.',
       price: 1200,
       text: 'Tu negocio responde solo, estés o no conectado',
       list: [
