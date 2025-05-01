@@ -1,13 +1,13 @@
 <script lang="ts">
   import { cn } from '../utilities/cn';
 
-  export let as: keyof HTMLElementTagNameMap = 'div';
+  let { as = 'div', children, ...restProps } = $props();
 </script>
 
 <svelte:element
   this={as}
-  {...$$restProps}
-  class={cn('container mx-auto px-4 lg:px-8', $$restProps.class)}
+  {...restProps}
+  class={cn('container mx-auto px-4 lg:px-8', restProps.class)}
 >
-  <slot />
+  {@render children()}
 </svelte:element>
