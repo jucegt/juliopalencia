@@ -4,22 +4,5 @@
   "description": {
     "text": "Real people, real businesses. These are just a few of the things they’ve said after working with me ›",
     "shiny": "clear process, real results, and ongoing support."
-  },
-  "testimonials": [
-    {
-      "name": "Carolina",
-      "business": "Small business owner",
-      "text": "“I had no idea how websites worked, but he explained everything step by step. Super helpful.”"
-    },
-    {
-      "name": "Luis",
-      "business": "Local business owner",
-      "text": "“I just told him what I needed, and he took care of the rest. Now customers contact me online.”"
-    },
-    {
-      "name": "Andrea",
-      "business": "Natural products shop",
-      "text": "“I liked that he didn’t overwhelm me with tech stuff. Straight to the point and delivered what he promised.”"
-    }
-  ]
+  }
 }
