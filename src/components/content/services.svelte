@@ -54,7 +54,7 @@
       >
         <Carousel breakpoints={null} role="list" id="services-carousel">
           {#each list as { buttons, ...rest } (rest.name)}
-            <Service {...rest} currency={lang === 'en' ? 'USD' : 'GTQ'}>
+            <Service {...rest} currency={lang === 'es' ? 'GTQ' : 'USD'}>
               <Button class="w-fit" variant="primary" href={buttons.primary.href}>
                 <span class="z-10">{buttons.primary.text}</span>
                 <buttons.primary.icon class="z-10" size="24" strokeWidth="2" />
