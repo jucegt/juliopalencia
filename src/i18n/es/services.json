@@ -1,0 +1,24 @@
+{
+  "title": "Servicios",
+  "subtitle": "Lo que te puedo ofrecer",
+  "description": {
+    "text": "Estos son los servicios que ofrezco para ayudarte a tener presencia en internet, automatizar procesos o simplemente hacer que tu negocio funcione mejor. Cada uno incluye lo necesario ›",
+    "shiny": "para que no tengas que preocuparte por lo técnico."
+  },
+  "steps": {
+    "title": "¿Cómo funciona?",
+    "one": "Conversamos sobre tu negocio",
+    "two": "Preparo una solución a tu medida",
+    "three": "Revisamos juntos y afinamos detalles",
+    "four": "Lo ponemos en marcha"
+  },
+  "button": {
+    "shiny": "¿No sabes por dónde empezar?",
+    "text": "Yo te guío"
+  },
+  "service": {
+    "recommended": "Recomendado",
+    "starting": "Desde",
+    "includes": "Incluye"
+  }
+}
