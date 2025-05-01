@@ -40,12 +40,12 @@
       <Step before={3} class="mt-4 md:mt-6">{$t('services.steps.three')}</Step>
       <Step before={4} class="mt-4 md:mt-6">{$t('services.steps.four')}</Step>
       <button
-        class="focus-visible:ring-primary ring-primary mt-8 flex cursor-pointer flex-wrap items-center gap-x-4 gap-y-2 rounded-md p-1 focus:outline-none focus-visible:ring-2"
+        class="focus-visible:ring-primary ring-primary text-primary mt-8 flex cursor-pointer flex-wrap items-center gap-x-4 gap-y-2 rounded-md p-1 hover:underline focus:outline-none focus-visible:ring-2"
         on:click={() => scrollTo(3)}
       >
         <Compass size="24" strokeWidth="2" class="text-primary" />
         <ShinyText>{$t('services.button.shiny')}</ShinyText>
-        {$t('services.button.text')}
+        <span class="text-gray">{$t('services.button.text')}</span>
       </button>
     </section>
     <div class="min-w-0 md:grow md:basis-0">
