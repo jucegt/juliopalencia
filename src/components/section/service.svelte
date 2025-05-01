@@ -10,6 +10,7 @@
   export let name: string = '';
   export let description: string = '';
   export let price: number = 0;
+  export let priceSuffix: string = '';
   export let text: string = '';
   export let list: string[] = [];
   export let currency: 'GTQ' | 'USD' = 'GTQ';
@@ -47,6 +48,11 @@
           <strong class="text-dark font-onest dark:text-light text-xl font-bold">
             {formatedPrice}
           </strong>
+          {#if priceSuffix}
+            <span class="text-gray font-onest text-base">
+              {priceSuffix}
+            </span>
+          {/if}
         </p>
       </div>
       <div class="order-3 mt-4 flex flex-col gap-4 lg:order-2 lg:col-start-1 lg:row-start-2">
