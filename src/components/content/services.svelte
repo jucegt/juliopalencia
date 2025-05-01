@@ -1,18 +1,6 @@
 <script lang="ts">
-  import {
-    Compass,
-    FileText,
-    Workflow,
-    Wrench,
-    Hammer,
-    HelpCircle,
-    CircleEllipsis,
-    CalendarCheck,
-    Speech,
-    ClipboardList,
-    BotMessageSquare,
-    Eye
-  } from '@lucide/svelte';
+  import { t, locale } from '../../i18n/config';
+  import { Compass, Workflow } from '@lucide/svelte';
   import Container from '../container.svelte';
   import Header from '../section/header.svelte';
   import SmallTitle from '../section/small-title.svelte';
@@ -22,137 +10,21 @@
   import Button from '../button.svelte';
   import Carousel from '../carousel.svelte';
   import { carousels } from '../../stores/services';
+  import services from '../../data/services';
 
   function scrollTo(index: number) {
     const embla = carousels.getInstance('services-carousel');
     embla?.scrollTo(index);
   }
 
-  const services = [
-    {
-      variant: 'recommended' as 'recommended',
-      name: 'Business Website',
-      description:
-        'A clear and modern website designed just for your business › no templates, no tech stress.',
-      price: 465,
-      text: 'Let more people find you',
-      list: [
-        'Custom design',
-        'Works on phones and computers',
-        'WhatsApp or contact form',
-        'Search-friendly'
-      ],
-      buttons: {
-        primary: {
-          text: 'I want my site',
-          icon: Wrench,
-          href: '#contact'
-        },
-        secondary: {
-          text: 'Request a quote',
-          icon: FileText,
-          href: '#contact'
-        }
-      }
-    },
-    {
-      name: 'Promotional Page',
-      description:
-        'A one-page website to highlight your offer and make it easy for customers to take action.',
-      price: 325,
-      text: 'Perfect for offers or new products',
-      list: ['Eye-catching design', 'WhatsApp or checkout button', 'Mobile-friendly and fast'],
-      buttons: {
-        primary: {
-          text: 'Let’s build one',
-          icon: Hammer,
-          href: '#contact'
-        },
-        secondary: {
-          text: 'Ask first',
-          icon: HelpCircle,
-          href: '#contact'
-        }
-      }
-    },
-    {
-      name: 'Website Maintenance Plan',
-      description:
-        'I keep your site updated, backed up and running smoothly, while you focus on your business.',
-      price: 40,
-      text: 'I take care of it, so you don’t have to',
-      list: ['Small edits or updates', 'Monthly checkups', 'Backups', 'Quick response'],
-      buttons: {
-        primary: {
-          text: 'Start plan',
-          icon: ClipboardList,
-          href: '#contact'
-        },
-        secondary: {
-          text: 'Get info',
-          icon: CircleEllipsis,
-          href: '#contact'
-        }
-      }
-    },
-    {
-      name: 'Digital Guidance',
-      description:
-        'Let’s talk and I’ll tell you what makes the most sense for your business › no tech talk.',
-      price: 55,
-      text: 'Not sure where to start? I’ll help you',
-      list: [
-        '1:1 video call',
-        'Simple, honest advice',
-        'Action plan made for you',
-        'Recap in writing'
-      ],
-      buttons: {
-        primary: {
-          text: 'Book a session',
-          icon: CalendarCheck,
-          href: '#contact'
-        },
-        secondary: {
-          text: 'Let’s chat first',
-          icon: Speech,
-          href: '#contact'
-        }
-      }
-    },
-    {
-      name: 'WhatsApp Automation',
-      description:
-        'Want your website to automatically send WhatsApp messages? Whether it’s after an order, question, or signup › your client gets a helpful reply, without you needing to do anything in real time.',
-      price: 150,
-      text: 'Your business replies › even when you’re offline',
-      list: [
-        'Integrated with your site or form',
-        'Personalized messages with interactive buttons',
-        'Setup and testing',
-        'Simple walkthrough so you’re in control'
-      ],
-      buttons: {
-        primary: {
-          text: 'Automate now',
-          icon: BotMessageSquare,
-          href: '#contact'
-        },
-        secondary: {
-          text: 'See it live',
-          icon: Eye,
-          href: '#contact'
-        }
-      }
-    }
-  ];
+  const lang = ($locale as 'en' | 'es') || 'es';
+  const list = services[lang];
 </script>
 
 <Container as="section" class="my-24 flex flex-col md:my-48" aria-labelledby="services-heading">
-  <Header badge="Services" title="What I offer" id="services-heading">
-    Here are the services I offer to help your business get online, automate tasks, or simply run
-    more efficiently. Each one is designed to give you peace of mind ›
-    <ShinyText>no technical knowledge required.</ShinyText>
+  <Header badge={$t('services.title')} title={$t('services.subtitle')} id="services-heading">
+    {$t('services.description.text')}
+    <ShinyText>{$t('services.description.shiny')}</ShinyText>
   </Header>
   <div class="flex flex-col gap-8 md:flex-row md:items-center lg:gap-16">
     <section
@@ -160,19 +32,20 @@
       aria-labelledby="how-it-works-heading"
     >
       <SmallTitle id="how-it-works-heading">
-        <Workflow class="text-primary h-6 w-6 md:h-8 md:w-8" strokeWidth="2" /> How it works
+        <Workflow class="text-primary h-6 w-6 md:h-8 md:w-8" strokeWidth="2" />
+        {$t('services.steps.title')}
       </SmallTitle>
-      <Step before={1} class="mt-8">Tell me about your business</Step>
-      <Step before={2} class="mt-4 md:mt-6">I plan and build a solution for you</Step>
-      <Step before={3} class="mt-4 md:mt-6">You review and give feedback</Step>
-      <Step before={4} class="mt-4 md:mt-6">We launch or implement it!</Step>
+      <Step before={1} class="mt-8">{$t('services.steps.one')}</Step>
+      <Step before={2} class="mt-4 md:mt-6">{$t('services.steps.two')}</Step>
+      <Step before={3} class="mt-4 md:mt-6">{$t('services.steps.three')}</Step>
+      <Step before={4} class="mt-4 md:mt-6">{$t('services.steps.four')}</Step>
       <button
         class="focus-visible:ring-primary ring-primary mt-8 flex cursor-pointer flex-wrap items-center gap-x-4 gap-y-2 rounded-md p-1 focus:outline-none focus-visible:ring-2"
         on:click={() => scrollTo(3)}
       >
         <Compass size="24" strokeWidth="2" class="text-primary" />
-        <ShinyText>Not sure where to start?</ShinyText>
-        I’ll guide you
+        <ShinyText>{$t('services.button.shiny')}</ShinyText>
+        {$t('services.button.text')}
       </button>
     </section>
     <div class="min-w-0 md:grow md:basis-0">
@@ -180,8 +53,8 @@
         class="before:content-'' after:content-'' before:from-light before:to-light/0 after:from-light after:to-light/0 dark:before:from-dark dark:before:to-dark/0 dark:after:from-dark dark:after:to-dark/0 relative -mx-4 overflow-hidden px-4 before:absolute before:top-0 before:left-0 before:z-10 before:h-full before:w-4 before:bg-gradient-to-r after:absolute after:top-0 after:right-0 after:h-full after:w-4 after:bg-gradient-to-l lg:-mx-8 lg:px-8 lg:before:w-8 lg:after:w-8"
       >
         <Carousel breakpoints={null} role="list" id="services-carousel">
-          {#each services as { buttons, ...rest } (rest.name)}
-            <Service {...rest}>
+          {#each list as { buttons, ...rest } (rest.name)}
+            <Service {...rest} currency={lang === 'en' ? 'USD' : 'GTQ'}>
               <Button class="w-fit" variant="primary" href={buttons.primary.href}>
                 <span class="z-10">{buttons.primary.text}</span>
                 <buttons.primary.icon class="z-10" size="24" strokeWidth="2" />
