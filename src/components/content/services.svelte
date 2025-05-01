@@ -21,7 +21,12 @@
   const list = services[lang];
 </script>
 
-<Container as="section" class="my-24 flex flex-col md:my-48" aria-labelledby="services-heading">
+<Container
+  as="section"
+  class="my-24 flex flex-col md:my-48"
+  aria-labelledby="services-heading"
+  id="services"
+>
   <Header badge={$t('services.title')} title={$t('services.subtitle')} id="services-heading">
     {$t('services.description.text')}
     <ShinyText>{$t('services.description.shiny')}</ShinyText>
