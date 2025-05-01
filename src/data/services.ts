@@ -64,6 +64,7 @@ const services = {
       description:
         'I keep your site updated, backed up and running smoothly, while you focus on your business.',
       price: 40,
+      priceSuffix: '/month',
       text: 'I take care of it, so you don’t have to',
       list: ['Small edits or updates', 'Monthly checkups', 'Backups', 'Quick response'],
       buttons: {
@@ -181,11 +182,12 @@ const services = {
       description:
         'Actualizo, reviso y mantengo tu sitio en orden. Vos seguís con tu negocio, sin preocuparte.',
       price: 325,
+      priceSuffix: '/mes',
       text: 'Yo me encargo de que todo funcione',
       list: ['Cambios pequeños', 'Revisión mensual', 'Copia de respaldo', 'Atención rápida'],
       buttons: {
         primary: {
-          text: 'Contratar mantenimiento',
+          text: 'Quiero el plan',
           icon: ClipboardList,
           href: '#contact'
         },
@@ -215,7 +217,7 @@ const services = {
           href: '#contact'
         },
         secondary: {
-          text: 'Preguntar sin compromiso',
+          text: '¿Dudas? Escribime',
           icon: Speech,
           href: '#contact'
         }
