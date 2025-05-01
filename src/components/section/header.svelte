@@ -13,4 +13,6 @@
 {#if title}
   <Title>{title}</Title>
 {/if}
-<p class="mb-8 text-base md:mb-16 md:text-center md:text-xl md:text-balance"><slot /></p>
+<p class="mx-auto mb-8 max-w-5xl text-base md:mb-16 md:text-center md:text-xl md:text-balance">
+  <slot />
+</p>
