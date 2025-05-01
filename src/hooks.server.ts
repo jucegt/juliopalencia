@@ -21,7 +21,7 @@ export const handle: Handle = async ({ event, resolve }) => {
       }
     },
     {
-      transformPageChunk: ({ html }) => html.replace('%lang%', lang)
+      transformPageChunk: ({ html }) => html.replace('%sveltekit.lang%', lang)
     }
   );
 
