@@ -1,8 +1,17 @@
 <script lang="ts">
+  import type { Snippet } from 'svelte';
+
   import { cn } from '../utilities/cn';
 
-  export let variant: 'primary' | 'secondary' = 'primary';
-  export let href: string | null = null;
+  type Props = {
+    variant?: 'primary' | 'secondary';
+    href?: string | null;
+    children: Snippet;
+    class?: string;
+    [key: string]: unknown;
+  };
+
+  const { variant = 'primary', href = null, children, ...restProps }: Props = $props();
 
   const classes = {
     primary:
@@ -13,11 +22,11 @@
 </script>
 
 {#if href}
-  <a {href} {...$$restProps} class={cn(classes[variant], $$restProps.class)} role="button">
-    <slot />
+  <a {href} {...restProps} class={cn(classes[variant], restProps.class)} role="button">
+    {@render children()}
   </a>
 {:else}
-  <button {...$$restProps} class={cn(classes[variant], $$restProps.class)}>
-    <slot />
+  <button {...restProps} class={cn(classes[variant], restProps.class)}>
+    {@render children()}
   </button>
 {/if}
