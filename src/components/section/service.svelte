@@ -1,5 +1,7 @@
 <script lang="ts">
   import { CircleCheck, Sparkle } from '@lucide/svelte';
+
+  import { t } from '../../i18n/config';
   import { cn } from '../../utilities/cn';
   import SmallTitle from './small-title.svelte';
   import { formatCurrency } from '../../utilities/format-currency';
@@ -26,7 +28,8 @@
     <p
       class="text-light font-onest flex items-center justify-center gap-2 py-2 text-xs font-bold uppercase"
     >
-      <Sparkle size="16" strokeWidth="2" /> Recommended
+      <Sparkle size="16" strokeWidth="2" />
+      {$t('services.service.recommended')}
     </p>
   {/if}
   <article
@@ -40,7 +43,7 @@
         <SmallTitle class="mb-4">{name}</SmallTitle>
         <p class="my-4 sm:text-balance xl:text-wrap 2xl:text-balance">{description}</p>
         <p>
-          Starting at{' '}
+          {$t('services.service.starting')}{' '}
           <strong class="text-dark font-onest dark:text-light text-xl font-bold">
             {formatedPrice}
           </strong>
@@ -51,7 +54,9 @@
       </div>
       <div class="order-2 lg:order-3 lg:col-start-2 lg:row-span-2 lg:row-start-1">
         <p class="mb-4 lg:mb-8">{text}</p>
-        <h4 class="text-dark font-onest dark:text-light mb-4 font-bold lg:mb-8">Includes:</h4>
+        <h4 class="text-dark font-onest dark:text-light mb-4 font-bold lg:mb-8">
+          {$t('services.service.includes')}:
+        </h4>
         <ul class="flex flex-col gap-4 text-base/5">
           {#each list as item (item)}
             <li class="flex gap-4">
