@@ -1,14 +1,13 @@
 <script lang="ts">
   import Hand from '../../svgs/hand.svelte';
   import { cn } from '../../utilities/cn';
+
+  let { ...restProps } = $props();
 </script>
 
 <p
-  {...$$restProps}
-  class={cn(
-    'mt-4 flex items-center justify-center text-center text-sm font-bold',
-    $$restProps.class
-  )}
+  {...restProps}
+  class={cn('mt-4 flex items-center justify-center text-center text-sm font-bold', restProps.class)}
 >
   Swipe to see more
   <span
