@@ -1,15 +1,17 @@
 <script lang="ts">
+  import { t } from '../i18n/config';
   import '../app.css';
 
   let { children } = $props();
 </script>
 
 <svelte:head>
-  <title>Sitios web para negocios | Julio Palencia – Desarrollador Web</title>
-  <meta
-    name="description"
-    content="Diseño y desarrollo sitios web modernos, rápidos y hechos a medida para que tu negocio venda más. Presencia online sin complicaciones ni tecnicismos."
-  />
+  <title>{$t('metadata.title')}</title>
+  <meta name="description" content={$t('metadata.description')} />
+
+  <link rel="alternate" hreflang="es" href="https://juliopalencia.com" />
+  <link rel="alternate" hreflang="en" href="https://en.juliopalencia.com" />
+  <link rel="alternate" hreflang="x-default" href="https://juliopalencia.com" />
 </svelte:head>
 
 {@render children()}
