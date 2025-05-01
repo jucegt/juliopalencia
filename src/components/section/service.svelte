@@ -10,8 +10,9 @@
   export let price: number = 0;
   export let text: string = '';
   export let list: string[] = [];
+  export let currency: 'GTQ' | 'USD' = 'GTQ';
 
-  const formatedPrice = formatCurrency(price);
+  const formatedPrice = formatCurrency(price, currency);
 
   const classes = {
     recommended:
