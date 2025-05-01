@@ -7,7 +7,12 @@
   import TrustedBullet from '../section/trusted-bullet.svelte';
 </script>
 
-<Container as="section" class="my-24 flex flex-col md:my-48" aria-labelledby="contact-heading">
+<Container
+  as="section"
+  class="my-24 flex flex-col md:my-48"
+  aria-labelledby="contact-heading"
+  id="contact"
+>
   <Header badge="Contact" title="Ready to start?" id="contact-heading">
     Send me a message and I’ll help you get your business online ›
     <ShinyText>quickly, clearly, and stress-free.</ShinyText>
