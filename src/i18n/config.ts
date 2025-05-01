@@ -11,6 +11,11 @@ export const config: Config = {
   loaders: [
     {
       locale: 'en',
+      key: 'metadata',
+      loader: async () => (await import('./en/metadata.json')).default
+    },
+    {
+      locale: 'en',
       key: 'nav',
       loader: async () => (await import('./en/nav.json')).default
     },
@@ -43,6 +48,11 @@ export const config: Config = {
       locale: 'en',
       key: 'testimonials',
       loader: async () => (await import('./en/testimonials.json')).default
+    },
+    {
+      locale: 'es',
+      key: 'metadata',
+      loader: async () => (await import('./es/metadata.json')).default
     },
     {
       locale: 'es',
