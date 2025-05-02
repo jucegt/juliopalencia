@@ -50,6 +50,11 @@ export const config: Config = {
       loader: async () => (await import('./en/testimonials.json')).default
     },
     {
+      locale: 'en',
+      key: 'contact',
+      loader: async () => (await import('./en/contact.json')).default
+    },
+    {
       locale: 'es',
       key: 'metadata',
       loader: async () => (await import('./es/metadata.json')).default
@@ -88,6 +93,11 @@ export const config: Config = {
       locale: 'es',
       key: 'testimonials',
       loader: async () => (await import('./es/testimonials.json')).default
+    },
+    {
+      locale: 'es',
+      key: 'contact',
+      loader: async () => (await import('./es/contact.json')).default
     }
   ]
 };
