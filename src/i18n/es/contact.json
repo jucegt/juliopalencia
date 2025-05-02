@@ -1,0 +1,30 @@
+{
+  "title": "Contacto",
+  "subtitle": "¿Empezamos?",
+  "description": {
+    "text": {
+      "one": "Escríbeme y te ayudo a tener presencia en internet de forma ›",
+      "two": "Podés contarme tu idea o simplemente preguntar ›"
+    },
+    "shiny": {
+      "one": "rápida, clara y sin dolores de cabeza.",
+      "two": "respondo personalmente."
+    }
+  },
+  "testimonial": {
+    "name": "Javier",
+    "business": "Negocio familiar",
+    "testimonial": "“Me ayudó a tener una web clara, bien hecha y lista en pocos días. Siempre sentí que estaba disponible para cualquier duda.”"
+  },
+  "trustBullets": {
+    "one": "Suelo responder en menos de 24 horas",
+    "two": {
+      "text": "Contactame por WhatsApp o correo ›",
+      "shiny": "como quieras"
+    },
+    "three": {
+      "text": "Tu información es privada ›",
+      "shiny": "no la comparto con nadie"
+    }
+  }
+}
