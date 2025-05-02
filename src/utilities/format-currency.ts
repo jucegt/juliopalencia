@@ -1,7 +1,7 @@
 type Currency = 'GTQ' | 'USD';
 
 export function formatCurrency(amount: number, currency: Currency = 'USD'): string {
-  const formatter = new Intl.NumberFormat('en-US', {
+  const formatter = new Intl.NumberFormat(currency === 'USD' ? 'en-US' : 'es-GT', {
     style: 'currency',
     currency,
     minimumFractionDigits: 2,
@@ -10,6 +10,14 @@ export function formatCurrency(amount: number, currency: Currency = 'USD'): stri
   });
 
   const formatted = formatter.format(amount);
+
+  if (currency === 'USD') {
+    return formatted.replace('$', 'US$');
+  }
+
+  if (currency === 'GTQ') {
+    return formatted.replace('Q', 'GTQ');
+  }
 
   return formatted;
 }
