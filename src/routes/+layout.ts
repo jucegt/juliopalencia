@@ -1,5 +1,5 @@
-import { addTranslations, setLocale, setRoute } from '../i18n/config';
 import type { LayoutLoad } from './$types';
+import { addTranslations, setLocale, setRoute } from '$i18n/config';
 
 export const load: LayoutLoad = async ({ data }) => {
   const { i18n, translations } = data;

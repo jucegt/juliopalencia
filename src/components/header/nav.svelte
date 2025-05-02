@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { smoothScroll } from '../../actions/smooth-scroll';
-  import { t } from '../../i18n/config';
-  import Link from './link.svelte';
+  import { smoothScroll } from '$action/smooth-scroll';
+  import { t } from '$i18n/config';
+  import Link from '$comp/header/link.svelte';
 </script>
 
 <nav

@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { t } from '../i18n/config';
-  import Container from './container.svelte';
-  import Browser from './hero/browser.svelte';
-  import Glow from './hero/glow.svelte';
-  import Text from './hero/text.svelte';
-  import Title from './hero/title.svelte';
-  import ShinyText from './shiny-text.svelte';
+  import { t } from '$i18n/config';
+  import Browser from '$comp/hero/browser.svelte';
+  import Container from '$comp/container.svelte';
+  import Glow from '$comp/hero/glow.svelte';
+  import ShinyText from '$comp/shiny-text.svelte';
+  import Text from '$comp/hero/text.svelte';
+  import Title from '$comp/hero/title.svelte';
 </script>
 
 <Glow />

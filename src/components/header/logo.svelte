@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Logo from '../../svgs/logo.svelte';
+  import Logo from '$svg/logo.svelte';
 </script>
 
 <a

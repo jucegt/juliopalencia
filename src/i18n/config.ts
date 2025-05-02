@@ -1,5 +1,6 @@
 import i18n, { type Config } from 'sveltekit-i18n';
-import lang from './lang.json';
+
+import lang from '$i18n/lang.json';
 
 export const defaultLocale = 'es';
 

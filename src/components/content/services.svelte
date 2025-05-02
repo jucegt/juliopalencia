@@ -1,16 +1,17 @@
 <script lang="ts">
-  import { t, locale } from '../../i18n/config';
   import { Compass, Workflow } from '@lucide/svelte';
-  import Container from '../container.svelte';
-  import Header from '../section/header.svelte';
-  import SmallTitle from '../section/small-title.svelte';
-  import ShinyText from '../shiny-text.svelte';
-  import Step from '../section/step.svelte';
-  import Service from '../section/service.svelte';
-  import Button from '../button.svelte';
-  import Carousel from '../carousel.svelte';
-  import { carousels } from '../../stores/services';
-  import services from '../../data/services';
+
+  import { carousels } from '$store/services';
+  import { t, locale } from '$i18n/config';
+  import Button from '$comp/button.svelte';
+  import Carousel from '$comp/carousel.svelte';
+  import Container from '$comp/container.svelte';
+  import Header from '$comp/section/header.svelte';
+  import Service from '$comp/section/service.svelte';
+  import services from '$data/services';
+  import ShinyText from '$comp/shiny-text.svelte';
+  import SmallTitle from '$comp/section/small-title.svelte';
+  import Step from '$comp/section/step.svelte';
 
   function scrollTo(index: number) {
     const embla = carousels.getInstance('services-carousel');

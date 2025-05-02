@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { t, locale } from '../../i18n/config';
-  import Carousel from '../carousel.svelte';
-  import Container from '../container.svelte';
-  import Header from '../section/header.svelte';
-  import ShinyText from '../shiny-text.svelte';
-  import Testimonial from '../section/testimonial.svelte';
-  import testimonials from '../../data/testimonials';
+  import { t, locale } from '$i18n/config';
+  import Carousel from '$comp/carousel.svelte';
+  import Container from '$comp/container.svelte';
+  import Header from '$comp/section/header.svelte';
+  import ShinyText from '$comp/shiny-text.svelte';
+  import Testimonial from '$comp/section/testimonial.svelte';
+  import testimonials from '$data/testimonials';
 
   const list = testimonials[($locale as 'en' | 'es') || 'es'];
 </script>

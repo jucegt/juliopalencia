@@ -1,8 +1,8 @@
 <script lang="ts">
   import type { Snippet } from 'svelte';
 
-  import { cn } from '../utilities/cn';
-  import { smoothScroll } from '../actions/smooth-scroll';
+  import { cn } from '$util/cn';
+  import { smoothScroll } from '$action/smooth-scroll';
 
   type Props = {
     variant?: 'primary' | 'secondary';

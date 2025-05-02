@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { cn } from '../utilities/cn';
+  import { cn } from '$util/cn';
 
   let { id = '', ...restProps } = $props();
 </script>

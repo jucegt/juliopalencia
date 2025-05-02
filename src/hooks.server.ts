@@ -1,5 +1,5 @@
 import type { Handle } from '@sveltejs/kit';
-import { locales } from './i18n/config';
+import { locales } from '$i18n/config';
 
 type Lang = 'es' | 'en';
 

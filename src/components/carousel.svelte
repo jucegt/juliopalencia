@@ -3,8 +3,8 @@
   import emblaCarouselSvelte from 'embla-carousel-svelte';
   import AutoHeight from 'embla-carousel-auto-height';
 
-  import Swipe from './section/swipe.svelte';
-  import { carousels } from '../stores/services';
+  import { carousels } from '$store/services';
+  import Swipe from '$comp/section/swipe.svelte';
 
   export let id: string;
   export let role: string | undefined = undefined;

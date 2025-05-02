@@ -1,12 +1,12 @@
 <script lang="ts">
   import { Clock, MessageCircleMore, ShieldCheck } from '@lucide/svelte';
 
-  import { t } from '../../i18n/config';
-  import Container from '../container.svelte';
-  import Header from '../section/header.svelte';
-  import ShinyText from '../shiny-text.svelte';
-  import Testimonial from '../section/testimonial.svelte';
-  import TrustedBullet from '../section/trusted-bullet.svelte';
+  import { t } from '$i18n/config';
+  import Container from '$comp/container.svelte';
+  import Header from '$comp/section/header.svelte';
+  import ShinyText from '$comp/shiny-text.svelte';
+  import Testimonial from '$comp/section/testimonial.svelte';
+  import TrustedBullet from '$comp/section/trusted-bullet.svelte';
 </script>
 
 <Container

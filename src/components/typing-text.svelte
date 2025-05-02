@@ -1,6 +1,7 @@
 <script lang="ts">
   import { writable } from 'svelte/store';
-  import { cn } from '../utilities/cn';
+
+  import { cn } from '$util/cn';
 
   let {
     texts = [],

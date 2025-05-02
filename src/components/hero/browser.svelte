@@ -1,8 +1,9 @@
 <script lang="ts">
   import { ChevronDown, Lock, MessageCircleMore, RotateCw } from '@lucide/svelte';
-  import { t } from '../../i18n/config';
-  import Button from '../button.svelte';
-  import TypingText from '../typing-text.svelte';
+
+  import { t } from '$i18n/config';
+  import Button from '$comp/button.svelte';
+  import TypingText from '$comp/typing-text.svelte';
 </script>
 
 <div

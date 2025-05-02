@@ -1,5 +1,6 @@
-import { locales, loadTranslations, translations, defaultLocale } from '../i18n/config';
 import type { ServerLoad } from '@sveltejs/kit';
+
+import { locales, loadTranslations, translations, defaultLocale } from '$i18n/config';
 
 export const load: ServerLoad = async ({ url }) => {
   const host = url.hostname;

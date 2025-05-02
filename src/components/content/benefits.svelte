@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { t } from '../../i18n/config';
-  import Container from '../container.svelte';
-  import Header from '../section/header.svelte';
-  import ShinyText from '../shiny-text.svelte';
+  import { t } from '$i18n/config';
+  import Container from '$comp/container.svelte';
+  import Header from '$comp/section/header.svelte';
+  import ShinyText from '$comp/shiny-text.svelte';
 </script>
 
 <Container

@@ -1,13 +1,13 @@
 <script lang="ts">
   import { Mail } from '@lucide/svelte';
 
-  import { t } from '../i18n/config';
-  import Button from './button.svelte';
-  import Container from './container.svelte';
-  import Logo from './header/logo.svelte';
-  import Nav from './header/nav.svelte';
-  import Right from './header/right.svelte';
-  import { cn } from '../utilities/cn';
+  import { cn } from '$util/cn';
+  import { t } from '$i18n/config';
+  import Button from '$comp/button.svelte';
+  import Container from '$comp/container.svelte';
+  import Logo from '$comp/header/logo.svelte';
+  import Nav from '$comp/header/nav.svelte';
+  import Right from '$comp/header/right.svelte';
 
   const SCROLL_LIMIT = 100;
   const SCROLL_LIMIT_MOBILE = 50;

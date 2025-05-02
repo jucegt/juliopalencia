@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { t } from '../i18n/config';
+  import { t } from '$i18n/config';
   import '../app.css';
 
   let { children } = $props();
