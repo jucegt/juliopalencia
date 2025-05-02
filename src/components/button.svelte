@@ -2,6 +2,7 @@
   import type { Snippet } from 'svelte';
 
   import { cn } from '../utilities/cn';
+  import { smoothScroll } from '../actions/smooth-scroll';
 
   type Props = {
     variant?: 'primary' | 'secondary';
@@ -22,7 +23,13 @@
 </script>
 
 {#if href}
-  <a {href} {...restProps} class={cn(classes[variant], restProps.class)} role="button">
+  <a
+    {href}
+    {...restProps}
+    class={cn(classes[variant], restProps.class)}
+    role="button"
+    use:smoothScroll
+  >
     {@render children()}
   </a>
 {:else}
