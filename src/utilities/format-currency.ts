@@ -11,13 +11,5 @@ export function formatCurrency(amount: number, currency: Currency = 'USD'): stri
 
   const formatted = formatter.format(amount);
 
-  if (currency === 'USD') {
-    return formatted.replace('$', 'US$');
-  }
-
-  if (currency === 'GTQ') {
-    return formatted.replace('Q', 'GTQ');
-  }
-
   return formatted;
 }
