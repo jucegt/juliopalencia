@@ -6,18 +6,10 @@ export function formatCurrency(amount: number, currency: Currency = 'USD'): stri
     currency,
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
-    currencyDisplay: 'narrowSymbol'
+    currencyDisplay: 'symbol'
   });
 
   const formatted = formatter.format(amount);
-
-  if (currency === 'USD') {
-    return formatted.replace('$', 'US$');
-  }
-
-  if (currency === 'GTQ') {
-    return formatted.replace('Q', 'GTQ');
-  }
 
   return formatted;
 }
