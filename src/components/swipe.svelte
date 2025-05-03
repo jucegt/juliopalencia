@@ -1,6 +1,7 @@
 <script lang="ts">
-  import Hand from '../../svgs/hand.svelte';
-  import { cn } from '../../utilities/cn';
+  import { cn } from '$util/cn';
+  import { t } from '$i18n/config';
+  import Hand from '$svg/hand.svelte';
 
   let { ...restProps } = $props();
 </script>
@@ -9,7 +10,7 @@
   {...restProps}
   class={cn('mt-4 flex items-center justify-center text-center text-sm font-bold', restProps.class)}
 >
-  Swipe to see more
+  {$t('interactions.swipe')}
   <span
     class="before:content-'' before:animate-swipe-dot before:bg-primary/50 relative ml-2 origin-bottom before:invisible before:absolute before:top-0 before:left-[15px] before:h-[6px] before:w-[6px] before:rounded-full"
   >
