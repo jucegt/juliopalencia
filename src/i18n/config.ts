@@ -56,6 +56,11 @@ export const config: Config = {
       loader: async () => (await import('./en/contact.json')).default
     },
     {
+      locale: 'en',
+      key: 'interactions',
+      loader: async () => (await import('./en/interactions.json')).default
+    },
+    {
       locale: 'es',
       key: 'metadata',
       loader: async () => (await import('./es/metadata.json')).default
@@ -99,6 +104,11 @@ export const config: Config = {
       locale: 'es',
       key: 'contact',
       loader: async () => (await import('./es/contact.json')).default
+    },
+    {
+      locale: 'es',
+      key: 'interactions',
+      loader: async () => (await import('./es/interactions.json')).default
     }
   ]
 };
