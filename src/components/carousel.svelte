@@ -6,7 +6,8 @@
 
   import { carousels } from '$store/services';
   import { cn } from '$util/cn';
-  import Swipe from '$comp/section/swipe.svelte';
+  import { t } from '$i18n/config';
+  import Swipe from '$comp/swipe.svelte';
 
   export let controls: boolean = false;
   export let id: string;
@@ -70,7 +71,7 @@
         <button
           on:click={scrollPrev}
           disabled={!canScrollPrev}
-          aria-label="Previous"
+          aria-label={$t('interactions.prev')}
           class={cn(
             'bg-light-200 dark:bg-dark-200 text-dark dark:text-light flex size-12 items-center justify-center rounded-full transition ease-in-out not-disabled:cursor-pointer',
             !canScrollPrev && 'opacity-20'
@@ -81,7 +82,7 @@
         <button
           on:click={scrollNext}
           disabled={!canScrollNext}
-          aria-label="Next"
+          aria-label={$t('interactions.next')}
           class={cn(
             'bg-light-200 dark:bg-dark-200 text-dark dark:text-light flex size-12 items-center justify-center rounded-full transition ease-in-out not-disabled:cursor-pointer',
             !canScrollNext && 'opacity-20'
@@ -96,10 +97,10 @@
           <button
             on:click={() => embla?.scrollTo(index)}
             class={cn(
-              'bg-light-200 dark:bg-dark-200 before:content-"" before:from-gradient-start before:to-gradient-end after:content-"" after:bg-light dark:after:bg-dark relative flex size-4.5 items-center justify-center rounded-full before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:opacity-0 before:transition before:ease-in-out after:z-10 after:size-2 after:rounded-full after:transition after:ease-in-out',
-              index === selectedIndex && 'before:opacity-100 after:shadow-sm'
+              'bg-light-200 dark:bg-dark-200 before:content-"" before:from-gradient-start before:to-gradient-end after:content-"" after:bg-light dark:after:bg-dark relative flex size-4.5 cursor-pointer items-center justify-center rounded-full before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:opacity-0 before:transition before:ease-in-out after:z-10 after:size-2 after:rounded-full after:transition after:ease-in-out',
+              index === selectedIndex && 'cursor-default before:opacity-100 after:shadow-sm'
             )}
-            aria-label={`Go to slide ${index + 1}`}
+            aria-label={`${$t('interactions.slide')} ${index + 1}`}
           ></button>
         {/each}
       </div>
