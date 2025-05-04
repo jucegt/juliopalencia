@@ -22,7 +22,8 @@ const benefits = {
       illustration: 'illustration-stress',
       button: {
         icon: Mail,
-        text: 'Let’s talk about your website'
+        text: 'Let’s talk',
+        hidden: 'about your website'
       }
     },
     {
@@ -59,7 +60,8 @@ const benefits = {
       illustration: 'illustration-foryou',
       button: {
         icon: Eye,
-        text: 'See what I can design for you'
+        text: 'See what I can design',
+        hidden: 'for you'
       }
     },
     {
@@ -90,7 +92,8 @@ const benefits = {
       illustration: 'illustration-stress',
       button: {
         icon: Mail,
-        text: 'Hablemos de tu sitio web'
+        text: 'Hablemos',
+        hidden: 'de tu sitio web'
       }
     },
     {
@@ -129,7 +132,8 @@ const benefits = {
       illustration: 'illustration-foryou',
       button: {
         icon: Eye,
-        text: 'Mira lo que puedo crear para ti'
+        text: 'Mira lo que puedo crear',
+        hidden: 'para ti'
       }
     },
     {
@@ -143,7 +147,8 @@ const benefits = {
       illustration: 'illustration-support',
       button: {
         icon: LifeBuoy,
-        text: '¿Te surge algo después? Escríbeme cuando quieras'
+        text: '¿Te surge algo después? Escríbeme',
+        hidden: 'cuando quieras'
       }
     }
   ]
