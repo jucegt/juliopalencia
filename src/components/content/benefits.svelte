@@ -7,7 +7,7 @@
   import Benefit from '$comp/section/benefit.svelte';
   import Carousel from '$comp/carousel.svelte';
 
-  const list = benefits[($locale as 'en' | 'es', 'es')];
+  const list = benefits[($locale as 'en' | 'es') || 'es'];
 </script>
 
 <div class="my-24 overflow-hidden md:my-48">
