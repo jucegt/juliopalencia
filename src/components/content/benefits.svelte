@@ -33,6 +33,7 @@
           buttonText={button?.text}
           buttonTextHidden={button?.hidden}
           buttonIcon={button?.icon}
+          buttonHref={button?.href}
           {...restProps}
         />
       {/each}
