@@ -53,7 +53,7 @@
       </p>
       {#if buttonIcon && buttonText}
         <Button variant="underline" class="mt-4 w-fit">
-          <ButtonIcon size="24" strokeWidth="2" class="text-primary" />
+          <ButtonIcon size="24" strokeWidth="2" />
           <span>
             {buttonText}
             {#if buttonTextHidden}
@@ -84,7 +84,7 @@
     </p>
     {#if buttonIcon && buttonText}
       <Button variant="underline" class="mt-4 w-fit">
-        <ButtonIcon size="24" strokeWidth="2" class="text-primary" />
+        <ButtonIcon size="24" strokeWidth="2" />
         <span>
           {buttonText}
           {#if buttonTextHidden}
