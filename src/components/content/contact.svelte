@@ -6,7 +6,7 @@
   import Header from '$comp/section/header.svelte';
   import ShinyText from '$comp/shiny-text.svelte';
   import Testimonial from '$comp/section/testimonial.svelte';
-  import TrustedBullet from '$comp/section/trusted-bullet.svelte';
+  import TrustedBullet from '$comp/trusted-bullet.svelte';
 </script>
 
 <Container
