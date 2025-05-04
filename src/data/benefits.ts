@@ -2,6 +2,7 @@ import {
   Eye,
   LifeBuoy,
   Mail,
+  MessagesSquare,
   Palette,
   Rocket,
   ShieldCheck,
@@ -77,7 +78,7 @@ const benefits = {
       footer: 'Let’s talk whenever you need.',
       illustration: 'illustration-support',
       button: {
-        icon: LifeBuoy,
+        icon: MessagesSquare,
         text: 'Need help later? Message me',
         href: '#contact'
       }
@@ -151,7 +152,7 @@ const benefits = {
       footer: 'Hablemos cuando quieras.',
       illustration: 'illustration-support',
       button: {
-        icon: LifeBuoy,
+        icon: MessagesSquare,
         text: '¿Te surge algo después? Escríbeme',
         hidden: 'cuando quieras',
         href: '#contact'
