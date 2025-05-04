@@ -54,10 +54,12 @@
       {#if buttonIcon && buttonText}
         <Button variant="underline" class="mt-4 w-fit">
           <ButtonIcon size="24" strokeWidth="2" class="text-primary" />
-          {buttonText}
-          {#if buttonTextHidden}
-            <span class="hiddend lg:inline">{buttonTextHidden}</span>
-          {/if}
+          <span>
+            {buttonText}
+            {#if buttonTextHidden}
+              <span class="hiddend lg:inline">{buttonTextHidden}</span>
+            {/if}
+          </span>
         </Button>
       {/if}
     </div>
@@ -83,10 +85,12 @@
     {#if buttonIcon && buttonText}
       <Button variant="underline" class="mt-4 w-fit">
         <ButtonIcon size="24" strokeWidth="2" class="text-primary" />
-        {buttonText}
-        {#if buttonTextHidden}
-          <span class="hiddend lg:inline">{buttonTextHidden}</span>
-        {/if}
+        <span>
+          {buttonText}
+          {#if buttonTextHidden}
+            <span class="hiddend lg:inline">{buttonTextHidden}</span>
+          {/if}
+        </span>
       </Button>
     {/if}
   {/if}
