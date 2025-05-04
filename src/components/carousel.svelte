@@ -94,8 +94,9 @@
           disabled={!canScrollPrev}
           aria-label={$t('interactions.prev')}
           class={cn(
-            'bg-light-200 dark:bg-dark-200 text-dark dark:text-light flex size-12 items-center justify-center rounded-full transition ease-in-out not-disabled:cursor-pointer',
-            !canScrollPrev && 'opacity-20'
+            'bg-light-200 dark:bg-dark-200 text-dark dark:text-light  hover:bg-primary hover:text-light dark:hover:bg-primary dark:hover:text-light focus-visible:ring-primary  flex size-12 items-center  justify-center rounded-full transition ease-in-out not-disabled:cursor-pointer focus:outline-none focus-visible:ring-2',
+            !canScrollPrev &&
+              'hover:bg-light-200 dark:hover:bg-dark-200 hover:text-dark dark:hover:text-light opacity-20'
           )}
         >
           <ChevronLeft size="24" class="mr-0.5" />
@@ -105,8 +106,9 @@
           disabled={!canScrollNext}
           aria-label={$t('interactions.next')}
           class={cn(
-            'bg-light-200 dark:bg-dark-200 text-dark dark:text-light flex size-12 items-center justify-center rounded-full transition ease-in-out not-disabled:cursor-pointer',
-            !canScrollNext && 'opacity-20'
+            'bg-light-200 dark:bg-dark-200 text-dark dark:text-light  hover:bg-primary hover:text-light dark:hover:bg-primary dark:hover:text-light focus-visible:ring-primary  flex size-12 items-center  justify-center rounded-full transition ease-in-out not-disabled:cursor-pointer focus:outline-none focus-visible:ring-2',
+            !canScrollNext &&
+              'hover:bg-light-200 dark:hover:bg-dark-200 hover:text-dark dark:hover:text-light opacity-20'
           )}
         >
           <ChevronRight size="24" class="ml-0.5" />
@@ -119,7 +121,9 @@
             onclick={() => embla?.scrollTo(index)}
             class={cn(
               'bg-light-200 dark:bg-dark-200 before:content-"" before:from-gradient-start before:to-gradient-end after:content-"" after:bg-light dark:after:bg-dark relative flex size-4.5 cursor-pointer items-center justify-center rounded-full before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:opacity-0 before:transition before:ease-in-out after:z-10 after:size-2 after:rounded-full after:transition after:ease-in-out',
-              index === selectedIndex && 'cursor-default before:opacity-100 after:shadow-sm'
+              index === selectedIndex
+                ? 'cursor-default before:opacity-100 after:shadow-sm'
+                : 'hover:before:opacity-100 hover:after:scale-110 hover:after:shadow-sm'
             )}
             aria-label={`${$t('interactions.slide')} ${index + 1}`}
           ></button>
