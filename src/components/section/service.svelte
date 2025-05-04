@@ -1,11 +1,11 @@
 <script lang="ts">
   import { CircleCheck, Sparkle } from '@lucide/svelte';
 
-  import { t } from '../../i18n/config';
-  import { cn } from '../../utilities/cn';
-  import SmallTitle from './small-title.svelte';
-  import { formatCurrency } from '../../utilities/format-currency';
-  import { smoothScroll } from '../../actions/smooth-scroll';
+  import { cn } from '$util/cn';
+  import { formatCurrency } from '$util/format-currency';
+  import { smoothScroll } from '$action/smooth-scroll';
+  import { t } from '$i18n/config';
+  import SmallTitle from '$comp/small-title.svelte';
 
   export let variant: 'recommended' | 'default' = 'default';
   export let name: string = '';

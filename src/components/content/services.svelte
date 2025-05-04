@@ -10,7 +10,7 @@
   import Service from '$comp/section/service.svelte';
   import services from '$data/services';
   import ShinyText from '$comp/shiny-text.svelte';
-  import SmallTitle from '$comp/section/small-title.svelte';
+  import SmallTitle from '$comp/small-title.svelte';
   import Step from '$comp/step.svelte';
 
   function scrollTo(index: number) {
