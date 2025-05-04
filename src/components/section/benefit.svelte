@@ -16,6 +16,7 @@
     buttonText?: string;
     buttonTextHidden?: string;
     buttonIcon?: typeof IconType;
+    buttonHref?: string;
     class?: string;
   };
 
@@ -28,6 +29,7 @@
     buttonText,
     buttonTextHidden,
     buttonIcon,
+    buttonHref,
     layout,
     ...restProps
   }: BenefitProps = $props();
@@ -52,7 +54,7 @@
         <strong>{footer}</strong>
       </p>
       {#if buttonIcon && buttonText}
-        <Button variant="underline" class="mt-4 w-fit">
+        <Button href={buttonHref} variant="underline" class="mt-4 w-fit">
           <ButtonIcon size="24" strokeWidth="2" />
           <span>
             {buttonText}
@@ -83,7 +85,7 @@
       <strong>{footer}</strong>
     </p>
     {#if buttonIcon && buttonText}
-      <Button variant="underline" class="mt-4 w-fit">
+      <Button href={buttonHref} variant="underline" class="mt-4 w-fit">
         <ButtonIcon size="24" strokeWidth="2" />
         <span>
           {buttonText}
