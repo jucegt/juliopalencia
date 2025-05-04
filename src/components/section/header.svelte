@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Badge from './badge.svelte';
-  import Title from './title.svelte';
+  import Badge from '$comp/badge.svelte';
+  import Title from '$comp/section/title.svelte';
 
   export let badge: string | undefined = undefined;
   export let title: string | undefined = undefined;
