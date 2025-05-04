@@ -14,6 +14,7 @@
     illustration?: string;
     footer: String;
     buttonText?: string;
+    buttonTextHidden?: string;
     buttonIcon?: typeof IconType;
     class?: string;
   };
@@ -25,6 +26,7 @@
     illustration,
     footer,
     buttonText,
+    buttonTextHidden,
     buttonIcon,
     layout,
     ...restProps
@@ -53,6 +55,9 @@
         <Button variant="underline" class="mt-4 w-fit">
           <ButtonIcon size="24" strokeWidth="2" class="text-primary" />
           {buttonText}
+          {#if buttonTextHidden}
+            <span class="hiddend lg:inline">{buttonTextHidden}</span>
+          {/if}
         </Button>
       {/if}
     </div>
@@ -79,6 +84,9 @@
       <Button variant="underline" class="mt-4 w-fit">
         <ButtonIcon size="24" strokeWidth="2" class="text-primary" />
         {buttonText}
+        {#if buttonTextHidden}
+          <span class="hiddend lg:inline">{buttonTextHidden}</span>
+        {/if}
       </Button>
     {/if}
   {/if}
