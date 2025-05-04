@@ -17,6 +17,8 @@
     breakpoints?: Record<string, EmblaOptionsType> | null;
     class?: string;
     children?: Snippet;
+    autoheight?: boolean;
+    swipeClass?: string;
   };
 
   let {
@@ -28,6 +30,8 @@
         active: false
       }
     },
+    autoheight = true,
+    swipeClass,
     children,
     ...restProps
   }: CarouselProps = $props();
@@ -70,7 +74,7 @@
       slidesToScroll: 'auto',
       breakpoints
     } as EmblaOptionsType,
-    plugins: [AutoHeight()]
+    plugins: autoheight ? [AutoHeight()] : []
   };
 </script>
 
@@ -125,4 +129,4 @@
   {/if}
 </div>
 
-<Swipe class={cn('xl:hidden', controls && 'lg:hidden')} />
+<Swipe class={cn('xl:hidden', controls && 'lg:hidden', swipeClass)} />
