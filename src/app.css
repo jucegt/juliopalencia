@@ -142,6 +142,25 @@
     background-image: url('/logos/light-siman.png');
   }
 
+  .illustration-stress {
+    background-image: url('/illustrations/no-tech-stress-light.png');
+  }
+  .dark .illustration-stress {
+    background-image: url('/illustrations/no-tech-stress-dark.png');
+  }
+  .illustration-foryou {
+    background-image: url('/illustrations/made-for-you-light.png');
+  }
+  .dark .illustration-foryou {
+    background-image: url('/illustrations/made-for-you-dark.png');
+  }
+  .illustration-support {
+    background-image: url('/illustrations/support-after-launch-light.png');
+  }
+  .dark .illustration-support {
+    background-image: url('/illustrations/support-after-launch-dark.png');
+  }
+
   .hover\:pause:hover {
     animation-play-state: paused;
   }
