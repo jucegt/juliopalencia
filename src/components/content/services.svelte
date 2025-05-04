@@ -46,7 +46,7 @@
       <Step before={3} class="mt-4 md:mt-6">{$t('services.steps.three')}</Step>
       <Step before={4} class="mt-4 md:mt-6">{$t('services.steps.four')}</Step>
       <Button variant="underline" onclick={() => scrollTo(3)} class="mt-8">
-        <Compass size="24" strokeWidth="2" class="text-primary" />
+        <Compass size="24" strokeWidth="2" />
         {$t('services.button.shiny')}
       </Button>
       <span class="text-gray relative -top-1.5">{$t('services.button.text')}</span>
