@@ -11,7 +11,7 @@
   import services from '$data/services';
   import ShinyText from '$comp/shiny-text.svelte';
   import SmallTitle from '$comp/section/small-title.svelte';
-  import Step from '$comp/section/step.svelte';
+  import Step from '$comp/step.svelte';
 
   function scrollTo(index: number) {
     const embla = carousels.getInstance('services-carousel');
