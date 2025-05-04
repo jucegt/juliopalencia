@@ -23,7 +23,8 @@ const benefits = {
       button: {
         icon: Mail,
         text: 'Let’s talk',
-        hidden: 'about your website'
+        hidden: 'about your website',
+        href: '#contact'
       }
     },
     {
@@ -61,7 +62,8 @@ const benefits = {
       button: {
         icon: Eye,
         text: 'See what I can design',
-        hidden: 'for you'
+        hidden: 'for you',
+        href: '#contact'
       }
     },
     {
@@ -76,7 +78,8 @@ const benefits = {
       illustration: 'illustration-support',
       button: {
         icon: LifeBuoy,
-        text: 'Need help later? Message me'
+        text: 'Need help later? Message me',
+        href: '#contact'
       }
     }
   ],
@@ -93,7 +96,8 @@ const benefits = {
       button: {
         icon: Mail,
         text: 'Hablemos',
-        hidden: 'de tu sitio web'
+        hidden: 'de tu sitio web',
+        href: '#contact'
       }
     },
     {
@@ -133,7 +137,8 @@ const benefits = {
       button: {
         icon: Eye,
         text: 'Mira lo que puedo crear',
-        hidden: 'para ti'
+        hidden: 'para ti',
+        href: '#contact'
       }
     },
     {
@@ -148,7 +153,8 @@ const benefits = {
       button: {
         icon: LifeBuoy,
         text: '¿Te surge algo después? Escríbeme',
-        hidden: 'cuando quieras'
+        hidden: 'cuando quieras',
+        href: '#contact'
       }
     }
   ]
