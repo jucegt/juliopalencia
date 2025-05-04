@@ -57,7 +57,7 @@
           <span>
             {buttonText}
             {#if buttonTextHidden}
-              <span class="hiddend lg:inline">{buttonTextHidden}</span>
+              <span class="hidden xl:inline">{buttonTextHidden}</span>
             {/if}
           </span>
         </Button>
@@ -88,7 +88,7 @@
         <span>
           {buttonText}
           {#if buttonTextHidden}
-            <span class="hiddend lg:inline">{buttonTextHidden}</span>
+            <span class="hidden xl:inline">{buttonTextHidden}</span>
           {/if}
         </span>
       </Button>
