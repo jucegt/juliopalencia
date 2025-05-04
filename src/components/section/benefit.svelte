@@ -5,6 +5,7 @@
   import CardHeader from '$comp/card-header.svelte';
   import ShinyText from '$comp/shiny-text.svelte';
   import { cn } from '$util/cn';
+  import Button from '$comp/button.svelte';
 
   type BenefitProps = {
     icon: typeof IconType;
@@ -50,12 +51,10 @@
         <strong>{footer}</strong>
       </p>
       {#if buttonIcon && buttonText}
-        <button
-          class="focus-visible:ring-primary ring-primary text-primary mt-4 flex cursor-pointer flex-wrap items-center gap-x-4 gap-y-2 rounded-md p-1 hover:underline focus:outline-none focus-visible:ring-2"
-        >
+        <Button variant="underline" class="mt-4 w-fit">
           <ButtonIcon size="24" strokeWidth="2" class="text-primary" />
-          <ShinyText>{buttonText}</ShinyText>
-        </button>
+          {buttonText}
+        </Button>
       {/if}
     </div>
     {#if illustration}
@@ -78,12 +77,10 @@
       <strong>{footer}</strong>
     </p>
     {#if buttonIcon && buttonText}
-      <button
-        class="focus-visible:ring-primary ring-primary text-primary mt-4 flex cursor-pointer flex-wrap items-center gap-x-4 gap-y-2 rounded-md p-1 hover:underline focus:outline-none focus-visible:ring-2"
-      >
+      <Button variant="underline" class="mt-4 w-fit">
         <ButtonIcon size="24" strokeWidth="2" class="text-primary" />
-        <ShinyText>{buttonText}</ShinyText>
-      </button>
+        {buttonText}
+      </Button>
     {/if}
   {/if}
 </Card>
