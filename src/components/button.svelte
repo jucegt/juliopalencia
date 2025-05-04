@@ -5,7 +5,7 @@
   import { smoothScroll } from '$action/smooth-scroll';
 
   type Props = {
-    variant?: 'primary' | 'secondary';
+    variant?: 'primary' | 'secondary' | 'underline';
     href?: string | null;
     children: Snippet;
     class?: string;
@@ -16,9 +16,11 @@
 
   const classes = {
     primary:
-      'relative overflow-hidden inline-flex items-center gap-x-2 rounded-lg bg-primary px-4 py-3 text-base font-bold text-light font-onest before:content-[""] before:absolute before:inset-0 before:bg-gradient-to-r before:from-gradient-start before:to-gradient-end before:opacity-0 before:transition-opacity before:ease-in-out before:duration-300 hover:before:opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-dark dark:focus-visible:ring-light md:px-8 md:gap-x-4 transition ease-in-out',
+      'bg-primary text-light font-onest before:from-gradient-start before:to-gradient-end focus-visible:ring-dark dark:focus-visible:ring-light relative inline-flex items-center gap-x-2 overflow-hidden rounded-lg px-4 py-3 text-center text-base font-bold transition ease-in-out before:absolute before:inset-0 before:bg-gradient-to-r before:opacity-0 before:transition-opacity before:duration-300 before:ease-in-out before:content-[""] hover:before:opacity-100 focus:outline-none focus-visible:ring-2 md:gap-x-4 md:px-8',
     secondary:
-      'inline-flex items-center gap-x-2 rounded-lg bg-light-200 dark:bg-dark-200 px-4 py-3 text-base font-bold text-dark dark:text-light font-onest hover:bg-primary hover:text-light transition ease-in-out duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary md:px-8 md:gap-x-4'
+      'bg-light-200 dark:bg-dark-200 text-dark dark:text-light font-onest hover:bg-primary hover:text-light focus-visible:ring-primary inline-flex items-center gap-x-2 rounded-lg px-4 py-3 text-center text-base font-bold transition duration-300 ease-in-out focus:outline-none focus-visible:ring-2 md:gap-x-4 md:px-8',
+    underline:
+      'inline-flex items-center gap-x-2 font-onest text-base font-bold text-primary dark:text-primary underline underline-offset-4 decoration-2 decoration-primary dark:decoration-primary hover:text-primary/80 hover:decoration-primary/60 transition-colors duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-primary'
   };
 </script>
 
