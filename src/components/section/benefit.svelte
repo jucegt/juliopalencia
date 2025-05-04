@@ -1,11 +1,10 @@
 <script lang="ts">
   import { type Icon as IconType } from '@lucide/svelte';
 
-  import Card from '$comp/card.svelte';
-  import CardHeader from '$comp/card-header.svelte';
-  import ShinyText from '$comp/shiny-text.svelte';
   import { cn } from '$util/cn';
   import Button from '$comp/button.svelte';
+  import Card from '$comp/card.svelte';
+  import CardHeader from '$comp/card-header.svelte';
 
   type BenefitProps = {
     icon: typeof IconType;
