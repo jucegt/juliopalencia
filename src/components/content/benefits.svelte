@@ -29,7 +29,12 @@
       swipeClass="lg:hidden"
     >
       {#each list as { id, button, ...restProps } (id)}
-        <Benefit buttonText={button?.text} buttonIcon={button?.icon} {...restProps} />
+        <Benefit
+          buttonText={button?.text}
+          buttonTextHidden={button?.hidden}
+          buttonIcon={button?.icon}
+          {...restProps}
+        />
       {/each}
     </Carousel>
   </Container>
