@@ -27,7 +27,7 @@
 
 <div
   class={cn(
-    'fixed right-4 bottom-4 z-10 ml-4 flex items-center gap-4 rounded-xl p-4 backdrop-blur-sm transition ease-in-out md:right-8 md:bottom-8 md:ml-8 md:px-8',
+    'animate-fade-up fixed right-4 bottom-4 z-10 ml-4 flex items-center gap-4 rounded-xl p-4 backdrop-blur-sm transition ease-in-out md:right-8 md:bottom-8 md:ml-8 md:px-8',
     variant[type || 'success'],
     restProps.class
   )}
