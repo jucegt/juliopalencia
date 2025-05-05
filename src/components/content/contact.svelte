@@ -123,35 +123,35 @@
         <Input
           id="name"
           name="name"
-          label="Name:"
+          label={$t('contact.form.name.label')}
           type="text"
-          placeholder="e.g. John Doe"
+          placeholder={$t('contact.form.name.placeholder')}
           icon={User}
           invalid={invalidFields.includes('name')}
         />
         <Input
           id="email"
           name="email"
-          label="Email:"
+          label={$t('contact.form.email.label')}
           type="email"
-          placeholder="e.g. johndoe@mail.com"
+          placeholder={$t('contact.form.email.placeholder')}
           icon={Mail}
           invalid={invalidFields.includes('email')}
         />
         <Input
           id="phone"
           name="phone"
-          label="Phone Number:"
+          label={$t('contact.form.phone.label')}
           type="tel"
-          placeholder="e.g. +1 (502) 9876-5432"
+          placeholder={$t('contact.form.phone.placeholder')}
           icon={Phone}
           invalid={invalidFields.includes('phone')}
         />
         <Select
           id="service"
           name="service"
-          label="What do you need?"
-          placeholder="Select an option"
+          label={$t('contact.form.service.label')}
+          placeholder={$t('contact.form.service.placeholder')}
           options={list}
           icon={ListTree}
           invalid={invalidFields.includes('service')}
@@ -160,13 +160,13 @@
           class="md:col-span-2"
           id="message"
           name="message"
-          label="Tell me about your project/business:"
-          placeholder="You can describe what you want to build, what your business needs, or simply share your ideas."
+          label={$t('contact.form.message.label')}
+          placeholder={$t('contact.form.message.placeholder')}
           rows={8}
         />
         <div class="flex flex-wrap justify-center gap-4 text-center md:col-span-2">
           <p class="text-dark font-onest block shrink-0 basis-full font-bold">
-            How do you want to send your message?
+            {$t('contact.form.submit.label')}
           </p>
           <Button variant="primary" type="submit">
             <span class="z-10">Email</span><Mail size="24" strokeWidth="2" class="z-10" />
@@ -182,20 +182,20 @@
         {#if showSuccess}
           <Toast
             icon={BadgeCheck}
-            title="Thanks! Your message was sent successfully."
+            title={$t('contact.form.submit.success.title')}
             class={cn(hideToast && 'translate-y-50 opacity-0')}
           >
-            I’ll get back to you soon using your preferred method.
+            {$t('contact.form.submit.success.text')}
           </Toast>
         {/if}
         {#if showError}
           <Toast
             type="error"
             icon={BadgeAlert}
-            title="Fill in the highlighted fields."
+            title={$t('contact.form.submit.error.title')}
             class={cn(hideToast && 'translate-y-50 opacity-0')}
           >
-            I need that info to get back to you.
+            {$t('contact.form.submit.error.text')}
           </Toast>
         {/if}
       </Card>
