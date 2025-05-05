@@ -1,5 +1,8 @@
 <script lang="ts">
   import {
+    BadgeAlert,
+    BadgeCheck,
+    CircleCheck,
     Clock,
     ListTree,
     Mail,
@@ -24,24 +27,43 @@
   import Testimonial from '$comp/section/testimonial.svelte';
   import Textarea from '$comp/textarea.svelte';
   import TrustedBullet from '$comp/trusted-bullet.svelte';
+  import Toast from '$comp/toast.svelte';
+  import { cn } from '$util/cn';
 
   const list = servicesList[($locale as 'en' | 'es') || 'es'];
 
-  let successMessage = $state('');
-  let errorMessage = $state('');
+  const TIMEOUT = 10000;
+
+  let showSuccess = $state(false);
+  let showError = $state(false);
   let invalidFields = $state<string[]>([]);
+  let hideToast = $state(false);
 
   const handleForm: SubmitFunction = () => {
     return async ({ result, update }) => {
       if (result.type === 'success' && result.data?.success) {
-        successMessage = 'Your message has been sent successfully!';
-        errorMessage = '';
+        showSuccess = true;
+        showError = false;
         invalidFields = [];
         await update();
+        setTimeout(() => {
+          hideToast = true;
+        }, TIMEOUT - 200);
+        setTimeout(() => {
+          showSuccess = false;
+          hideToast = false;
+        }, TIMEOUT);
       } else if (result.type === 'failure') {
-        errorMessage = 'Please fill in all required fields.';
+        showError = true;
         invalidFields = result.data?.invalidFields ?? [];
-        successMessage = '';
+        showSuccess = false;
+        setTimeout(() => {
+          hideToast = true;
+        }, TIMEOUT - 200);
+        setTimeout(() => {
+          showError = false;
+          hideToast = false;
+        }, TIMEOUT);
       }
     };
   };
@@ -95,7 +117,7 @@
       method="POST"
       action="?/email"
       use:enhance={handleForm}
-      class="shrink-1 grow-1 basis-full lg:basis-0"
+      class="relative shrink-1 grow-1 basis-full lg:basis-0"
     >
       <Card class="gap-4 md:grid md:grid-cols-2 md:gap-8 lg:flex xl:grid">
         <Input
@@ -151,22 +173,30 @@
           </Button>
           <Button
             variant="secondary"
-            class="text-dark hover:text-light bg-green-500 hover:bg-green-700"
+            class="focus-visible:ring-dark text-dark hover:text-light bg-green-500 hover:bg-green-700"
             href="#"
           >
             WhatsApp <SendHorizonal size="24" strokeWidth="2" />
           </Button>
         </div>
-        {#if successMessage}
-          <p class="font-onest mb-4 text-center font-bold text-green-400 md:col-span-2">
-            {successMessage}
-          </p>
+        {#if showSuccess}
+          <Toast
+            icon={BadgeCheck}
+            title="Thanks! Your message was sent successfully."
+            class={cn(hideToast && 'translate-y-50 opacity-0')}
+          >
+            I’ll get back to you soon using your preferred method.
+          </Toast>
         {/if}
-
-        {#if errorMessage}
-          <p class="font-onest mb-4 text-center font-bold text-red-400 md:col-span-2">
-            {errorMessage}
-          </p>
+        {#if showError}
+          <Toast
+            type="error"
+            icon={BadgeAlert}
+            title="Fill in the highlighted fields."
+            class={cn(hideToast && 'translate-y-50 opacity-0')}
+          >
+            I need that info to get back to you.
+          </Toast>
         {/if}
       </Card>
     </form>
