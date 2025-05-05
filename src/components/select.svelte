@@ -25,10 +25,16 @@
   const Icon = icon;
 
   let isDefaultValueSelected = $state(true);
+  let hasChanged = $state(false);
 
   function handleChange() {
     isDefaultValueSelected = false;
+    hasChanged = true;
   }
+
+  $effect(() => {
+    if (invalid) hasChanged = false;
+  });
 </script>
 
 <div class={cn(restProps.class)}>
@@ -38,12 +44,12 @@
       {...restProps}
       {id}
       {name}
-      onchange={() => handleChange()}
+      onchange={handleChange}
       class={cn(
         'peer bg-light-50 border-light-200 text-dark focus:ring-primary h-12 w-full appearance-none rounded-lg border bg-none px-4 pr-10 placeholder:text-gray-200 focus:ring-2 focus:ring-offset-2',
         icon && 'pl-12',
         isDefaultValueSelected && 'text-gray-200',
-        invalid && 'ring-2 ring-red-400 ring-offset-2'
+        invalid && !hasChanged && 'ring-2 ring-red-400 ring-offset-2'
       )}
     >
       <option disabled selected>{placeholder}</option>
