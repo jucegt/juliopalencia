@@ -48,7 +48,7 @@
         await update();
         setTimeout(() => {
           hideToast = true;
-        }, TIMEOUT - 200);
+        }, TIMEOUT - 150);
         setTimeout(() => {
           showSuccess = false;
           hideToast = false;
@@ -59,7 +59,7 @@
         showSuccess = false;
         setTimeout(() => {
           hideToast = true;
-        }, TIMEOUT - 200);
+        }, TIMEOUT - 150);
         setTimeout(() => {
           showError = false;
           hideToast = false;
