@@ -251,4 +251,61 @@ const services = {
   ]
 };
 
+export const servicesList = {
+  en: [
+    {
+      id: 1,
+      label: 'Business Website',
+      value: 'business-website'
+    },
+    {
+      id: 2,
+      label: 'Promotional Page',
+      value: 'promotional-page'
+    },
+    {
+      id: 3,
+      label: 'Website Maintenance Plan',
+      value: 'website-maintenance-plan'
+    },
+    {
+      id: 4,
+      label: 'Digital Guidance',
+      value: 'digital-guidance'
+    },
+    {
+      id: 5,
+      label: 'WhatsApp Automation',
+      value: 'whatsapp-automation'
+    }
+  ],
+  es: [
+    {
+      id: 1,
+      label: 'Sitio web para tu negocio',
+      value: 'business-website'
+    },
+    {
+      id: 2,
+      label: 'Página para promociones',
+      value: 'promotional-page'
+    },
+    {
+      id: 3,
+      label: 'Cuidado mensual de tu sitio',
+      value: 'website-maintenance-plan'
+    },
+    {
+      id: 4,
+      label: 'Asesoría para estar en internet',
+      value: 'digital-guidance'
+    },
+    {
+      id: 5,
+      label: 'Automatización con WhatsApp',
+      value: 'whatsapp-automation'
+    }
+  ]
+};
+
 export default services;
