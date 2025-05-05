@@ -49,7 +49,15 @@
       "placeholder": "You can describe what you want to build, what your business needs, or simply share your ideas."
     },
     "submit": {
-      "label": "How do you want to send your message?"
+      "label": "How do you want to send your message?",
+      "success": {
+        "title": "Thanks! Your message was sent successfully.",
+        "text": "I’ll get back to you soon using your preferred method."
+      },
+      "error": {
+        "title": "Fill in the highlighted fields.",
+        "text": "I need that info to get back to you."
+      }
     }
   }
 }

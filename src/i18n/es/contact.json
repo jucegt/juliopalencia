@@ -49,7 +49,15 @@
       "placeholder": "Puedes contar qué deseas construir, lo que necesita tu negocio o simplemente compartir tu ideas."
     },
     "submit": {
-      "label": "¿Cómo quierés enviar tu mensaje?"
+      "label": "¿Cómo quierés enviar tu mensaje?",
+      "success": {
+        "title": "¡Gracias! Tu mensaje fue enviado correctamente.",
+        "text": "Te responderé pronto por el canal que elegiste."
+      },
+      "error": {
+        "title": "Completá los campos marcados.",
+        "text": "Necesito esa info para poder responderte."
+      }
     }
   }
 }
