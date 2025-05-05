@@ -26,5 +26,30 @@
       "text": "Your info stays private ›",
       "shiny": "I don’t share it with anyone"
     }
+  },
+  "form": {
+    "name": {
+      "label": "Name:",
+      "placeholder": "e.g. John Doe"
+    },
+    "email": {
+      "label": "Email:",
+      "placeholder": "e.g. johndoe@mail.com"
+    },
+    "phone": {
+      "label": "Phone Number:",
+      "placeholder": "e.g. +1 (502) 4567 8901"
+    },
+    "service": {
+      "label": "What do you need?",
+      "placeholder": "Select an option"
+    },
+    "message": {
+      "label": "Tell me about your project/business:",
+      "placeholder": "You can describe what you want to build, what your business needs, or simply share your ideas."
+    },
+    "submit": {
+      "label": "How do you want to send your message?"
+    }
   }
 }

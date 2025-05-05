@@ -26,5 +26,30 @@
       "text": "Tu información es privada ›",
       "shiny": "no la comparto con nadie"
     }
+  },
+  "form": {
+    "name": {
+      "label": "Nombre:",
+      "placeholder": "Ej: Juan Pérez"
+    },
+    "email": {
+      "label": "Correo electrónico:",
+      "placeholder": "Ej: juanperez@mail.com"
+    },
+    "phone": {
+      "label": "Números de teléfono:",
+      "placeholder": "Ej: +1 (502) 4567 8901"
+    },
+    "service": {
+      "label": "¿Qué necesitas??",
+      "placeholder": "Selecciona una opción"
+    },
+    "message": {
+      "label": "Cuéntame sobre tu proyecto o negocio:",
+      "placeholder": "Puedes contar qué deseas construir, lo que necesita tu negocio o simplemente compartir tu ideas."
+    },
+    "submit": {
+      "label": "¿Cómo quierés enviar tu mensaje?"
+    }
   }
 }
