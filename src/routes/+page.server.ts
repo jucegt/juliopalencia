@@ -21,7 +21,7 @@ export const actions: Actions = {
     if (invalidFields.length > 0) {
       return fail(400, {
         success: false,
-        error: 'Please fill in all required fields.',
+        message: 'Please fill in all required fields.',
         invalidFields
       });
     }
