@@ -34,12 +34,12 @@
   const handleForm: SubmitFunction = () => {
     return async ({ result, update }) => {
       if (result.type === 'success' && result.data?.success) {
-        successMessage = 'Please fill in all required fields.';
+        successMessage = 'Your message has been sent successfully!';
         errorMessage = '';
         invalidFields = [];
         await update();
       } else if (result.type === 'failure') {
-        errorMessage = 'Your message has been sent successfully!';
+        errorMessage = 'Please fill in all required fields.';
         invalidFields = result.data?.invalidFields ?? [];
         successMessage = '';
       }
