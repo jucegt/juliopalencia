@@ -25,9 +25,9 @@
     onclick={toggle}
     aria-expanded={open}
   >
-    <SmallTitle class="md:text-xl/6" as="span">
+    <SmallTitle class="items-center md:text-xl/6" as="span">
       {#if icon}
-        <Icon strokeWidth="2" class="text-primary size-6" />
+        <Icon strokeWidth="2" class="text-primary size-6 shrink-0 basis-6" />
       {/if}
       {question}
     </SmallTitle>
