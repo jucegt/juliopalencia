@@ -38,7 +38,7 @@ export const actions: Actions = {
 
     try {
       await resend.emails.send({
-        from: 'JulioPalencia.com <website@updates.juliopalencia.com>',
+        from: 'Notifications <notifications@updates.juliopalencia.com>',
         to: [RESEND_CONTACT_EMAIL],
         subject: `${contact[locale].subject.prefix} | ${name} ${contact[locale].subject.text} ${servicesList[locale].find((s) => s.value === service)?.label}`,
         replyTo: email,
