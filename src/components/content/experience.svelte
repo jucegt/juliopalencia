@@ -24,7 +24,7 @@
       {/each}
     </div>
   </div>
-  <p class="mt-4 text-center text-sm text-balance opacity-50">
+  <p class="text-gray/50 mt-4 text-center text-sm text-balance">
     {$t('experience.disclaimer')}
   </p>
 </Container>
