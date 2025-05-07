@@ -37,7 +37,7 @@
       "placeholder": "Ej: juanperez@mail.com"
     },
     "phone": {
-      "label": "Números de teléfono:",
+      "label": "Número de teléfono:",
       "placeholder": "Ej: +1 (502) 4567 8901"
     },
     "service": {
