@@ -38,6 +38,7 @@
   let showError = $state(false);
   let invalidFields = $state<string[]>([]);
   let hideToast = $state(false);
+  let intent = $state('email');
 
   const handleForm: SubmitFunction = () => {
     return async ({ result, update }) => {
@@ -115,7 +116,7 @@
     </div>
     <form
       method="POST"
-      action="?/email"
+      action="?/send"
       use:enhance={handleForm}
       class="relative shrink-1 grow-1 basis-full lg:basis-0"
     >
@@ -164,17 +165,19 @@
           placeholder={$t('contact.form.message.placeholder')}
           rows={8}
         />
+        <input type="hidden" name="intent" value={intent} />
         <div class="flex flex-wrap justify-center gap-4 text-center md:col-span-2">
           <p class="text-dark font-onest block shrink-0 basis-full font-bold">
             {$t('contact.form.submit.label')}
           </p>
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" onclick={() => (intent = 'email')}>
             <span class="z-10">Email</span><Mail size="24" strokeWidth="2" class="z-10" />
           </Button>
           <Button
             variant="secondary"
             class="focus-visible:ring-dark text-dark hover:text-light bg-green-500 hover:bg-green-700"
-            href="#"
+            type="submit"
+            onclick={() => (intent = 'whatsapp')}
           >
             WhatsApp <SendHorizonal size="24" strokeWidth="2" />
           </Button>
