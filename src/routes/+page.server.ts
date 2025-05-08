@@ -1,10 +1,11 @@
+import { env } from '$env/dynamic/private';
 import { fail } from '@sveltejs/kit';
 import { Resend } from 'resend';
-import { RESEND_API_KEY, RESEND_CONTACT_EMAIL } from '$env/static/private';
-import type { Actions } from './$types';
-import contact from '$data/contact';
 import { servicesList } from '$data/services';
+import contact from '$data/contact';
+import type { Actions } from './$types';
 
+const { RESEND_API_KEY, RESEND_CONTACT_EMAIL } = env;
 const resend = new Resend(RESEND_API_KEY);
 
 export const actions: Actions = {
