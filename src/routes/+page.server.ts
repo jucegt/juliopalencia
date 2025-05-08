@@ -1,16 +1,9 @@
-import { env } from '$env/dynamic/private';
 import { fail } from '@sveltejs/kit';
-import { servicesList } from '$data/services';
-import contact from '$data/contact';
 import type { Actions } from './$types';
-
-const { RESEND_API_KEY, RESEND_CONTACT_EMAIL } = env;
+import sendEmail from '$service/resend';
 
 export const actions: Actions = {
   email: async ({ request, url }) => {
-    const { Resend } = await import('resend');
-    const resend = new Resend(RESEND_API_KEY);
-
     const hostname = url.hostname;
     const isEnglishSubdomain = hostname.startsWith('en.');
     const locale = isEnglishSubdomain ? 'en' : 'es';
@@ -39,31 +32,7 @@ export const actions: Actions = {
     }
 
     try {
-      await resend.emails.send({
-        from: 'Notifications <notifications@updates.juliopalencia.com>',
-        to: [RESEND_CONTACT_EMAIL],
-        subject: `${contact[locale].subject.prefix} | ${name} ${contact[locale].subject.text} ${servicesList[locale].find((s) => s.value === service)?.label}`,
-        replyTo: email,
-        html: `
-          <h3>${contact[locale].body}</h3>
-          <p><strong>${contact[locale].form.name}</strong> ${name}</p>
-          <p><strong>${contact[locale].form.email}</strong> ${email}</p>
-          <p><strong>${contact[locale].form.phone}</strong> ${phone}</p>
-          <p><strong>${contact[locale].form.message}</strong></p>
-          <p>${message}</p>
-        `,
-        text: `${contact[locale].body}
-          ${contact[locale].form.name} ${name}
-          ${contact[locale].form.email} ${email}
-          ${contact[locale].form.phone} ${phone}
-          ${contact[locale].form.message}
-          ${message}`
-      });
-
-      return {
-        success: true,
-        message: 'Your message has been sent successfully!'
-      };
+      return await sendEmail(name, email, phone, service, message, locale);
     } catch (err) {
       console.error(err);
       return fail(500, {
