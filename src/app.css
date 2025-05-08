@@ -1,0 +1,186 @@
+@import '@fontsource-variable/figtree';
+@import '@fontsource-variable/onest';
+
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-figtree: 'Figtree Variable', ui-sans-serif, system-ui;
+  --font-onest: 'Onest Variable', ui-sans-serif, system-ui;
+  --color-primary: oklch(0.56 0.1361 249.13);
+  --color-dark: oklch(0.25 0.0104 229.36);
+  --color-dark-100: oklch(0.24 0.009 208.75);
+  --color-dark-200: oklch(0.36 0.0145 252.28);
+  --color-dark-border-200: oklch(0.36 0.0088 219.72);
+  --color-light: oklch(0.97 0.0029 264.54);
+  --color-light-50: oklch(0.98 0.0045 258.32);
+  --color-light-100: oklch(0.97 0.0068 247.9);
+  --color-light-200: oklch(0.89 0.0101 267.35);
+  --color-light-border: oklch(0.89 0.0101 267.35);
+  --color-light-border-200: oklch(0.85 0.0035 247.86);
+  --color-gray: oklch(0.61 0.0066 239.89);
+  --color-gray-200: oklch(0.71 0.0125 264.49);
+  --color-whatsapp: oklch(0.76 0.2015 149.74);
+  --color-gradient-start: var(--color-primary);
+  --color-gradient-end: oklch(0.6 0.2655 304.98);
+  --color-purple: oklch(0.79 0.1041 274.71);
+  --color-skyblue: oklch(0.83 0.1013 230.32);
+  --animate-spin-slow: spin-slow 120s linear infinite;
+  --animate-blink: blink 1s step-end infinite;
+  --animate-swipe-dot: swipe-dot 2s 0.5s infinite cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-swipe-hand: swipe-hand 2s infinite cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slide: slide 30s linear infinite;
+  --animate-fade-up: fade-up 0.15s ease-in-out forwards;
+  --shadow-on-top: 0px -20px 40px -20px transparent;
+  --font-xxs: 10px;
+
+  @keyframes blink {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: currentColor;
+    }
+  }
+  @keyframes spin-slow {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes swipe-hand {
+    25% {
+      transform: translate(6px) rotate(30deg);
+    }
+    50% {
+      transform: translate(-6px) rotate(-15deg);
+    }
+    100% {
+      transform: translate(0px) rotate(0);
+    }
+  }
+
+  @keyframes swipe-dot {
+    12% {
+      visibility: visible;
+      width: 16px;
+    }
+    25% {
+      visibility: visible;
+      transform: translateX(-17px);
+      width: 6px;
+    }
+    26% {
+      visibility: hidden;
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(200px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer utilities {
+  .logo-cocacola {
+    background-image: url('/logos/dark-coca-cola.png');
+  }
+  .dark .dark\:logo-cocacola {
+    background-image: url('/logos/light-coca-cola.png');
+  }
+  .logo-jeep {
+    background-image: url('/logos/dark-jeep.png');
+  }
+  .dark .dark\:logo-jeep {
+    background-image: url('/logos/light-jeep.png');
+  }
+  .logo-mercedesbenz {
+    background-image: url('/logos/dark-mercedes-benz.png');
+  }
+  .dark .dark\:logo-mercedesbenz {
+    background-image: url('/logos/light-mercedes-benz.png');
+  }
+  .logo-gallo {
+    background-image: url('/logos/dark-gallo.png');
+  }
+  .dark .dark\:logo-gallo {
+    background-image: url('/logos/light-gallo.png');
+  }
+  .logo-intecap {
+    background-image: url('/logos/dark-intecap.png');
+  }
+  .dark .dark\:logo-intecap {
+    background-image: url('/logos/light-intecap.png');
+  }
+  .logo-hyundai {
+    background-image: url('/logos/dark-hyundai.png');
+  }
+  .dark .dark\:logo-hyundai {
+    background-image: url('/logos/light-hyundai.png');
+  }
+  .logo-mcdonalds {
+    background-image: url('/logos/dark-mcdonalds.png');
+  }
+  .dark .dark\:logo-mcdonalds {
+    background-image: url('/logos/light-mcdonalds.png');
+  }
+  .logo-revlon {
+    background-image: url('/logos/dark-revlon.png');
+  }
+  .dark .dark\:logo-revlon {
+    background-image: url('/logos/light-revlon.png');
+  }
+  .logo-siman {
+    background-image: url('/logos/dark-siman.png');
+  }
+  .dark .dark\:logo-siman {
+    background-image: url('/logos/light-siman.png');
+  }
+
+  .illustration-stress {
+    background-image: url('/illustrations/no-tech-stress-light.png');
+  }
+  .dark .illustration-stress {
+    background-image: url('/illustrations/no-tech-stress-dark.png');
+  }
+  .illustration-foryou {
+    background-image: url('/illustrations/made-for-you-light.png');
+  }
+  .dark .illustration-foryou {
+    background-image: url('/illustrations/made-for-you-dark.png');
+  }
+  .illustration-support {
+    background-image: url('/illustrations/support-after-launch-light.png');
+  }
+  .dark .illustration-support {
+    background-image: url('/illustrations/support-after-launch-dark.png');
+  }
+
+  .hover\:pause:hover {
+    animation-play-state: paused;
+  }
+}
+
+:root {
+  @apply font-figtree;
+  @apply text-gray;
+  @apply text-base;
+  @apply antialiased;
+}

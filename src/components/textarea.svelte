@@ -1,0 +1,29 @@
+<script lang="ts">
+  import { cn } from '$util/cn';
+
+  type TextareaProps = {
+    id: string;
+    name: string;
+    label: string;
+    placeholder?: string;
+    class?: string;
+    rows?: number;
+  };
+
+  let { id, name, label, rows = 4, ...restProps }: TextareaProps = $props();
+</script>
+
+<div class={cn(restProps.class)}>
+  <label for={id} class="text-dark font-onest mb-2 block font-bold">{label}</label>
+  <div class="relative">
+    <textarea
+      {...restProps}
+      {id}
+      {name}
+      {rows}
+      class={cn(
+        'peer bg-light-50 border-light-200 text-dark focus:ring-primary w-full rounded-lg border px-4 py-3 placeholder:text-gray-200 focus:ring-2 focus:ring-offset-2'
+      )}
+    ></textarea>
+  </div>
+</div>

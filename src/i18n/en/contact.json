@@ -1,0 +1,63 @@
+{
+  "title": "Contact",
+  "subtitle": "Ready to start?",
+  "description": {
+    "text": {
+      "one": "Send me a message and I’ll help you get your business online ›",
+      "two": "You can share your idea or just ask a question ›"
+    },
+    "shiny": {
+      "one": "quickly, clearly, and stress-free.",
+      "two": "I’ll answer you directly."
+    }
+  },
+  "testimonial": {
+    "name": "Javier",
+    "business": "Small business owner",
+    "testimonial": "“He helped me get a clean, well-made website up in just a few days. I always felt like he was just a message away if I had questions.”"
+  },
+  "trustedBullets": {
+    "one": "I usually reply within 24 hours",
+    "two": {
+      "text": "I’ll reach out via WhatsApp or email ›",
+      "shiny": "whichever you prefer"
+    },
+    "three": {
+      "text": "Your info stays private ›",
+      "shiny": "I don’t share it with anyone"
+    }
+  },
+  "form": {
+    "name": {
+      "label": "Name:",
+      "placeholder": "e.g. John Doe"
+    },
+    "email": {
+      "label": "Email:",
+      "placeholder": "e.g. johndoe@mail.com"
+    },
+    "phone": {
+      "label": "Phone Number:",
+      "placeholder": "e.g. +1 (502) 4567 8901"
+    },
+    "service": {
+      "label": "What do you need?",
+      "placeholder": "Select an option"
+    },
+    "message": {
+      "label": "Tell me about your project/business:",
+      "placeholder": "You can describe what you want to build, what your business needs, or simply share your ideas."
+    },
+    "submit": {
+      "label": "How do you want to send your message?",
+      "success": {
+        "title": "Thanks! Your message was sent successfully.",
+        "text": "I’ll get back to you soon using your preferred method."
+      },
+      "error": {
+        "title": "Fill in the highlighted fields.",
+        "text": "I need that info to get back to you."
+      }
+    }
+  }
+}

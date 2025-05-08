@@ -1,0 +1,24 @@
+{
+  "title": "Services",
+  "subtitle": "What I offer",
+  "description": {
+    "text": "Here are the services I offer to help your business get online, automate tasks, or simply run more efficiently. Each one is designed to give you peace of mind ›",
+    "shiny": "no technical knowledge required."
+  },
+  "steps": {
+    "title": "How it works",
+    "one": "Tell me about your business",
+    "two": "I plan and build a solution for you",
+    "three": "You review and give feedback",
+    "four": "We launch or implement it!"
+  },
+  "button": {
+    "shiny": "Not sure where to start?",
+    "text": "I’ll guide you"
+  },
+  "service": {
+    "recommended": "Recommended",
+    "starting": "Starting at",
+    "includes": "Includes"
+  }
+}
