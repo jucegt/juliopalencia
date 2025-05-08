@@ -10,6 +10,7 @@ const config = {
       $comp: 'src/components/*',
       $data: 'src/data/*',
       $i18n: 'src/i18n/*',
+      $service: 'src/services/*',
       $store: 'src/stores/*',
       $svg: 'src/svgs/*',
       $util: 'src/utilities/*'
