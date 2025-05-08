@@ -2,7 +2,6 @@
   import {
     BadgeAlert,
     BadgeCheck,
-    CircleCheck,
     Clock,
     ListTree,
     Mail,
@@ -42,7 +41,10 @@
 
   const handleForm: SubmitFunction = () => {
     return async ({ result, update }) => {
-      if (result.type === 'success' && result.data?.success) {
+      if (result.type === 'success' && result.data?.success && result.data?.url) {
+        window.open(result.data.url, '_blank');
+        await update();
+      } else if (result.type === 'success' && result.data?.success) {
         showSuccess = true;
         showError = false;
         invalidFields = [];
