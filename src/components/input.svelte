@@ -2,14 +2,13 @@
   import { type Icon as IconType } from '@lucide/svelte';
 
   import { cn } from '$util/cn';
-  import { phoneMask } from '$action/phone-mask';
   import { zodValidate } from '$action/zod-validate';
 
   type InputProps = {
     id: string;
     name: string;
     label: string;
-    type?: string;
+    type: string;
     placeholder?: string;
     class?: string;
     icon?: typeof IconType;
@@ -18,6 +17,11 @@
 
   let { id, label, icon, invalid, ...restProps }: InputProps = $props();
   let hasChanged = $state(false);
+  let localInvalid = $state(false);
+
+  function setInvalid(value: boolean) {
+    localInvalid = value;
+  }
 
   const Icon = icon;
 
@@ -27,6 +31,7 @@
 
   $effect(() => {
     if (invalid) hasChanged = false;
+    if (localInvalid) hasChanged = false;
   });
 </script>
 
@@ -36,13 +41,12 @@
     <input
       {...restProps}
       {id}
-      use:zodValidate={restProps.type as 'email' | 'tel'}
-      use:phoneMask={restProps.type === 'tel' ? true : undefined}
+      use:zodValidate={{ type: restProps.type, setInvalid }}
       onchange={handleChange}
       class={cn(
         'peer bg-light-50 border-light-200 text-dark focus:ring-primary h-12 w-full rounded-lg border placeholder:text-gray-200 focus:ring-2 focus:ring-offset-2',
         icon && 'pl-12',
-        invalid && !hasChanged && 'ring-2 ring-red-400 ring-offset-2'
+        ((invalid && !hasChanged) || localInvalid) && 'ring-2 ring-red-400 ring-offset-2'
       )}
     />
     {#if icon}
