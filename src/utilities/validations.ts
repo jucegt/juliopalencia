@@ -5,9 +5,19 @@ export const emailSchema = z.string().trim().email({ message: 'Invalid email add
 export const phoneSchema = z
   .string()
   .trim()
-  .regex(/^\+?[0-9\s\-()]{7,15}$/, {
-    message: 'Invalid phone number format'
-  });
+  .refine(
+    (val) => {
+      const digits = val.replace(/\D/g, '');
+      return (
+        digits.length === 10 ||
+        digits.length === 11 ||
+        (digits.startsWith('1') && digits.length === 11)
+      );
+    },
+    {
+      message: 'Invalid phone number format'
+    }
+  );
 
 export const inputValidations = {
   email: emailSchema,
