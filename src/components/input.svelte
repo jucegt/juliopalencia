@@ -2,6 +2,8 @@
   import { type Icon as IconType } from '@lucide/svelte';
 
   import { cn } from '$util/cn';
+  import { phoneMask } from '$action/phone-mask';
+  import { zodValidate } from '$action/zod-validate';
 
   type InputProps = {
     id: string;
@@ -34,6 +36,8 @@
     <input
       {...restProps}
       {id}
+      use:zodValidate={restProps.type as 'email' | 'tel'}
+      use:phoneMask={restProps.type === 'tel' ? true : undefined}
       onchange={handleChange}
       class={cn(
         'peer bg-light-50 border-light-200 text-dark focus:ring-primary h-12 w-full rounded-lg border placeholder:text-gray-200 focus:ring-2 focus:ring-offset-2',
