@@ -1,6 +1,5 @@
 import { env } from '$env/dynamic/private';
 import { fail } from '@sveltejs/kit';
-import { Resend } from 'resend';
 import { servicesList } from '$data/services';
 import contact from '$data/contact';
 import type { Actions } from './$types';
@@ -9,6 +8,7 @@ const { RESEND_API_KEY, RESEND_CONTACT_EMAIL } = env;
 
 export const actions: Actions = {
   email: async ({ request, url }) => {
+    const { Resend } = await import('resend');
     const resend = new Resend(RESEND_API_KEY);
 
     const hostname = url.hostname;
