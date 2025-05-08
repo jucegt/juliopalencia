@@ -23,7 +23,7 @@ export default async function sendEmail(
         from: 'Notifications <notifications@updates.juliopalencia.com>',
         to: [RESEND_CONTACT_EMAIL],
         subject: `${contact[locale].subject.prefix} | ${name} ${contact[locale].subject.text} ${servicesList[locale].find((s) => s.value === service)?.label}`,
-        replyTo: email,
+        reply_to: email,
         html: `
           <h3>${contact[locale].body}</h3>
           <p><strong>${contact[locale].form.name}</strong> ${name}</p>
