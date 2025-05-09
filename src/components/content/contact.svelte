@@ -14,6 +14,7 @@
   import type { SubmitFunction } from '@sveltejs/kit';
   import { enhance } from '$app/forms';
 
+  import { cn } from '$util/cn';
   import { servicesList } from '$data/services';
   import { t, locale } from '$i18n/config';
   import Button from '$comp/button.svelte';
@@ -21,13 +22,13 @@
   import Container from '$comp/container.svelte';
   import Header from '$comp/section/header.svelte';
   import Input from '$comp/input.svelte';
+  import InputTel from '$comp/input-tel.svelte';
   import Select from '$comp/select.svelte';
   import ShinyText from '$comp/shiny-text.svelte';
   import Testimonial from '$comp/section/testimonial.svelte';
   import Textarea from '$comp/textarea.svelte';
-  import TrustedBullet from '$comp/trusted-bullet.svelte';
   import Toast from '$comp/toast.svelte';
-  import { cn } from '$util/cn';
+  import TrustedBullet from '$comp/trusted-bullet.svelte';
 
   const list = servicesList[($locale as 'en' | 'es') || 'es'];
 
@@ -141,14 +142,13 @@
           icon={Mail}
           invalid={invalidFields.includes('email')}
         />
-        <Input
+        <InputTel
           id="phone"
           name="phone"
           label={$t('contact.form.phone.label')}
-          type="tel"
           placeholder={$t('contact.form.phone.placeholder')}
           icon={Phone}
-          invalid={invalidFields.includes('phone')}
+          invalid={invalidFields.includes('country') || invalidFields.includes('phone')}
         />
         <Select
           id="service"
