@@ -38,7 +38,7 @@
 </script>
 
 <div class={cn(restProps.class)}>
-  <label for={id} class="text-dark font-onest mb-2 block font-bold">{label}</label>
+  <label for={id} class="text-dark font-onest dark:text-light mb-2 block font-bold">{label}</label>
   <div class="relative">
     <select
       {...restProps}
@@ -46,21 +46,21 @@
       {name}
       onchange={handleChange}
       class={cn(
-        'peer bg-light-50 border-light-200 text-dark focus:ring-primary h-12 w-full appearance-none rounded-lg border bg-none px-4 pr-10 placeholder:text-gray-200 focus:ring-2 focus:ring-offset-2',
+        'peer bg-light-50 ring-offset-light-200 dark:ring-offset-dark-100 dark:bg-dark-50 dark:border-dark-200 border-light-200 text-dark focus:ring-primary dark:placeholder:text-dark-placeholder h-12 w-full appearance-none rounded-lg border bg-none px-4 pr-10 placeholder:text-gray-200 focus:ring-2 focus:ring-offset-2',
         icon && 'pl-12',
-        isDefaultValueSelected && 'text-gray-200',
+        isDefaultValueSelected && 'dark:text-dark-placeholder text-gray-200',
         invalid && !hasChanged && 'ring-2 ring-red-400 ring-offset-2'
       )}
     >
       <option disabled selected>{placeholder}</option>
       {#each options as { value, label }}
-        <option class="text-dark" {value}>{label}</option>
+        <option class="text-dark dark:text-light" {value}>{label}</option>
       {/each}
     </select>
 
     {#if icon}
       <Icon
-        class="peer-focus:text-primary pointer-events-none absolute top-[13px] left-[15px] size-6 text-gray-200"
+        class="peer-focus:text-primary dark:text-dark-placeholder pointer-events-none absolute top-[13px] left-[15px] size-6 text-gray-200"
       />
     {/if}
     <ChevronsUpDown
