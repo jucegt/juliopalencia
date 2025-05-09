@@ -2,9 +2,10 @@ import type { Handle } from '@sveltejs/kit';
 import { locales } from '$i18n/config';
 
 type Lang = 'es' | 'en';
+type Theme = 'dark' | 'light';
 
 export const handle: Handle = async ({ event, resolve }) => {
-  const { url, locals } = event;
+  const { url, locals, cookies } = event;
   const host = url.hostname;
   const isEnglishSubdomain = host.startsWith('en.');
 
@@ -13,15 +14,20 @@ export const handle: Handle = async ({ event, resolve }) => {
   let locale = supportedLocales.find((l) => l === lang) as Lang;
   locals.lang = lang;
 
+  const theme = (cookies.get('theme') || 'dark') as Theme;
+  locals.theme = theme;
+
   const response = await resolve(
     {
       ...event,
       locals: {
-        lang: locale || 'es'
+        lang: locale || 'es',
+        theme
       }
     },
     {
-      transformPageChunk: ({ html }) => html.replace('%sveltekit.lang%', lang)
+      transformPageChunk: ({ html }) =>
+        html.replace('%sveltekit.lang%', lang).replace('%sveltekit.theme%', theme)
     }
   );
 

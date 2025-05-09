@@ -65,10 +65,10 @@
 </script>
 
 <div class="group">
-  <label for={id} class="text-dark font-onest mb-2 block font-bold">{label}</label>
+  <label for={id} class="text-dark dark:text-light font-onest mb-2 block font-bold">{label}</label>
   <div
     class={cn(
-      'focus-within:ring-primary flex rounded-lg focus-within:ring-2 focus-within:ring-offset-2',
+      'focus-within:ring-primary ring-offset-light-100 dark:ring-offset-dark-100 flex rounded-lg focus-within:ring-2 focus-within:ring-offset-2',
       ((invalid && (!hasChangedSelect || !hasChangedInput)) || !localValid) &&
         'ring-2 ring-red-400 ring-offset-2'
     )}
@@ -76,9 +76,9 @@
     <div class="relative focus-within:z-10">
       <select
         class={cn(
-          'bg-light-50 border-light-200 text-dark -mr-[1px] block h-12 appearance-none rounded-l-lg border bg-none px-4 pr-10 placeholder:text-gray-200 focus:ring-0',
+          'bg-light-50 border-light-200 dark:border-dark-200 dark:text-light dark:bg-dark-50 text-dark -mr-[1px] block h-12 appearance-none rounded-l-lg border bg-none px-4 pr-10 focus:ring-0',
           icon && 'pl-12',
-          isDefaultValueSelected && 'text-gray-200'
+          isDefaultValueSelected && 'dark:text-dark-placeholder text-gray-200'
         )}
         aria-label={$t('interactions.country')}
         name="country"
@@ -88,7 +88,7 @@
         <option value={null} hidden={country !== null}>{$t('interactions.country')}</option>
         {#each normalizedCountries as currentCountry (currentCountry.id)}
           <option
-            class="text-dark"
+            class="text-dark dark:text-light"
             value={currentCountry.iso2}
             selected={currentCountry.iso2 === country}
             aria-selected={currentCountry.iso2 === country}
@@ -99,7 +99,7 @@
       </select>
       {#if icon}
         <Icon
-          class="group-focus-within:text-primary pointer-events-none absolute top-[13px] left-[15px] size-6 text-gray-200"
+          class="group-focus-within:text-primary dark:text-dark-placeholder pointer-events-none absolute top-[13px] left-[15px] size-6 text-gray-200"
         />
       {/if}
       <ChevronsUpDown
@@ -120,7 +120,7 @@
         onblur={handleBlur}
         onchange={handleChangeInput}
         class={cn(
-          'bg-light-50 border-light-200 text-dark h-12 w-full rounded-r-lg border placeholder:text-gray-200 focus:ring-0'
+          'bg-light-50 border-light-200 text-dark dark:border-dark-200 dark:bg-dark-50 dark:text-light dark:placeholder:text-dark-placeholder h-12 w-full rounded-r-lg border placeholder:text-gray-200 focus:ring-0'
         )}
       />
     </div>

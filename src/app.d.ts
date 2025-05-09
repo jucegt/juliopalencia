@@ -5,6 +5,7 @@ declare global {
     // interface Error {}
     interface Locals {
       lang: 'en' | 'es';
+      theme: 'dark' | 'light';
     }
     // interface PageData {}
     // interface PageState {}
