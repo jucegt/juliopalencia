@@ -169,7 +169,7 @@
         />
         <input type="hidden" name="intent" value={intent} />
         <div class="flex flex-wrap justify-center gap-4 text-center md:col-span-2">
-          <p class="text-dark font-onest block shrink-0 basis-full font-bold">
+          <p class="text-dark font-onest dark:text-light block shrink-0 basis-full font-bold">
             {$t('contact.form.submit.label')}
           </p>
           <Button variant="primary" type="submit" onclick={() => (intent = 'email')}>
@@ -177,7 +177,7 @@
           </Button>
           <Button
             variant="secondary"
-            class="focus-visible:ring-dark text-dark hover:text-light bg-green-500 hover:bg-green-700"
+            class="focus-visible:ring-dark text-dark hover:text-light dark:text-dark bg-green-500 hover:bg-green-700 dark:bg-green-500"
             type="submit"
             onclick={() => (intent = 'whatsapp')}
           >
