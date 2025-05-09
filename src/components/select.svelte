@@ -46,7 +46,7 @@
       {name}
       onchange={handleChange}
       class={cn(
-        'peer bg-light-50 ring-offset-light-100 dark:ring-offset-dark-100 dark:bg-dark-50 dark:border-dark-200 border-light-200 text-dark focus:ring-primary dark:placeholder:text-dark-placeholder h-12 w-full appearance-none rounded-lg border bg-none px-4 pr-10 placeholder:text-gray-200 focus:ring-2 focus:ring-offset-2',
+        'peer bg-light-50 ring-offset-light-100 dark:ring-offset-dark-100 dark:bg-dark-50 dark:border-dark-200 border-light-200 text-dark focus:ring-primary dark:placeholder:text-dark-placeholder dark:text-light h-12 w-full appearance-none rounded-lg border bg-none px-4 pr-10 placeholder:text-gray-200 focus:ring-2 focus:ring-offset-2',
         icon && 'pl-12',
         isDefaultValueSelected && 'dark:text-dark-placeholder text-gray-200',
         invalid && !hasChanged && 'ring-2 ring-red-400 ring-offset-2'
