@@ -19,7 +19,7 @@ export const zodValidate: Action<HTMLInputElement, Params> = (node, params) => {
     const result = schema.safeParse(node.value);
 
     setInvalid(node.value ? !result.success : false);
-    node.setCustomValidity(' ');
+    node.setCustomValidity(result.success ? '' : ' ');
   };
 
   if (isEnabled) {
