@@ -1,7 +1,9 @@
 <script lang="ts">
-  import { Mail } from '@lucide/svelte';
+  import { Mail, Moon, Sun } from '@lucide/svelte';
+  import { getStores } from '$app/stores';
 
   import { cn } from '$util/cn';
+  import { setTheme } from '$util/theme';
   import { t } from '$i18n/config';
   import Button from '$comp/button.svelte';
   import Container from '$comp/container.svelte';
@@ -9,9 +11,18 @@
   import Nav from '$comp/header/nav.svelte';
   import Right from '$comp/header/right.svelte';
 
+  const { page } = getStores();
+  let theme = $state($page.data.theme);
+
   const SCROLL_LIMIT = 100;
   const SCROLL_LIMIT_MOBILE = 50;
   let isAfterPosition = $state(false);
+
+  function toggleTheme() {
+    const next = theme === 'dark' ? 'light' : 'dark';
+    theme = next;
+    setTheme(next);
+  }
 
   $effect(() => {
     const handleScroll = () => {
@@ -35,6 +46,24 @@
     <Logo />
     <Nav />
     <Right>
+      <button
+        onclick={toggleTheme}
+        class="group hover:text-primary hover:bg-light-200/50 dark:hover:bg-dark-200/50 flex size-12 cursor-pointer items-center justify-center rounded-md transition ease-in-out"
+      >
+        {#if theme === 'dark'}
+          <Sun
+            class="transition-[rotate] ease-in-out group-hover:-rotate-10"
+            size="24"
+            strokeWidth="2"
+          />
+        {:else}
+          <Moon
+            class="transition-[rotate] ease-in-out group-hover:-rotate-10"
+            size="24"
+            strokeWidth="2"
+          />
+        {/if}
+      </button>
       <Button variant="secondary" href="#contact">
         <Mail
           size="24"
@@ -44,7 +73,7 @@
         />
         <span class="z-10">
           {$t('header.button.small')}
-          <span class="hidden md:inline">{$t('header.button.extended')}</span>
+          <span class="hidden lg:inline">{$t('header.button.extended')}</span>
         </span>
       </Button>
     </Right>
