@@ -54,7 +54,7 @@
     >
       <option disabled selected>{placeholder}</option>
       {#each options as { value, label }}
-        <option {value}>{label}</option>
+        <option class="text-dark" {value}>{label}</option>
       {/each}
     </select>
 

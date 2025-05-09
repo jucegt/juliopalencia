@@ -38,7 +38,7 @@
     },
     "phone": {
       "label": "Phone Number:",
-      "placeholder": "e.g. +1 (502) 4567 8901"
+      "placeholder": "Select a country first"
     },
     "service": {
       "label": "What do you need?",
@@ -56,7 +56,7 @@
       },
       "error": {
         "title": "Fill in the highlighted fields.",
-        "text": "I need that info to get back to you."
+        "text": "I need that information to get back to you."
       }
     }
   }

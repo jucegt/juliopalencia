@@ -2,7 +2,6 @@
   import {
     BadgeAlert,
     BadgeCheck,
-    CircleCheck,
     Clock,
     ListTree,
     Mail,
@@ -15,6 +14,7 @@
   import type { SubmitFunction } from '@sveltejs/kit';
   import { enhance } from '$app/forms';
 
+  import { cn } from '$util/cn';
   import { servicesList } from '$data/services';
   import { t, locale } from '$i18n/config';
   import Button from '$comp/button.svelte';
@@ -22,13 +22,13 @@
   import Container from '$comp/container.svelte';
   import Header from '$comp/section/header.svelte';
   import Input from '$comp/input.svelte';
+  import InputTel from '$comp/input-tel.svelte';
   import Select from '$comp/select.svelte';
   import ShinyText from '$comp/shiny-text.svelte';
   import Testimonial from '$comp/section/testimonial.svelte';
   import Textarea from '$comp/textarea.svelte';
-  import TrustedBullet from '$comp/trusted-bullet.svelte';
   import Toast from '$comp/toast.svelte';
-  import { cn } from '$util/cn';
+  import TrustedBullet from '$comp/trusted-bullet.svelte';
 
   const list = servicesList[($locale as 'en' | 'es') || 'es'];
 
@@ -38,10 +38,14 @@
   let showError = $state(false);
   let invalidFields = $state<string[]>([]);
   let hideToast = $state(false);
+  let intent = $state('email');
 
   const handleForm: SubmitFunction = () => {
     return async ({ result, update }) => {
-      if (result.type === 'success' && result.data?.success) {
+      if (result.type === 'success' && result.data?.success && result.data?.url) {
+        window.open(result.data.url, '_blank');
+        await update();
+      } else if (result.type === 'success' && result.data?.success) {
         showSuccess = true;
         showError = false;
         invalidFields = [];
@@ -115,7 +119,7 @@
     </div>
     <form
       method="POST"
-      action="?/email"
+      action="?/send"
       use:enhance={handleForm}
       class="relative shrink-1 grow-1 basis-full lg:basis-0"
     >
@@ -138,14 +142,13 @@
           icon={Mail}
           invalid={invalidFields.includes('email')}
         />
-        <Input
+        <InputTel
           id="phone"
           name="phone"
           label={$t('contact.form.phone.label')}
-          type="tel"
           placeholder={$t('contact.form.phone.placeholder')}
           icon={Phone}
-          invalid={invalidFields.includes('phone')}
+          invalid={invalidFields.includes('country') || invalidFields.includes('phone')}
         />
         <Select
           id="service"
@@ -164,17 +167,19 @@
           placeholder={$t('contact.form.message.placeholder')}
           rows={8}
         />
+        <input type="hidden" name="intent" value={intent} />
         <div class="flex flex-wrap justify-center gap-4 text-center md:col-span-2">
           <p class="text-dark font-onest block shrink-0 basis-full font-bold">
             {$t('contact.form.submit.label')}
           </p>
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" onclick={() => (intent = 'email')}>
             <span class="z-10">Email</span><Mail size="24" strokeWidth="2" class="z-10" />
           </Button>
           <Button
             variant="secondary"
             class="focus-visible:ring-dark text-dark hover:text-light bg-green-500 hover:bg-green-700"
-            href="#"
+            type="submit"
+            onclick={() => (intent = 'whatsapp')}
           >
             WhatsApp <SendHorizonal size="24" strokeWidth="2" />
           </Button>

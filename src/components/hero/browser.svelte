@@ -17,7 +17,6 @@
     </div>
     <div
       class="font-figtree text-dark dark:text-light bg-light dark:bg-dark border-light-border-200 dark:border-dark-border-200 ring-primary flex h-[36px] shrink-1 grow-1 basis-0 items-center justify-between rounded-sm border px-2 tracking-wider transition md:justify-center"
-      aria-readonly="true"
     >
       <Lock size="18" strokeWidth="2" class="text-gray md:hidden" />
       <TypingText

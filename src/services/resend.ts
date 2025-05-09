@@ -4,14 +4,23 @@ import contact from '$data/contact';
 
 const { RESEND_API_KEY, RESEND_CONTACT_EMAIL } = env;
 
-export default async function sendEmail(
-  name: string,
-  email: string,
-  phone: string,
-  service: string,
-  message: string,
-  locale: 'es' | 'en'
-) {
+type SendEmailProps = {
+  name: string;
+  email: string;
+  phone: string;
+  service: string;
+  message: string;
+  locale: 'es' | 'en';
+};
+
+export default async function sendEmail({
+  name,
+  email,
+  phone,
+  service,
+  message,
+  locale
+}: SendEmailProps) {
   try {
     const response = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -23,7 +32,7 @@ export default async function sendEmail(
         from: 'Notifications <notifications@updates.juliopalencia.com>',
         to: [RESEND_CONTACT_EMAIL],
         subject: `${contact[locale].subject.prefix} | ${name} ${contact[locale].subject.text} ${servicesList[locale].find((s) => s.value === service)?.label}`,
-        replyTo: email,
+        reply_to: email,
         html: `
           <h3>${contact[locale].body}</h3>
           <p><strong>${contact[locale].form.name}</strong> ${name}</p>

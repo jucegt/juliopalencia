@@ -39,6 +39,7 @@
 </script>
 
 <Card
+  as="div"
   class={cn(
     'shrink-0 basis-full sm:basis-96 md:basis-112',
     restProps.class,
