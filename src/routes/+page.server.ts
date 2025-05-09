@@ -1,4 +1,6 @@
 import { fail } from '@sveltejs/kit';
+import { normalizedCountries } from 'svelte-tel-input';
+
 import buildWhatsappMessage from '$util/whatsapp-message';
 import createWhatsappUrl from '$util/whatsapp-link';
 import sendEmail from '$service/resend';
@@ -14,6 +16,7 @@ export const actions: Actions = {
 
     const name = formData.get('name')?.toString().trim() || '';
     const email = formData.get('email')?.toString().trim() || '';
+    const country = formData.get('country')?.toString().trim() || '';
     const phone = formData.get('phone')?.toString().trim() || '';
     const service = (formData.get('service')?.toString().trim() || '') as
       | 'business-website'
@@ -28,6 +31,7 @@ export const actions: Actions = {
 
     if (!name) invalidFields.push('name');
     if (!email) invalidFields.push('email');
+    if (!country) invalidFields.push('country');
     if (!phone) invalidFields.push('phone');
     if (!service) invalidFields.push('service');
 
@@ -39,10 +43,12 @@ export const actions: Actions = {
       });
     }
 
+    const countryDialCode = normalizedCountries.find((c) => c.iso2 === country)?.dialCode;
+
     if (intent === 'whatsapp') {
       const whatsappMessage = buildWhatsappMessage({
         name,
-        phone,
+        phone: `+${countryDialCode} ${phone}`,
         email,
         service,
         message,
@@ -57,7 +63,14 @@ export const actions: Actions = {
     }
 
     try {
-      return await sendEmail(name, email, phone, service, message, locale);
+      return await sendEmail({
+        name,
+        email,
+        phone: `+${countryDialCode} ${phone}`,
+        service,
+        message,
+        locale
+      });
     } catch (err) {
       console.error(err);
       return fail(500, {
