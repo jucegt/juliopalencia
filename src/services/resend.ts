@@ -4,14 +4,23 @@ import contact from '$data/contact';
 
 const { RESEND_API_KEY, RESEND_CONTACT_EMAIL } = env;
 
-export default async function sendEmail(
-  name: string,
-  email: string,
-  phone: string,
-  service: string,
-  message: string,
-  locale: 'es' | 'en'
-) {
+type SendEmailProps = {
+  name: string;
+  email: string;
+  phone: string;
+  service: string;
+  message: string;
+  locale: 'es' | 'en';
+};
+
+export default async function sendEmail({
+  name,
+  email,
+  phone,
+  service,
+  message,
+  locale
+}: SendEmailProps) {
   try {
     const response = await fetch('https://api.resend.com/emails', {
       method: 'POST',
