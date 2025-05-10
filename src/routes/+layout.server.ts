@@ -3,7 +3,7 @@ import type { ServerLoad } from '@sveltejs/kit';
 
 import { locales, loadTranslations, translations, defaultLocale } from '$i18n/config';
 
-const { DOMAIN } = env;
+const { PUBLIC_DOMAIN } = env;
 
 export const load: ServerLoad = async ({ url, locals, cookies }) => {
   const host = url.hostname;
@@ -17,7 +17,7 @@ export const load: ServerLoad = async ({ url, locals, cookies }) => {
 
   cookies.set('theme', locals.theme, {
     path: '/',
-    domain: `.${DOMAIN}`,
+    domain: `.${PUBLIC_DOMAIN}`,
     httpOnly: false,
     sameSite: 'lax',
     secure: true,
