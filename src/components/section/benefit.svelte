@@ -56,7 +56,11 @@
       </p>
       {#if buttonIcon && buttonText}
         <Button href={buttonHref} variant="underline" class="mt-4 w-fit">
-          <ButtonIcon size="24" strokeWidth="2" />
+          <ButtonIcon
+            size="24"
+            strokeWidth="2"
+            class="transition-[rotate] ease-in-out group-hover:-rotate-10"
+          />
           <span>
             {buttonText}
             {#if buttonTextHidden}
@@ -87,7 +91,11 @@
     </p>
     {#if buttonIcon && buttonText}
       <Button href={buttonHref} variant="underline" class="mt-4 w-fit">
-        <ButtonIcon size="24" strokeWidth="2" />
+        <ButtonIcon
+          size="24"
+          strokeWidth="2"
+          class="transition-[rotate] ease-in-out group-hover:-rotate-10"
+        />
         <span>
           {buttonText}
           {#if buttonTextHidden}
