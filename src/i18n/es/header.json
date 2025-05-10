@@ -1,4 +1,10 @@
 {
+  "lang": {
+    "text": "EN",
+    "label": "Go to English version",
+    "href": "https://en.juliopalencia.com"
+  },
+  "theme": "Cambiar tema",
   "button": {
     "small": "Hablemos",
     "extended": "de tu sitio web"
