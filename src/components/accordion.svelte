@@ -21,7 +21,7 @@
 
 <div class="border-light-200 dark:border-dark-200 bg-light-100 dark:bg-dark-100 rounded-xl border">
   <button
-    class="text-dark dark:text-light flex w-full cursor-pointer items-center justify-between p-4 text-left font-bold md:px-8 md:py-6"
+    class="text-dark dark:text-light focus-visible:ring-primary z-10 flex w-full cursor-pointer items-center justify-between rounded-xl p-4 text-left font-bold outline-none focus-visible:ring-2 md:px-8 md:py-6"
     onclick={toggle}
     aria-expanded={open}
   >
