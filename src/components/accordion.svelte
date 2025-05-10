@@ -21,13 +21,16 @@
 
 <div class="border-light-200 dark:border-dark-200 bg-light-100 dark:bg-dark-100 rounded-xl border">
   <button
-    class="text-dark dark:text-light focus-visible:ring-primary z-10 flex w-full cursor-pointer items-center justify-between rounded-xl p-4 text-left font-bold outline-none focus-visible:ring-2 md:px-8 md:py-6"
+    class="group text-dark dark:text-light focus-visible:ring-primary z-10 flex w-full cursor-pointer items-center justify-between rounded-xl p-4 text-left font-bold outline-none focus-visible:ring-2 md:px-8 md:py-6"
     onclick={toggle}
     aria-expanded={open}
   >
     <SmallTitle class="items-center md:text-xl/6" as="span">
       {#if icon}
-        <Icon strokeWidth="2" class="text-primary size-6 shrink-0 basis-6" />
+        <Icon
+          strokeWidth="2"
+          class="text-primary size-6 shrink-0 basis-6 transition-[rotate] ease-in-out group-hover:-rotate-10"
+        />
       {/if}
       {question}
     </SmallTitle>
