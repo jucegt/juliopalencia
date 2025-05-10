@@ -1,4 +1,4 @@
-import { env } from '$env/dynamic/private';
+import { env } from '$env/dynamic/public';
 import type { ServerLoad } from '@sveltejs/kit';
 
 import { locales, loadTranslations, translations, defaultLocale } from '$i18n/config';
