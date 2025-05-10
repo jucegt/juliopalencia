@@ -173,7 +173,11 @@
             {$t('contact.form.submit.label')}
           </p>
           <Button variant="primary" type="submit" onclick={() => (intent = 'email')}>
-            <span class="z-10">Email</span><Mail size="24" strokeWidth="2" class="z-10" />
+            <span class="z-10">Email</span><Mail
+              size="24"
+              strokeWidth="2"
+              class="z-10 transition-[rotate] ease-in-out group-hover:rotate-10"
+            />
           </Button>
           <Button
             variant="secondary"
@@ -181,7 +185,11 @@
             type="submit"
             onclick={() => (intent = 'whatsapp')}
           >
-            WhatsApp <SendHorizonal size="24" strokeWidth="2" />
+            WhatsApp <SendHorizonal
+              size="24"
+              strokeWidth="2"
+              class="transition-[rotate] ease-in-out group-hover:-rotate-10"
+            />
           </Button>
         </div>
         {#if showSuccess}
