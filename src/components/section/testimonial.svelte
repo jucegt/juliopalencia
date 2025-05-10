@@ -7,7 +7,7 @@
 </script>
 
 <article
-  class="bg-light-100 border-light-200 dark:bg-dark-100 dark:border-dark-200 flex shrink-0 grow-0 basis-full flex-col gap-4 rounded-2xl border p-6 select-none sm:basis-sm md:p-8 xl:shrink-1 xl:grow-1 xl:basis-0"
+  class="group bg-light-100 border-light-200 dark:bg-dark-100 dark:border-dark-200 flex shrink-0 grow-0 basis-full flex-col gap-4 rounded-2xl border p-6 select-none sm:basis-sm md:p-8 xl:shrink-1 xl:grow-1 xl:basis-0"
   {role}
 >
   <blockquote class="text-base font-bold"><slot /></blockquote>
@@ -23,7 +23,7 @@
           {/if}
         </div>
         <Quote
-          class="text-primary shrink-0 grow-0 basis-[24px] text-base"
+          class="text-primary shrink-0 grow-0 basis-[24px] text-base transition-[rotate] ease-in-out group-hover:rotate-10"
           size="24"
           strokeWidth="2"
           aria-hidden="true"
