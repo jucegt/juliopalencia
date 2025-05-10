@@ -46,7 +46,11 @@
       <Step before={3} class="mt-4 md:mt-6">{$t('services.steps.three')}</Step>
       <Step before={4} class="mt-4 md:mt-6">{$t('services.steps.four')}</Step>
       <Button variant="underline" onclick={() => scrollTo(3)} class="mt-8">
-        <Compass size="24" strokeWidth="2" />
+        <Compass
+          size="24"
+          strokeWidth="2"
+          class="transition-[rotate] ease-in-out group-hover:-rotate-10"
+        />
         {$t('services.button.shiny')}
       </Button>
       <span class="text-gray relative -top-1.5">{$t('services.button.text')}</span>
@@ -60,11 +64,19 @@
             <Service {...rest} currency={lang === 'es' ? 'GTQ' : 'USD'}>
               <Button class="w-fit" variant="primary" href={buttons.primary.href}>
                 <span class="z-10">{buttons.primary.text}</span>
-                <buttons.primary.icon class="z-10" size="24" strokeWidth="2" />
+                <buttons.primary.icon
+                  class="z-10 transition-[rotate] ease-in-out group-hover:rotate-10"
+                  size="24"
+                  strokeWidth="2"
+                />
               </Button>
               <Button class="w-fit" variant="secondary" href={buttons.secondary.href}>
                 <span>{buttons.secondary.text}</span>
-                <buttons.secondary.icon size="24" strokeWidth="2" />
+                <buttons.secondary.icon
+                  class="transition-[rotate] ease-in-out group-hover:rotate-10"
+                  size="24"
+                  strokeWidth="2"
+                />
               </Button>
             </Service>
           {/each}
