@@ -46,10 +46,7 @@
     <Logo />
     <Nav />
     <Right>
-      <button
-        onclick={toggleTheme}
-        class="group hover:text-primary hover:bg-light-200/50 dark:hover:bg-dark-200/50 flex size-12 cursor-pointer items-center justify-center rounded-md transition ease-in-out"
-      >
+      <Button variant="square" aria-label={$t('header.theme')} onclick={toggleTheme}>
         {#if theme === 'dark'}
           <Sun
             class="transition-[rotate] ease-in-out group-hover:-rotate-10"
@@ -63,7 +60,10 @@
             strokeWidth="2"
           />
         {/if}
-      </button>
+      </Button>
+      <Button variant="square" aria-label={$t('header.lang.label')} href={$t('header.lang.href')}>
+        {$t('header.lang.text')}
+      </Button>
       <Button variant="secondary" href="#contact">
         <Mail
           size="24"
