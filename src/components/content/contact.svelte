@@ -94,13 +94,17 @@
       >
         {$t('contact.testimonial.testimonial')}
       </Testimonial>
-      <TrustedBullet class="mt-8 lg:mt-16">
-        <Clock class="text-primary shrink-0 grow-0 basis-[24px]" size="24" strokeWidth="2" />
+      <TrustedBullet class="group mt-8 lg:mt-16">
+        <Clock
+          class="text-primary shrink-0 grow-0 basis-[24px] transition-[rotate] ease-in-out group-hover:-rotate-10"
+          size="24"
+          strokeWidth="2"
+        />
         <span>{$t('contact.trustedBullets.one')}</span>
       </TrustedBullet>
-      <TrustedBullet class="mt-4 lg:mt-8">
+      <TrustedBullet class="group mt-4 lg:mt-8">
         <MessageCircleMore
-          class="text-primary shrink-0 grow-0 basis-[24px]"
+          class="text-primary shrink-0 grow-0 basis-[24px] transition-[rotate] ease-in-out group-hover:-rotate-10"
           size="24"
           strokeWidth="2"
         />
@@ -109,8 +113,12 @@
           <ShinyText>{$t('contact.trustedBullets.two.shiny')}</ShinyText>
         </span>
       </TrustedBullet>
-      <TrustedBullet class="mt-4 lg:mt-8">
-        <ShieldCheck class="text-primary shrink-0 grow-0 basis-[24px]" size="24" strokeWidth="2" />
+      <TrustedBullet class="group mt-4 lg:mt-8">
+        <ShieldCheck
+          class="text-primary shrink-0 grow-0 basis-[24px] transition-[rotate] ease-in-out group-hover:-rotate-10"
+          size="24"
+          strokeWidth="2"
+        />
         <span>
           {$t('contact.trustedBullets.three.text')}
           <ShinyText>{$t('contact.trustedBullets.three.shiny')}</ShinyText>
@@ -173,7 +181,8 @@
             {$t('contact.form.submit.label')}
           </p>
           <Button variant="primary" type="submit" onclick={() => (intent = 'email')}>
-            <span class="z-10">Email</span><Mail
+            <span class="z-10">Email</span>
+            <Mail
               size="24"
               strokeWidth="2"
               class="z-10 transition-[rotate] ease-in-out group-hover:rotate-10"
