@@ -1,3 +1,4 @@
+import { env } from '$env/dynamic/private';
 import { fail } from '@sveltejs/kit';
 import { normalizedCountries } from 'svelte-tel-input';
 
@@ -5,6 +6,8 @@ import buildWhatsappMessage from '$util/whatsapp-message';
 import createWhatsappUrl from '$util/whatsapp-link';
 import sendEmail from '$service/resend';
 import type { Actions } from './$types';
+
+const { WHATSAPP_PHONE_NUMBER } = env;
 
 export const actions: Actions = {
   send: async ({ request, url }) => {
@@ -54,7 +57,7 @@ export const actions: Actions = {
         message,
         lang: locale
       });
-      const whatsappUrl = createWhatsappUrl('50230138559', whatsappMessage);
+      const whatsappUrl = createWhatsappUrl(WHATSAPP_PHONE_NUMBER!, whatsappMessage);
       return {
         success: true,
         message: 'WhatsApp link generated successfully.',
