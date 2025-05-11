@@ -7,6 +7,7 @@
   import Hero from '$comp/hero.svelte';
   import Services from '$comp/content/services.svelte';
   import Testimonials from '$comp/content/testimonials.svelte';
+  import Footer from '$comp/footer.svelte';
 </script>
 
 <Header />
@@ -17,3 +18,4 @@
 <Experience />
 <Faq />
 <Contact />
+<Footer />
