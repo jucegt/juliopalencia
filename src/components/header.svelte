@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Mail, Moon, Sun } from '@lucide/svelte';
-  import { getStores } from '$app/stores';
+  import { page } from '$app/state';
 
   import { cn } from '$util/cn';
   import { setTheme } from '$util/theme';
@@ -11,8 +11,8 @@
   import Nav from '$comp/header/nav.svelte';
   import Right from '$comp/header/right.svelte';
 
-  const { page } = getStores();
-  let theme = $state($page.data.theme);
+  const { data } = page;
+  let theme = $state(data.theme);
 
   const SCROLL_LIMIT = 100;
   const SCROLL_LIMIT_MOBILE = 50;
