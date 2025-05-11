@@ -61,9 +61,9 @@
       </div>
       <div class="order-2 lg:order-3 lg:col-start-2 lg:row-span-2 lg:row-start-1">
         <p class="mb-4 lg:mb-8">{text}</p>
-        <h4 class="text-dark font-onest dark:text-light mb-4 font-bold lg:mb-8">
+        <p class="text-dark font-onest dark:text-light mb-4 font-bold lg:mb-8">
           {$t('services.service.includes')}:
-        </h4>
+        </p>
         <ul class="flex flex-col gap-4 text-base/5">
           {#each list as item (item)}
             <li class="flex gap-4">
