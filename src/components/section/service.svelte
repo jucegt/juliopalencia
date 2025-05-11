@@ -42,7 +42,7 @@
   >
     <div class="grid gap-x-8 gap-y-4 lg:auto-rows-auto lg:grid-cols-2 xl:gap-x-16">
       <div class="order-1">
-        <SmallTitle class="mb-4">{name}</SmallTitle>
+        <SmallTitle as="h3" class="mb-4">{name}</SmallTitle>
         <p class="my-4 sm:text-balance xl:text-wrap 2xl:text-balance">{description}</p>
         <p>
           {$t('services.service.starting')}{' '}
