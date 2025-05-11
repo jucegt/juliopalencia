@@ -25,7 +25,7 @@
   };
 </script>
 
-<div class={cn(classes[variant])} role="listitem" use:smoothScroll>
+<div class={cn(classes[variant])} use:smoothScroll>
   {#if variant === 'recommended'}
     <p
       class="text-light font-onest flex items-center justify-center gap-2 py-2 text-xs font-bold uppercase"
