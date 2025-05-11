@@ -20,9 +20,9 @@
       {$t('testimonials.description.text')}
       <ShinyText>{$t('testimonials.description.shiny')}</ShinyText>
     </Header>
-    <Carousel role="list" id="testimonials-carousel">
+    <Carousel id="testimonials-carousel">
       {#each list as { testimonial, id, ...rest } (id)}
-        <Testimonial role="listitem" {...rest}>{testimonial}</Testimonial>
+        <Testimonial {...rest}>{testimonial}</Testimonial>
       {/each}
     </Carousel>
   </Container>

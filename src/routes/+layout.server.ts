@@ -8,6 +8,7 @@ const { PUBLIC_DOMAIN } = env;
 export const load: ServerLoad = async ({ url, locals, cookies }) => {
   const host = url.hostname;
   const isEnglishSubdomain = host.startsWith('en.');
+  const currentYear = new Date().getFullYear();
   let locale = isEnglishSubdomain ? 'en' : 'es';
 
   const supportedLocales = locales.get().map((l) => l.toLowerCase());
@@ -29,6 +30,7 @@ export const load: ServerLoad = async ({ url, locals, cookies }) => {
   return {
     i18n: { locale, route: url.pathname },
     translations: translations.get(),
-    theme: locals.theme
+    theme: locals.theme,
+    year: currentYear
   };
 };

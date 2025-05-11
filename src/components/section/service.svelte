@@ -25,7 +25,7 @@
   };
 </script>
 
-<div class={cn(classes[variant])} role="listitem" use:smoothScroll>
+<div class={cn(classes[variant])} use:smoothScroll>
   {#if variant === 'recommended'}
     <p
       class="text-light font-onest flex items-center justify-center gap-2 py-2 text-xs font-bold uppercase"
@@ -42,7 +42,7 @@
   >
     <div class="grid gap-x-8 gap-y-4 lg:auto-rows-auto lg:grid-cols-2 xl:gap-x-16">
       <div class="order-1">
-        <SmallTitle class="mb-4">{name}</SmallTitle>
+        <SmallTitle as="h3" class="mb-4">{name}</SmallTitle>
         <p class="my-4 sm:text-balance xl:text-wrap 2xl:text-balance">{description}</p>
         <p>
           {$t('services.service.starting')}{' '}
@@ -61,9 +61,9 @@
       </div>
       <div class="order-2 lg:order-3 lg:col-start-2 lg:row-span-2 lg:row-start-1">
         <p class="mb-4 lg:mb-8">{text}</p>
-        <h4 class="text-dark font-onest dark:text-light mb-4 font-bold lg:mb-8">
+        <p class="text-dark font-onest dark:text-light mb-4 font-bold lg:mb-8">
           {$t('services.service.includes')}:
-        </h4>
+        </p>
         <ul class="flex flex-col gap-4 text-base/5">
           {#each list as item (item)}
             <li class="flex gap-4">

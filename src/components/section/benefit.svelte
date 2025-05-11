@@ -45,7 +45,6 @@
     restProps.class,
     layout === 'horizontal' && 'flex-row'
   )}
-  role="listitem"
 >
   {#if layout === 'horizontal'}
     <div class="flex shrink-1 grow-1 flex-col gap-4">

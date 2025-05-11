@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Mail, Moon, Sun } from '@lucide/svelte';
-  import { getStores } from '$app/stores';
+  import { page } from '$app/state';
 
   import { cn } from '$util/cn';
   import { setTheme } from '$util/theme';
@@ -11,8 +11,8 @@
   import Nav from '$comp/header/nav.svelte';
   import Right from '$comp/header/right.svelte';
 
-  const { page } = getStores();
-  let theme = $state($page.data.theme);
+  const { data } = page;
+  let theme = $state(data.theme);
 
   const SCROLL_LIMIT = 100;
   const SCROLL_LIMIT_MOBILE = 50;
@@ -38,7 +38,7 @@
 
 <header
   class={cn(
-    "before:content-'' before:bg-light/80 dark:before:bg-dark/80 before:border-light-200 dark:before:border-dark-200 sticky top-0 z-50 before:absolute before:inset-0 before:-translate-y-full before:border-b before:backdrop-blur-sm before:transition",
+    "before:content-'' before:bg-light/80 dark:before:bg-dark/80 before:border-light-200 dark:before:border-dark-200 sticky top-0 z-50 before:absolute before:inset-0 before:-translate-y-full before:border-b before:backdrop-blur-sm before:transition-[translate]",
     isAfterPosition && 'before:translate-0'
   )}
 >
