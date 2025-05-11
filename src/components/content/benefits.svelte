@@ -24,7 +24,6 @@
       }}
       autoheight={false}
       id="benefits-carousel"
-      role="list"
       class="flex items-stretch gap-4 md:gap-8 lg:grid lg:auto-rows-auto lg:grid-cols-3"
       swipeClass="lg:hidden"
     >
