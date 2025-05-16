@@ -190,11 +190,12 @@
           </Button>
           <Button
             variant="secondary"
-            class="focus-visible:ring-dark text-dark hover:text-light dark:text-dark bg-green-500 hover:bg-green-700 dark:bg-green-500"
+            class="focus-visible:ring-dark dark:focus-visible:ring-light text-dark hover:text-light dark:text-dark bg-green-500 hover:bg-green-700 dark:bg-green-500"
             type="submit"
             onclick={() => (intent = 'whatsapp')}
           >
-            WhatsApp <SendHorizonal
+            WhatsApp
+            <SendHorizonal
               size="24"
               strokeWidth="2"
               class="transition-[rotate] ease-in-out group-hover:-rotate-10"
