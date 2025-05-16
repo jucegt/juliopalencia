@@ -68,7 +68,7 @@
   <label for={id} class="text-dark dark:text-light font-onest mb-2 block font-bold">{label}</label>
   <div
     class={cn(
-      'focus-within:ring-primary ring-offset-light-100 dark:ring-offset-dark-100 flex rounded-lg focus-within:ring-2 focus-within:ring-offset-2',
+      'focus-within:ring-primary ring-offset-light-100 dark:ring-offset-dark-100 flex rounded-lg transition-all ease-in-out focus-within:ring-2 focus-within:ring-offset-2',
       ((invalid && (!hasChangedSelect || !hasChangedInput)) || !localValid) &&
         'ring-2 ring-red-400 ring-offset-2'
     )}

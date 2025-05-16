@@ -44,7 +44,7 @@
       use:zodValidate={{ type: restProps.type, setInvalid }}
       onchange={handleChange}
       class={cn(
-        'peer bg-light-50 ring-offset-light-100 border-light-200 text-dark dark:text-light focus:ring-primary dark:bg-dark-50 dark:border-dark-200 dark:ring-offset-dark-100 dark:placeholder:text-dark-placeholder h-12 w-full rounded-lg border placeholder:text-gray-200 focus:ring-2 focus:ring-offset-2',
+        'peer bg-light-50 ring-offset-light-100 border-light-200 text-dark dark:text-light focus:ring-primary dark:bg-dark-50 dark:border-dark-200 dark:ring-offset-dark-100 dark:placeholder:text-dark-placeholder h-12 w-full rounded-lg border transition-all ease-in-out placeholder:text-gray-200 focus:ring-2 focus:ring-offset-2',
         icon && 'pl-12',
         ((invalid && !hasChanged) || localInvalid) && 'ring-2 ring-red-400 ring-offset-2'
       )}

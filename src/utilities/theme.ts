@@ -3,7 +3,11 @@ import { env } from '$env/dynamic/public';
 const { PUBLIC_DOMAIN } = env;
 
 export function setTheme(theme: string) {
-  document.cookie = `theme=${theme}; Path=/; Domain=.${PUBLIC_DOMAIN}; Max-Age=31536000; SameSite=Lax`;
+  const isDev = PUBLIC_DOMAIN?.startsWith('localhost') ?? true;
+
+  const domain = isDev ? '' : `Domain=.${PUBLIC_DOMAIN};`;
+  const secure = isDev ? '' : 'Secure;';
+  document.cookie = `theme=${theme}; Path=/; ${domain} ${secure} Max-Age=31536000; SameSite=Lax`;
   document.documentElement.classList.remove('light', 'dark');
   document.documentElement.classList.add(theme);
 }

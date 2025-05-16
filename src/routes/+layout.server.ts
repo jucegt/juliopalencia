@@ -6,6 +6,8 @@ import { locales, loadTranslations, translations, defaultLocale } from '$i18n/co
 const { PUBLIC_DOMAIN } = env;
 
 export const load: ServerLoad = async ({ url, locals, cookies }) => {
+  const isDev = PUBLIC_DOMAIN?.startsWith('localhost') ?? true;
+
   const host = url.hostname;
   const isEnglishSubdomain = host.startsWith('en.');
   const currentYear = new Date().getFullYear();
@@ -18,10 +20,10 @@ export const load: ServerLoad = async ({ url, locals, cookies }) => {
 
   cookies.set('theme', locals.theme, {
     path: '/',
-    domain: `.${PUBLIC_DOMAIN}`,
+    domain: isDev ? undefined : `.${PUBLIC_DOMAIN}`,
     httpOnly: false,
     sameSite: 'lax',
-    secure: true,
+    secure: !isDev,
     maxAge: 60 * 60 * 24 * 365
   });
 

@@ -1,28 +1,25 @@
 <script lang="ts">
-  import { Mail, Moon, Sun } from '@lucide/svelte';
-  import { page } from '$app/state';
+  import type { Component, Snippet } from 'svelte';
 
   import { cn } from '$util/cn';
-  import { setTheme } from '$util/theme';
-  import { t } from '$i18n/config';
-  import Button from '$comp/button.svelte';
   import Container from '$comp/container.svelte';
   import Logo from '$comp/header/logo.svelte';
-  import Nav from '$comp/header/nav.svelte';
   import Right from '$comp/header/right.svelte';
+  import SwitchLang from './switch-lang.svelte';
+  import SwitchTheme from './switch-theme.svelte';
 
-  const { data } = page;
-  let theme = $state(data.theme);
+  type HeaderProps = {
+    right?: Component<any, {}>;
+    children?: Snippet;
+  };
+
+  let { children, right }: HeaderProps = $props();
+
+  const RightComponent = right;
 
   const SCROLL_LIMIT = 100;
   const SCROLL_LIMIT_MOBILE = 50;
   let isAfterPosition = $state(false);
-
-  function toggleTheme() {
-    const next = theme === 'dark' ? 'light' : 'dark';
-    theme = next;
-    setTheme(next);
-  }
 
   $effect(() => {
     const handleScroll = () => {
@@ -44,38 +41,13 @@
 >
   <Container class="flex w-full items-center justify-between py-4 md:py-6">
     <Logo />
-    <Nav />
+    {@render children?.()}
     <Right>
-      <Button variant="square" aria-label={$t('header.theme')} onclick={toggleTheme}>
-        {#if theme === 'dark'}
-          <Sun
-            class="transition-[rotate] ease-in-out group-hover:-rotate-10"
-            size="24"
-            strokeWidth="2"
-          />
-        {:else}
-          <Moon
-            class="transition-[rotate] ease-in-out group-hover:-rotate-10"
-            size="24"
-            strokeWidth="2"
-          />
-        {/if}
-      </Button>
-      <Button variant="square" aria-label={$t('header.lang.label')} href={$t('header.lang.href')}>
-        {$t('header.lang.text')}
-      </Button>
-      <Button variant="secondary" href="#contact">
-        <Mail
-          size="24"
-          strokeWidth="2"
-          class="z-10 shrink-0 grow-0 basis-[24px] transition-[rotate] ease-in-out group-hover:-rotate-10"
-          aria-hidden="true"
-        />
-        <span class="z-10">
-          {$t('header.button.small')}
-          <span class="hidden lg:inline">{$t('header.button.extended')}</span>
-        </span>
-      </Button>
+      <SwitchTheme />
+      <SwitchLang />
+      {#if right}
+        <RightComponent />
+      {/if}
     </Right>
   </Container>
 </header>

@@ -22,7 +22,7 @@
       {name}
       {rows}
       class={cn(
-        'peer bg-light-50 border-light-200 ring-offset-light-100 dark:ring-offset-dark-100 dark:bg-dark-50 dark:placeholder:text-dark-placeholder dark:border-dark-200 text-dark focus:ring-primary dark:text-light w-full rounded-lg border px-4 py-3 placeholder:text-gray-200 focus:ring-2 focus:ring-offset-2'
+        'peer bg-light-50 border-light-200 ring-offset-light-100 dark:ring-offset-dark-100 dark:bg-dark-50 dark:placeholder:text-dark-placeholder dark:border-dark-200 text-dark focus:ring-primary dark:text-light w-full rounded-lg border px-4 py-3 transition-all ease-in-out placeholder:text-gray-200 focus:ring-2 focus:ring-offset-2'
       )}
     ></textarea>
   </div>
