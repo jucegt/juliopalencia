@@ -23,7 +23,7 @@
           {/if}
         </div>
         <Quote
-          class="text-primary shrink-0 grow-0 basis-[24px] text-base transition-[rotate] ease-in-out group-hover:rotate-10"
+          class="text-primary shrink-0 grow-0 basis-6 text-base transition-[rotate] ease-in-out group-hover:rotate-10"
           size="24"
           strokeWidth="2"
           aria-hidden="true"
