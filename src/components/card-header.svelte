@@ -17,7 +17,7 @@
 
 <header class={cn('flex items-center gap-4', restProps.class)}>
   {#if icon}
-    <Icon strokeWidth="2" class="text-primary size-6 basis-[24px] lg:size-8 lg:basis-[32px]" />
+    <Icon strokeWidth="2" class="text-primary size-6 basis-6 lg:size-8 lg:basis-8" />
   {/if}
   <SmallTitle>
     {@render children?.()}
