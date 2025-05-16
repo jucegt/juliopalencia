@@ -1,6 +1,7 @@
 <script lang="ts">
-  import { Mail, Moon, Sun } from '@lucide/svelte';
+  import { Moon, Sun } from '@lucide/svelte';
   import { page } from '$app/state';
+  import type { Component, Snippet } from 'svelte';
 
   import { cn } from '$util/cn';
   import { setTheme } from '$util/theme';
@@ -8,8 +9,16 @@
   import Button from '$comp/button.svelte';
   import Container from '$comp/container.svelte';
   import Logo from '$comp/header/logo.svelte';
-  import Nav from '$comp/header/nav.svelte';
   import Right from '$comp/header/right.svelte';
+
+  type HeaderProps = {
+    right?: Component<any, {}>;
+    children?: Snippet;
+  };
+
+  let { children, right }: HeaderProps = $props();
+
+  const RightComponent = right;
 
   const { data } = page;
   let theme = $state(data.theme);
@@ -44,7 +53,7 @@
 >
   <Container class="flex w-full items-center justify-between py-4 md:py-6">
     <Logo />
-    <Nav />
+    {@render children?.()}
     <Right>
       <Button variant="square" aria-label={$t('header.theme')} onclick={toggleTheme}>
         {#if theme === 'dark'}
@@ -64,18 +73,9 @@
       <Button variant="square" aria-label={$t('header.lang.label')} href={$t('header.lang.href')}>
         {$t('header.lang.text')}
       </Button>
-      <Button variant="secondary" href="#contact">
-        <Mail
-          size="24"
-          strokeWidth="2"
-          class="z-10 shrink-0 grow-0 basis-[24px] transition-[rotate] ease-in-out group-hover:-rotate-10"
-          aria-hidden="true"
-        />
-        <span class="z-10">
-          {$t('header.button.small')}
-          <span class="hidden lg:inline">{$t('header.button.extended')}</span>
-        </span>
-      </Button>
+      {#if right}
+        <RightComponent />
+      {/if}
     </Right>
   </Container>
 </header>
