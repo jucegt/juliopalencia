@@ -10,6 +10,7 @@
   import Container from '$comp/container.svelte';
   import Logo from '$comp/header/logo.svelte';
   import Right from '$comp/header/right.svelte';
+  import SwitchLang from './switch-lang.svelte';
 
   type HeaderProps = {
     right?: Component<any, {}>;
@@ -70,9 +71,7 @@
           />
         {/if}
       </Button>
-      <Button variant="square" aria-label={$t('header.lang.label')} href={$t('header.lang.href')}>
-        {$t('header.lang.text')}
-      </Button>
+      <SwitchLang />
       {#if right}
         <RightComponent />
       {/if}
