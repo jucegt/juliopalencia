@@ -96,7 +96,7 @@
       </Testimonial>
       <TrustedBullet class="group mt-8 lg:mt-16">
         <Clock
-          class="text-primary shrink-0 grow-0 basis-[24px] transition-[rotate] ease-in-out group-hover:-rotate-10"
+          class="text-primary shrink-0 grow-0 basis-6 transition-[rotate] ease-in-out group-hover:-rotate-10"
           size="24"
           strokeWidth="2"
         />
@@ -104,7 +104,7 @@
       </TrustedBullet>
       <TrustedBullet class="group mt-4 lg:mt-8">
         <MessageCircleMore
-          class="text-primary shrink-0 grow-0 basis-[24px] transition-[rotate] ease-in-out group-hover:-rotate-10"
+          class="text-primary shrink-0 grow-0 basis-6 transition-[rotate] ease-in-out group-hover:-rotate-10"
           size="24"
           strokeWidth="2"
         />
@@ -115,7 +115,7 @@
       </TrustedBullet>
       <TrustedBullet class="group mt-4 lg:mt-8">
         <ShieldCheck
-          class="text-primary shrink-0 grow-0 basis-[24px] transition-[rotate] ease-in-out group-hover:-rotate-10"
+          class="text-primary shrink-0 grow-0 basis-6 transition-[rotate] ease-in-out group-hover:-rotate-10"
           size="24"
           strokeWidth="2"
         />
