@@ -1,16 +1,12 @@
 <script lang="ts">
-  import { Moon, Sun } from '@lucide/svelte';
-  import { page } from '$app/state';
   import type { Component, Snippet } from 'svelte';
 
   import { cn } from '$util/cn';
-  import { setTheme } from '$util/theme';
-  import { t } from '$i18n/config';
-  import Button from '$comp/button.svelte';
   import Container from '$comp/container.svelte';
   import Logo from '$comp/header/logo.svelte';
   import Right from '$comp/header/right.svelte';
   import SwitchLang from './switch-lang.svelte';
+  import SwitchTheme from './switch-theme.svelte';
 
   type HeaderProps = {
     right?: Component<any, {}>;
@@ -21,18 +17,9 @@
 
   const RightComponent = right;
 
-  const { data } = page;
-  let theme = $state(data.theme);
-
   const SCROLL_LIMIT = 100;
   const SCROLL_LIMIT_MOBILE = 50;
   let isAfterPosition = $state(false);
-
-  function toggleTheme() {
-    const next = theme === 'dark' ? 'light' : 'dark';
-    theme = next;
-    setTheme(next);
-  }
 
   $effect(() => {
     const handleScroll = () => {
@@ -56,21 +43,7 @@
     <Logo />
     {@render children?.()}
     <Right>
-      <Button variant="square" aria-label={$t('header.theme')} onclick={toggleTheme}>
-        {#if theme === 'dark'}
-          <Sun
-            class="transition-[rotate] ease-in-out group-hover:-rotate-10"
-            size="24"
-            strokeWidth="2"
-          />
-        {:else}
-          <Moon
-            class="transition-[rotate] ease-in-out group-hover:-rotate-10"
-            size="24"
-            strokeWidth="2"
-          />
-        {/if}
-      </Button>
+      <SwitchTheme />
       <SwitchLang />
       {#if right}
         <RightComponent />
