@@ -20,7 +20,7 @@
     secondary:
       'group bg-light-200 dark:bg-dark-200 text-dark dark:text-light font-onest hover:bg-primary hover:text-light focus-visible:ring-primary inline-flex cursor-pointer items-center gap-x-2 rounded-lg px-4 py-3 text-center text-base font-bold transition ease-in-out focus:outline-none focus-visible:ring-2 md:gap-x-4 md:px-8',
     underline:
-      'group font-onest text-primary dark:text-primary decoration-primary dark:decoration-primary hover:text-dark hover:decoration-dark dark:hover:text-light dark:hover:decoration-light focus-visible:ring-primary inline-flex cursor-pointer items-center gap-x-2 rounded-sm p-1 text-base font-bold underline decoration-2 underline-offset-4 transition-colors ease-in-out focus:outline-none focus-visible:ring-2',
+      'group font-onest text-primary dark:text-primary decoration-primary dark:decoration-primary hover:text-dark hover:decoration-dark dark:hover:text-light dark:hover:decoration-light focus-visible:ring-primary inline-flex cursor-pointer items-center gap-x-2 rounded-sm p-1 text-base font-bold underline decoration-2 underline-offset-4 transition ease-in-out focus:outline-none focus-visible:ring-2',
     square:
       'group font-onest hover:text-dark dark:hover:text-light hover:bg-light-200/50 dark:hover:bg-dark-200/50 focus-visible:ring-primary flex size-12 cursor-pointer items-center justify-center rounded-lg transition ease-in-out hover:font-bold focus:outline-none focus-visible:ring-2'
   };
