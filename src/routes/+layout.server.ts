@@ -4,9 +4,10 @@ import type { ServerLoad } from '@sveltejs/kit';
 import { locales, loadTranslations, translations, defaultLocale } from '$i18n/config';
 
 const { PUBLIC_DOMAIN } = env;
-const isDev = PUBLIC_DOMAIN!.includes('localhost');
 
 export const load: ServerLoad = async ({ url, locals, cookies }) => {
+  const isDev = PUBLIC_DOMAIN?.startsWith('localhost') ?? true;
+
   const host = url.hostname;
   const isEnglishSubdomain = host.startsWith('en.');
   const currentYear = new Date().getFullYear();
