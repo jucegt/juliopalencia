@@ -11,12 +11,12 @@
 >
   <div class="flex items-center justify-between gap-x-4">
     <div class="hidden gap-x-2 md:flex" aria-hidden="true">
-      <div class="aspect-square w-[14px] rounded-full bg-red-400"></div>
-      <div class="aspect-square w-[14px] rounded-full bg-yellow-400"></div>
-      <div class="aspect-square w-[14px] rounded-full bg-green-400"></div>
+      <div class="aspect-square w-3.5 rounded-full bg-red-400"></div>
+      <div class="aspect-square w-3.5 rounded-full bg-yellow-400"></div>
+      <div class="aspect-square w-3.5 rounded-full bg-green-400"></div>
     </div>
     <div
-      class="font-figtree text-dark dark:text-light bg-light dark:bg-dark border-light-border-200 dark:border-dark-border-200 ring-primary flex h-[36px] shrink-1 grow-1 basis-0 items-center justify-between rounded-sm border px-2 tracking-wider md:justify-center"
+      class="font-figtree text-dark dark:text-light bg-light dark:bg-dark border-light-border-200 dark:border-dark-border-200 ring-primary flex h-9 shrink-1 grow-1 basis-0 items-center justify-between rounded-sm border px-2 tracking-wider md:justify-center"
     >
       <Lock size="18" strokeWidth="2" class="text-gray md:hidden" />
       <TypingText
@@ -25,7 +25,7 @@
       <RotateCw size="18" strokeWidth="2" class="text-gray md:hidden" />
     </div>
     <div
-      class="bg-light/50 dark:bg-dark/50 hidden h-[20px] w-[54px] rounded-full md:block"
+      class="bg-light/50 dark:bg-dark/50 hidden h-5 w-13.5 rounded-full md:block"
       aria-hidden="true"
     ></div>
   </div>
@@ -35,7 +35,7 @@
       aria-hidden="true"
       size="24"
       strokeWidth="2"
-      class="z-10 shrink-0 grow-0 basis-[24px] transition-[rotate] ease-in-out group-hover:rotate-10"
+      class="z-10 shrink-0 grow-0 basis-6 transition-[rotate] ease-in-out group-hover:rotate-10"
     />
   </Button>
   <ChevronDown
