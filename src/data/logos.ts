@@ -33,7 +33,7 @@ const logos = [
   },
   {
     id: 'gallo',
-    name: 'Gallo'
+    name: 'Cerveza Gallo'
   }
 ];
 
