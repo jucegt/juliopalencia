@@ -68,7 +68,7 @@
           {#each list as item (item)}
             <li class="flex gap-4">
               <CircleCheck
-                class="text-dark dark:text-light shrink-0 grow-0 basis-[24px]"
+                class="text-dark dark:text-light shrink-0 grow-0 basis-6"
                 size="20"
                 strokeWidth="2"
               />

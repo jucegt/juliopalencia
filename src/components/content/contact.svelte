@@ -96,7 +96,7 @@
       </Testimonial>
       <TrustedBullet class="group mt-8 lg:mt-16">
         <Clock
-          class="text-primary shrink-0 grow-0 basis-[24px] transition-[rotate] ease-in-out group-hover:-rotate-10"
+          class="text-primary shrink-0 grow-0 basis-6 transition-[rotate] ease-in-out group-hover:-rotate-10"
           size="24"
           strokeWidth="2"
         />
@@ -104,7 +104,7 @@
       </TrustedBullet>
       <TrustedBullet class="group mt-4 lg:mt-8">
         <MessageCircleMore
-          class="text-primary shrink-0 grow-0 basis-[24px] transition-[rotate] ease-in-out group-hover:-rotate-10"
+          class="text-primary shrink-0 grow-0 basis-6 transition-[rotate] ease-in-out group-hover:-rotate-10"
           size="24"
           strokeWidth="2"
         />
@@ -115,7 +115,7 @@
       </TrustedBullet>
       <TrustedBullet class="group mt-4 lg:mt-8">
         <ShieldCheck
-          class="text-primary shrink-0 grow-0 basis-[24px] transition-[rotate] ease-in-out group-hover:-rotate-10"
+          class="text-primary shrink-0 grow-0 basis-6 transition-[rotate] ease-in-out group-hover:-rotate-10"
           size="24"
           strokeWidth="2"
         />
@@ -190,11 +190,12 @@
           </Button>
           <Button
             variant="secondary"
-            class="focus-visible:ring-dark text-dark hover:text-light dark:text-dark bg-green-500 hover:bg-green-700 dark:bg-green-500"
+            class="focus-visible:ring-dark dark:focus-visible:ring-light text-dark hover:text-light dark:text-dark bg-green-500 hover:bg-green-700 dark:bg-green-500"
             type="submit"
             onclick={() => (intent = 'whatsapp')}
           >
-            WhatsApp <SendHorizonal
+            WhatsApp
+            <SendHorizonal
               size="24"
               strokeWidth="2"
               class="transition-[rotate] ease-in-out group-hover:-rotate-10"

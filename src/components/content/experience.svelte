@@ -15,7 +15,7 @@
   <div
     class="before:content-'' after:content-'' before:from-light before:to-light/0 after:from-light after:to-light/0 dark:before:from-dark dark:before:to-dark/0 dark:after:from-dark dark:after:to-dark/0 relative overflow-hidden before:absolute before:top-0 before:left-0 before:z-10 before:h-37 before:w-10 before:bg-gradient-to-r after:absolute after:top-0 after:right-0 after:h-37 after:w-10 after:bg-gradient-to-l md:before:aspect-square md:before:w-37 md:after:aspect-square md:after:w-37"
   >
-    <div class="animate-slide hover:pause flex min-w-max whitespace-nowrap">
+    <div class="group animate-slide hover:pause flex min-w-max whitespace-nowrap">
       {#each logos as { id, name } (id)}
         <Logo aria-label={name} {id} alt={name} title={name} />
       {/each}
