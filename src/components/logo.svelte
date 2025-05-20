@@ -8,7 +8,7 @@
   {...restProps}
   role="img"
   class={cn(
-    'aspect-square w-37 bg-cover opacity-25 md:mx-4',
+    'aspect-square w-37 bg-cover opacity-25 transition-all duration-400 ease-in-out group-hover:opacity-10 group-hover:blur-[1px] hover:opacity-50 hover:blur-none md:mx-4',
     `dark:logo-${id}`,
     `logo-${id}`,
     restProps.class
