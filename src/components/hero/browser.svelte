@@ -1,5 +1,8 @@
 <script lang="ts">
-  import { ChevronDown, Lock, MessageCircleMore, RotateCw } from '@lucide/svelte';
+  import ChevronDown from '@lucide/svelte/icons/chevron-down';
+  import Lock from '@lucide/svelte/icons/lock';
+  import MessageCircleMore from '@lucide/svelte/icons/message-circle-more';
+  import RotateCw from '@lucide/svelte/icons/rotate-cw';
 
   import { t } from '$i18n/config';
   import Button from '$comp/button.svelte';

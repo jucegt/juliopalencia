@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Quote } from '@lucide/svelte';
+  import Quote from '@lucide/svelte/icons/quote';
 
   export let name: string | undefined;
   export let business: string | undefined;

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Mail } from '@lucide/svelte';
+  import Mail from '@lucide/svelte/icons/mail';
 
   import { t } from '$i18n/config';
   import Button from '$comp/button.svelte';

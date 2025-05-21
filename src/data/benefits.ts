@@ -1,14 +1,12 @@
-import {
-  Eye,
-  LifeBuoy,
-  Mail,
-  MessagesSquare,
-  Palette,
-  Rocket,
-  ShieldCheck,
-  TabletSmartphone,
-  Wrench
-} from '@lucide/svelte';
+import Eye from '@lucide/svelte/icons/eye';
+import LifeBuoy from '@lucide/svelte/icons/life-buoy';
+import Mail from '@lucide/svelte/icons/mail';
+import MessagesSquare from '@lucide/svelte/icons/messages-square';
+import Palette from '@lucide/svelte/icons/palette';
+import Rocket from '@lucide/svelte/icons/rocket';
+import ShieldCheck from '@lucide/svelte/icons/shield-check';
+import TabletSmartphone from '@lucide/svelte/icons/tablet-smartphone';
+import Wrench from '@lucide/svelte/icons/wrench';
 
 const benefits = {
   en: [

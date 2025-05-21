@@ -1,4 +1,9 @@
-import { CircleHelp, Clock, DollarSign, Send, SquarePen, Star } from '@lucide/svelte';
+import CircleHelp from '@lucide/svelte/icons/circle-help';
+import Clock from '@lucide/svelte/icons/clock';
+import DollarSign from '@lucide/svelte/icons/dollar-sign';
+import Send from '@lucide/svelte/icons/send';
+import SquarePen from '@lucide/svelte/icons/square-pen';
+import Star from '@lucide/svelte/icons/star';
 
 const faq = {
   en: [

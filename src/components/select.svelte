@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { ChevronsUpDown, type Icon as IconType } from '@lucide/svelte';
+  import ChevronsUpDown from '@lucide/svelte/icons/chevrons-up-down';
+  import { type Icon as IconType } from '@lucide/svelte';
 
   import { cn } from '$util/cn';
 

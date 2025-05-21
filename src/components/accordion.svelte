@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { ChevronDown, Icon as IconType } from '@lucide/svelte';
+  import { Icon as IconType } from '@lucide/svelte';
+  import ChevronDown from '@lucide/svelte/icons/chevron-down';
 
   import { cn } from '$util/cn';
   import SmallTitle from './small-title.svelte';

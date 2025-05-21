@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Icon as IconType } from '@lucide/svelte';
-  import { ChevronsUpDown } from '@lucide/svelte';
+  import ChevronsUpDown from '@lucide/svelte/icons/chevrons-up-down';
   import { TelInput, normalizedCountries } from 'svelte-tel-input';
   import type {
     DetailedValue,

@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { Compass, Workflow } from '@lucide/svelte';
+  import Compass from '@lucide/svelte/icons/compass';
+  import Workflow from '@lucide/svelte/icons/workflow';
 
   import { carousels } from '$store/services';
   import { t, locale } from '$i18n/config';

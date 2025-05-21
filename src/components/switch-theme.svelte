@@ -1,6 +1,7 @@
 <script lang="ts">
-  import { Moon, Sun } from '@lucide/svelte';
   import { page } from '$app/state';
+  import Moon from '@lucide/svelte/icons/moon';
+  import Sun from '@lucide/svelte/icons/sun';
 
   import { t } from '$i18n/config';
   import { setTheme } from '$util/theme';
