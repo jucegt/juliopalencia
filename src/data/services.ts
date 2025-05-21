@@ -1,15 +1,13 @@
-import {
-  BotMessageSquare,
-  CalendarCheck,
-  CircleEllipsis,
-  ClipboardList,
-  Eye,
-  FileText,
-  Hammer,
-  HelpCircle,
-  Speech,
-  Wrench
-} from '@lucide/svelte';
+import BotMessageSquare from '@lucide/svelte/icons/bot-message-square';
+import CalendarCheck from '@lucide/svelte/icons/calendar-check';
+import CircleEllipsis from '@lucide/svelte/icons/circle-ellipsis';
+import ClipboardList from '@lucide/svelte/icons/clipboard-list';
+import Eye from '@lucide/svelte/icons/eye';
+import FileText from '@lucide/svelte/icons/file-text';
+import Hammer from '@lucide/svelte/icons/hammer';
+import HelpCircle from '@lucide/svelte/icons/help-circle';
+import Speech from '@lucide/svelte/icons/speech';
+import Wrench from '@lucide/svelte/icons/wrench';
 
 const services = {
   en: [

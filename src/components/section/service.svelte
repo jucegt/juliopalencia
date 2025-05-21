@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { CircleCheck, Sparkle } from '@lucide/svelte';
+  import CircleCheck from '@lucide/svelte/icons/circle-check';
+  import Sparkle from '@lucide/svelte/icons/sparkle';
 
   import { cn } from '$util/cn';
   import { formatCurrency } from '$util/format-currency';

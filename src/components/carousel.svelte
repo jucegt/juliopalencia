@@ -1,7 +1,8 @@
 <script lang="ts">
-  import { ChevronLeft, ChevronRight } from '@lucide/svelte';
   import { type EmblaCarouselType, type EmblaOptionsType } from 'embla-carousel';
   import AutoHeight from 'embla-carousel-auto-height';
+  import ChevronLeft from '@lucide/svelte/icons/chevron-left';
+  import ChevronRight from '@lucide/svelte/icons/chevron-right';
   import emblaCarouselSvelte from 'embla-carousel-svelte';
 
   import { carousels } from '$store/services';

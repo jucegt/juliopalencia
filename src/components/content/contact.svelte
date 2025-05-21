@@ -1,18 +1,16 @@
 <script lang="ts">
-  import {
-    BadgeAlert,
-    BadgeCheck,
-    Clock,
-    ListTree,
-    Mail,
-    MessageCircleMore,
-    Phone,
-    SendHorizonal,
-    ShieldCheck,
-    User
-  } from '@lucide/svelte';
-  import type { SubmitFunction } from '@sveltejs/kit';
   import { enhance } from '$app/forms';
+  import BadgeAlert from '@lucide/svelte/icons/badge-alert';
+  import BadgeCheck from '@lucide/svelte/icons/badge-check';
+  import Clock from '@lucide/svelte/icons/clock';
+  import ListTree from '@lucide/svelte/icons/list-tree';
+  import Mail from '@lucide/svelte/icons/mail';
+  import MessageCircleMore from '@lucide/svelte/icons/message-circle-more';
+  import Phone from '@lucide/svelte/icons/phone';
+  import SendHorizonal from '@lucide/svelte/icons/send-horizonal';
+  import ShieldCheck from '@lucide/svelte/icons/shield-check';
+  import type { SubmitFunction } from '@sveltejs/kit';
+  import User from '@lucide/svelte/icons/user';
 
   import { cn } from '$util/cn';
   import { servicesList } from '$data/services';
